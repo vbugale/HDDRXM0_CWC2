@@ -1,4 +1,4 @@
-//${user_id}X JOB ('EUDD,INTL'),'NUESSE',NOTIFY=&SYSUID,
+//HDDRXM0X JOB ('EUDD,INTL'),'NUESSE',NOTIFY=&SYSUID,
 //             MSGLEVEL=(1,1),MSGCLASS=X,CLASS=A,REGION=0M
 //*
 /*JOBPARM S=CWCC
@@ -39,8 +39,8 @@
 //         PEND
 //*
 //CWKTDB2X EXEC CWDBPROC,
-//         APPL=${ispw_app_value},
-//         PATH=${ispw_path_num}
+//         APPL=GITA,
+//         PATH=1
 //STEP1.SYSTSIN DD *
  DSN SYSTEM(DSCC)
  RUN PROGRAM(CWKTDB2X) PLAN(FTSGITPL) PARMS('00003')

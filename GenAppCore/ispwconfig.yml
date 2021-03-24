@@ -1,10 +1,10 @@
 !!com.compuware.ispw.wzzms.models.IspwRoot
 ispwApplication:
-  host: ${host}
+  host: cwc2.nasa.cpwr.corp
   port: 16196
   runtimeConfig: ispw
   stream: GITDEMO1
-  application: ${ispw_app}
+  application: GITA
   pathMappings:
   - path: "**/Sources/**"
     types:

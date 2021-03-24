@@ -13,9 +13,9 @@ Not working yet:&#xD;
 Store expected RPFILE data locally and restore to mainframe</Description>
   <Test>
     <Scope name="Config" disabled="false">
-      <Variable id="userid">${mf_userid}</Variable>
-      <Variable id="ispw_app">${ispw_app_value}</Variable>
-      <Variable id="ispw_level">${ispw_level_value}</Variable>
+      <Variable id="userid">HDDRXM0</Variable>
+      <Variable id="ispw_app">GITA</Variable>
+      <Variable id="ispw_level">FT1</Variable>
     </Scope>
     <Scope name="Initialize" disabled="false">
       <Scope name="Variable Set Up" disabled="false">
@@ -32,7 +32,7 @@ Store expected RPFILE data locally and restore to mainframe</Description>
 // REGION=0M,MSGCLASS=X
 /*JOBPARM S=*
 //FASTEP   EXEC PGM=FILEAID,REGION=08M
-//STEPLIB  DD DISP=SHR,DSN=SYS2.CW.VJ.#${lpar_name}.CXVJLOAD
+//STEPLIB  DD DISP=SHR,DSN=SYS2.CW.VJ.#CWC2.CXVJLOAD
 //         DD DISP=SHR,DSN=SYS2.CW.&CWGAVJ..SXVJLOAD           
 //SYSPRINT DD  SYSOUT=*                                      
 //SYSLIST  DD  SYSOUT=*                                      
@@ -63,7 +63,7 @@ $$DD01 COPY PADCHAR=X'00'
 //XGOUTCPO DD  SYSOUT=*
 //XGOUTEXE DD  SYSOUT=* 
 //XGINPREQ DD *
- SSID=${xg_ssid}
+ SSID=MXG2
  TYPE=BATCH
  FORMAT=DATETIME
  H ${userid}E XATEST   *        *        N 2020/03/31
@@ -122,7 +122,7 @@ tmpOutput.toFixed(2)]]></Statement>
 // REGION=0M,MSGCLASS=X
 /*JOBPARM S=*
 //FASTEP   EXEC PGM=FILEAID,REGION=08M
-//STEPLIB  DD DISP=SHR,DSN=SYS2.CW.VJ.#${lpar_name}.CXVJLOAD
+//STEPLIB  DD DISP=SHR,DSN=SYS2.CW.VJ.#CWC2.CXVJLOAD
 //         DD DISP=SHR,DSN=SYS2.CW.&CWGAVJ..SXVJLOAD           
 //SYSPRINT DD  SYSOUT=*
 //SYSLIST  DD  SYSOUT=*
@@ -160,7 +160,7 @@ $$DD01 COMPARE
 //XGOUTCPO DD  SYSOUT=* 
 //XGOUTEXE DD  SYSOUT=* 
 //XGINPREQ DD *                                                                
- SSID=${xg_ssid}                                                                     
+ SSID=MXG2                                                                     
  TYPE=BATCH                                                                    
  FORMAT=DATETIME                                                               
  D ${userid}E XATEST   *        *        N 2020/03/31                            

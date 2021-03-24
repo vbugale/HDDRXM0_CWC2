@@ -1,4 +1,4 @@
-//${user_id}X JOB ('FTS'),'GITDEMO',NOTIFY=&SYSUID,
+//HDDRXM0X JOB ('FTS'),'GITDEMO',NOTIFY=&SYSUID,
 //             MSGLEVEL=(1,1),MSGCLASS=X,CLASS=A,REGION=6M
 /*JOBPARM S=*
 //*
@@ -28,5 +28,5 @@
 //SYSOUT   DD  SYSOUT=*
 //         PEND
 //CWBWCOBX EXEC CWKTPROC,
-//         APPL=${ispw_app_value},
-//         PATH=${ispw_path_num}
+//         APPL=GITA,
+//         PATH=1
