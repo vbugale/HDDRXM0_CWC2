@@ -1,0 +1,25 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<?totaltestVersion 20.5.1.v20201214-0405_74?>
+<!--Topaz for Total Test 20.5.1.v20201214-0405_74 Feb 12, 2021 12:23:00 PM-->
+<listructure:listructure xmlns:listructure="http://www.compuware.com/model/xml/listructure" xmlns:properties="http://www.compuware.com/model/xml/properties" id="InsuranceCore/Tests/Unit/SalesRepManagement/Payroll/CWXTCOB/Structures/CWXTCOB_CWXTDATE_RETURN-CODE.listructure">
+  <listructure:struct id="RETURN_CODE" name="RETURN_CODE">
+    <properties:properties>
+      <properties:property name="displayLength" type="number">2</properties:property>
+      <properties:property name="platform" type="string">mainframe</properties:property>
+      <properties:property name="storageLength" type="number">2</properties:property>
+    </properties:properties>
+    <listructure:number id="RETURN_CODE.RETURN_CODE" initial="0" length="4" name="RETURN_CODE">
+      <properties:properties>
+        <properties:property name="picture" type="string">S9(4)</properties:property>
+        <properties:property name="usage" type="string">binary</properties:property>
+        <properties:property name="signed" type="boolean">true</properties:property>
+        <properties:property name="value">zeros</properties:property>
+        <properties:property name="displayLength" type="number">4</properties:property>
+        <properties:property name="integerDigits" type="number">4</properties:property>
+        <properties:property name="platform" type="string">mainframe</properties:property>
+        <properties:property name="liType" type="string">binary</properties:property>
+        <properties:property name="storageLength" type="number">2</properties:property>
+      </properties:properties>
+    </listructure:number>
+  </listructure:struct>
+</listructure:listructure>

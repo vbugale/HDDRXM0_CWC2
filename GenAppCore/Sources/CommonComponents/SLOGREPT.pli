@@ -1,0 +1,884 @@
+SLOGREP : PROC OPTIONS(MAIN) REORDER ;
+
+ DCL PLIXOPT CHAR (80) VAR EXTERNAL INIT
+                  ('ISA(2M),ISAINC(512K),HEAP(20M,10M,ANYWHERE)') ;
+
+
+                                 /*** SYSLOGF - PRIMARY INPUT FILE  ***/
+ DCL SYSLOGF FILE RECORD  INPUT  ENV(FB TOTAL RECSIZE(133));
+
+                                 /*** LOGFIN  - OUTPUT FROM PART 1  ***/
+                                 /*** AND INPUT TO INTERNAL SORT    ***/
+ DCL LOGFIN  FILE RECORD  ;      /*** USED AS BOTH OUTPUT & INPUT   ***/
+
+                                 /*** LOGFOUT - OUTPUT FROM SORT &  ***/
+ DCL LOGFOUT FILE RECORD  ;      /*** INPUT TO PART 2 OF PROGRAM    ***/
+
+                                 /*** SYSLOG0 - OUTPUT FROM PART 2  ***/
+ DCL SYSLOGO FILE RECORD  OUTPUT ENV(FB TOTAL RECSIZE(133)) ;
+
+                                 /*** HASP892 - OUTPUT FROM PART 2  ***/
+ DCL HASP892 FILE RECORD  OUTPUT ENV(FB TOTAL RECSIZE(133)) ;
+
+ DCL SORTIN   FILE RECORD ;      /* INTERNAL SORT OF USERIDS - PART 2 */
+ DCL SORTOUT  FILE RECORD ;      /* INTERNAL SORT OF USERIDS - PART 2 */
+ DCL OPUSERS  FILE RECORD ;      /* OP COMMAND USER COUNTS   - PART 2 */
+
+ DCL REPORT  FILE PRINT ;
+
+ /** GENERIC SYSLOG RECORD FORMATS                                 */
+
+ DCL SLOG_RECORD     CHAR(133) BASED (P_SLOG) ;
+
+ DCL 1 SLOG_REC_TYPE BASED (P_SLOG) ,
+       3 ASA         CHAR(1) ,
+       3 SPECIAL     CHAR(3) ,
+       3 PRE_DATE    CHAR(16),
+       3 DATE_AREA   CHAR(26),
+       3 SPACE_1     CHAR(1) ,
+       3 USERID_AREA CHAR(8) ,
+       3 SPACE_2     CHAR(2) ;
+
+ DCL 1 SLOG_REC      BASED (P_SLOG) ,
+       3 ASA         CHAR(1) ,
+       3 LOG_CODE1   CHAR(1) ,
+       3 LOG_CODE2   CHAR(1) ,
+       3 LOG_CODE3   CHAR(7) ,
+       3 SPACE_11    CHAR(1) ,
+       3 LPAR        CHAR(8) ,
+       3 SPACE_16    CHAR(1) ,
+       3 DATE_TIME   CHAR(17),           /* YEAR FORMAT IS 2 BYTES */
+       3 SPACE_37    CHAR(1) ,
+       3 USERID      CHAR(8) ,
+       3 SPACE_47    CHAR(1) ,
+       3 INFO_2      CHAR(8) ,
+       3 SPACE_56    CHAR(2) ,
+       3 MESSAGE     CHAR(20) ;
+
+ /** 2-BYTE YEAR SYSLOG RECORD FORMATS (YYDDD)                        */
+
+ DCL 1 SLOG_REC_Y2   BASED (P_SLOG) ,       /* YEAR FORMAT IS 2 BYTES */
+       3 ASA         CHAR(1) ,
+       3 LOG_CODE1   CHAR(1) ,
+       3 LOG_CODE2   CHAR(1) ,
+       3 LOG_CODE3   CHAR(7) ,
+       3 SPACE_11    CHAR(1) ,
+       3 LPAR        CHAR(8) ,
+       3 SPACE_16    CHAR(1) ,
+       3 DATE_TIME   CHAR(17),           /* YEAR FORMAT IS 2 BYTES */
+       3 SPACE_37    CHAR(1) ,
+       3 USERID      CHAR(8) ,
+       3 SPACE_47    CHAR(1) ,
+       3 INFO_2      CHAR(8) ,
+       3 SPACE_56    CHAR(2) ,
+       3 MESSAGE     CHAR(20) ;
+
+ DCL 1 SLOG_OPER1_Y2 BASED (P_SLOG) ,
+       3 ASA         CHAR(1) ,
+       3 SPACE_56    CHAR(56),
+       3 OP_COMMAND  CHAR(2) ;
+
+ DCL 1 SLOG_OPER2_Y2 BASED (P_SLOG) ,
+       3 ASA         CHAR(1) ,
+       3 SPACE_56    CHAR(56),
+       3 HASP_ID     CHAR(8) ,
+       3 SPACE_12    CHAR(12),
+       3 STATUS_TXT  CHAR(14) ;
+
+ /** 4-BYTE YEAR SYSLOG RECORD FORMATS (YYYYDDD)                   */
+
+ DCL 1 SLOG_REC_Y4   BASED (P_SLOG) ,    /* YEAR FORMAT IS 4 BYTES */
+       3 ASA         CHAR(1) ,
+       3 LOG_CODE1   CHAR(1) ,
+       3 LOG_CODE2   CHAR(1) ,
+       3 LOG_CODE3   CHAR(7) ,
+       3 SPACE_11    CHAR(1) ,
+       3 LPAR        CHAR(8) ,
+       3 SPACE_16    CHAR(1) ,
+       3 DATE_TIME   CHAR(19),           /* YEAR FORMAT IS 4 BYTES */
+       3 SPACE_37    CHAR(1) ,
+       3 USERID      CHAR(8) ,
+       3 SPACE_47    CHAR(1) ,
+       3 INFO_2      CHAR(8) ,
+       3 SPACE_56    CHAR(2) ,
+       3 MESSAGE     CHAR(20) ;
+
+ DCL 1 SLOG_OPER1_Y4 BASED (P_SLOG) ,
+       3 ASA         CHAR(1) ,
+       3 SPACE_58    CHAR(58),
+       3 OP_COMMAND  CHAR(2) ;
+
+ DCL 1 SLOG_OPER2_Y4 BASED (P_SLOG) ,
+       3 ASA         CHAR(1) ,
+       3 SPACE_58    CHAR(58),
+       3 HASP_ID     CHAR(8) ,
+       3 SPACE_12    CHAR(12),
+       3 STATUS_TXT  CHAR(14) ;
+
+ /** PROGRAM INTERNAL VARIABLES                                    */
+
+ DCL SLOG_COUNT      FIXED BIN(31) INIT(0) ;
+ DCL LOGF_OUT_COUNT  FIXED BIN(31) INIT(0) ;
+ DCL LPAR_COUNT      FIXED BIN(31) INIT(0) ;
+
+ DCL DATETIME        BUILTIN ;
+ DCL HIGH            BUILTIN ;
+ DCL PLISRTA         BUILTIN ;
+ DCL SUBSTR          BUILTIN ;
+ DCL TRANSLATE       BUILTIN ;
+
+ DCL DATE_TIME_17    CHAR(17) INIT('') ;  /* 2-BYTE FORMAT YY        */
+ DCL DATE_TIME_19    CHAR(19) INIT('') ;  /* 4-BYTE FORMAT YYYY      */
+ DCL CURRENT_LPAR    CHAR(8)  INIT('') ;
+ DCL STORE_LPAR      CHAR(8)  INIT('') ;
+ DCL RUN_DATE        CHAR(10) INIT('') ;
+ DCL HIGH1           CHAR(1)  INIT(HIGH(1));
+ DCL HIGH8           CHAR(8)  INIT(HIGH(8));
+ DCL P_SLOG          POINTER ;
+
+ DCL 1 LOG_CODE1_ARRAY(26),
+       3 LOG_CODE      CHAR(1),
+       3 CODE_COUNT    FIXED BIN (31) ,
+       3 C_COUNT       FIXED BIN (31) ,
+       3 OP_ARRAY(0:26),             /* ELEMENT 0 = UNSPECIFIED */
+         5 OP_CODE     CHAR(2) ,
+         5 OP_COUNT    FIXED BIN (31) ,
+       3 I_COUNT       FIXED BIN (31) ,
+       3 R_COUNT       FIXED BIN (31) ,
+       3 HASP892_COUNT FIXED BIN (31) ,
+       3 U_COUNT       FIXED BIN (31) ,
+       3 NS_CODE2      FIXED BIN (31) ;
+
+ DCL 1 USER ,
+       3 LPAR          CHAR(8) INIT('') ,
+       3 ID            CHAR(8) INIT('') ;
+
+ DCL OP_USER_STRING    CHAR(22) INIT('') ;
+ DCL OP_SAVE_STRING    CHAR(22) INIT('') ;
+
+ DCL OP_USER_STORE     CHAR(22) CONTROLLED ;
+ DCL OP_USER_ARRAY(OP_USER_COUNT) CHAR(22) CONTROLLED ;
+ DCL OP_USER_COUNT     FIXED BIN(31) INIT(0) ;
+
+ DCL TOTAL_CODE_COUNT  FIXED BIN (31) INIT(0) ;
+ DCL TOTAL_HASP_COUNT  FIXED BIN (31) INIT(0) ;
+ DCL DRAINED_STATUS    FIXED BIN (31) INIT(0) ;
+ DCL INACTIVE_STATUS   FIXED BIN (31) INIT(0) ;
+ DCL STARTING_STATUS   FIXED BIN (31) INIT(0) ;
+ DCL TOTAL_C_COUNT     FIXED BIN (31) INIT(0) ;
+ DCL TOTAL_I_COUNT     FIXED BIN (31) INIT(0) ;
+ DCL TOTAL_R_COUNT     FIXED BIN (31) INIT(0) ;
+ DCL TOTAL_U_COUNT     FIXED BIN (31) INIT(0) ;
+ DCL TOTAL_NS_CODE2    FIXED BIN (31) INIT(0) ;
+
+ DCL I                 FIXED BIN(31) INIT(0) ;
+ DCL J                 FIXED BIN(31) INIT(0) ;
+ DCL SORT_RETURN       FIXED BIN(31) INIT(0) ;
+ DCL SORTIN_COUNT      FIXED BIN(31) INIT(0) ;
+
+ DCL OTHER_COUNT       FIXED BIN(31) INIT(0) ;
+ DCL OTHER_CODE2_COUNT FIXED BIN(31) INIT(0) ;
+ DCL USERID_COUNT      FIXED BIN(31) INIT(0) ;
+ DCL THIS_USERID_COUNT PIC'ZZZ,ZZZ,ZZ9' INIT(0) ;
+ DCL THIS_USERID_CHAR  CHAR(11) DEF THIS_USERID_COUNT ;
+
+ DCL START_DATE_Y2   CHAR(17) INIT('                 ') ;
+ DCL ENDED_DATE_Y2   CHAR(17) INIT('                 ') ;
+ DCL START_DATE_Y4   CHAR(19) INIT('                   ') ;
+ DCL ENDED_DATE_Y4   CHAR(19) INIT('                   ') ;
+
+ DCL LPAR_NAME(50)   CHAR(8) ;  /* CREATED IN PART 1 OF PROGRAM    */
+
+ DCL STORE_ID        CHAR(8)  INIT('') ;
+ DCL ALPHABET        CHAR(26) INIT('ABCDEFGHIJKLMNOPQRSTUVWXYZ') ;
+ DCL COMMAND_TITLE   CHAR(21) INIT('          OP COMMAND ') ;
+
+ DCL EOF_SYSLOGF     BIT(1) ALIGNED INIT('0'B);
+ DCL EOF_LOGFOUT     BIT(1) ALIGNED INIT('0'B);
+ DCL EOF_SORTOUT     BIT(1) ALIGNED INIT('0'B);
+ DCL EOF_OPUSERS     BIT(1) ALIGNED INIT('0'B);
+ DCL LIST_UNORDERED  BIT(1) ALIGNED INIT('1'B);
+
+ ON ENDFILE(SYSLOGF) BEGIN ;
+    EOF_SYSLOGF = '1'B ;
+    ALLOCATE SLOG_REC ;
+    SLOG_REC.LOG_CODE1 = HIGH1 ;
+    SLOG_REC.LPAR      = HIGH8 ;
+    END ;
+
+ ON ENDFILE(LOGFOUT) BEGIN ;
+    EOF_LOGFOUT = '1'B ;
+    ALLOCATE SLOG_REC_Y2 ;
+    SLOG_REC_Y2.LOG_CODE1 = HIGH1 ;
+    SLOG_REC_Y2.LPAR      = HIGH8 ;
+    ALLOCATE SLOG_REC_Y4 ;
+    SLOG_REC_Y4.LOG_CODE1 = HIGH1 ;
+    SLOG_REC_Y4.LPAR      = HIGH8 ;
+    END ;
+
+ ON ENDFILE(SORTOUT) BEGIN ;
+    EOF_SORTOUT = '1'B ;
+    END ;
+
+ ON ENDFILE(OPUSERS) BEGIN ;
+    EOF_OPUSERS = '1'B ;
+    END ;
+
+ ON ERROR SNAP BEGIN;
+    ON ERROR SYSTEM;
+       PUT DATA;
+       STOP;
+       END;
+
+ /*** INITIALIZE VARIABLES READY FOR MAINLINE PART 2 PROCESSING ***/
+
+ DO I = 1 TO 26 ;
+    LOG_CODE1_ARRAY(I).LOG_CODE   = SUBSTR(ALPHABET,I,1) ;
+    LOG_CODE1_ARRAY(I).CODE_COUNT = 0 ;
+    LOG_CODE1_ARRAY(I).C_COUNT    = 0 ;
+    DO J = 0 TO 26 ;
+       IF J = 0
+       THEN LOG_CODE1_ARRAY(I).OP_ARRAY(J).OP_CODE = 'ZZ' ;
+       ELSE LOG_CODE1_ARRAY(I).OP_ARRAY(J).OP_CODE =
+                                          '$'||SUBSTR(ALPHABET,J,1);
+       LOG_CODE1_ARRAY(I).OP_ARRAY(J).OP_COUNT = 0 ;
+       END ;
+    LOG_CODE1_ARRAY(I).I_COUNT  = 0 ;
+    LOG_CODE1_ARRAY(I).R_COUNT  = 0 ;
+    LOG_CODE1_ARRAY(I).HASP892_COUNT = 0 ;
+    LOG_CODE1_ARRAY(I).U_COUNT  = 0 ;
+    LOG_CODE1_ARRAY(I).NS_CODE2 = 0 ;
+    END ;
+
+ /********************************************************************/
+ /*****      M A I N L I N E   P R O C E S S I N G               *****/
+ /********************************************************************/
+
+   OPEN FILE (SYSLOGF),
+        FILE (LOGFIN)  OUTPUT ,
+        FILE (SYSLOGO),
+        FILE (HASP892),
+        FILE (SORTIN)  OUTPUT ,
+        FILE (OPUSERS) OUTPUT ,
+        FILE (REPORT) ;
+
+   RUN_DATE = TRANSLATE('78/56/1234',DATETIME,'12345678XXXXXXXXXXX') ;
+
+ /********************************************************************/
+ /****    P A R T  1 - PRE-FORMAT OF MAIN INPUT SYSLOGF FILE(S)   ****/
+ /**** INITIAL PASS OF INPUTS & PRE-FORMAT FOR PART 2 OF PROGRAM  ****/
+ /********************************************************************/
+
+   DO I = 1 TO 50 ;
+      LPAR_NAME(I) = '        ' ;
+      END ;
+
+   PUT FILE (REPORT) SKIP EDIT
+     ('******************************************')  (COL(15),A)
+     ('*****       SYSLOG PRE-FORMAT        *****')  (COL(15),A)
+     ('RUN DATE : ',RUN_DATE)                        (X(2),A,A)
+     ('******************************************')  (COL(15),A) ;
+
+   READ FILE(SYSLOGF) SET (P_SLOG) ;    /* READ FIRST INPUT RECORD */
+
+   DO WHILE(^EOF_SYSLOGF) ;
+      SLOG_COUNT = SLOG_COUNT + 1 ;
+      IF SLOG_REC.LOG_CODE1 = ' '
+       | SLOG_REC_TYPE.SPECIAL = 'X !'
+      THEN ;                                /* IGNORE THIS RECORD   */
+      ELSE DO ;                             /* CARRY ON PROCESSING  */
+           IF SLOG_REC.LPAR ^= '        '
+           THEN DO ;
+                CURRENT_LPAR = SLOG_REC.LPAR ;
+                DO I = 1 TO 50 WHILE (LPAR_NAME(I) ^= CURRENT_LPAR) ;
+                   IF LPAR_NAME(I) = '        '
+                   THEN DO ;
+                        LPAR_NAME(I) = CURRENT_LPAR ;
+                        LPAR_COUNT   = LPAR_COUNT + 1 ;
+                        I = 51 ;
+                        END ;
+                   END ;
+                IF SLOG_REC_TYPE.SPACE_1 = ' '
+                 & SLOG_REC_TYPE.SPACE_2 = '  ' /* 2-BYTE YEAR FORMAT */
+                THEN DO ;
+                     DATE_TIME_17 = SLOG_REC_Y2.DATE_TIME ;
+                     DATE_TIME_19 = '' ;
+                     END ;
+                ELSE DO ;
+                     DATE_TIME_17 = '' ;
+                     DATE_TIME_19 = SLOG_REC_Y4.DATE_TIME ;
+                     END ;
+                END ;
+           ELSE DO ;
+                IF (SLOG_REC.LPAR='        ' & SLOG_REC.LOG_CODE1^=' ')
+                 | SUBSTR(SLOG_REC.LPAR,1,1) = ' '
+                THEN DO ;
+                     SLOG_REC.LPAR = CURRENT_LPAR ;
+                     IF DATE_TIME_17 ^= ''
+                     THEN SLOG_REC_Y2.DATE_TIME = DATE_TIME_17 ;
+                     ELSE SLOG_REC_Y4.DATE_TIME = DATE_TIME_19 ;
+                     END ;
+                END ;
+           WRITE FILE(LOGFIN) FROM (SLOG_RECORD) ;
+           LOGF_OUT_COUNT = LOGF_OUT_COUNT + 1 ;
+           END ;
+      READ FILE(SYSLOGF) SET (P_SLOG) ;
+      END ;
+
+ /*********************************************************************/
+ /*** INPUT RECORDS FOR LPAR CONSUMED - REPORT TOTALS FOR THIS LPAR ***/
+ /*********************************************************************/
+
+   IF LPAR_COUNT > 0
+   THEN DO WHILE (LIST_UNORDERED) ;
+           LIST_UNORDERED = '0'B ;
+           DO I = 1 TO LPAR_COUNT - 1 ;
+              IF LPAR_NAME(I) > LPAR_NAME(I+1)
+              THEN DO ;
+                   CURRENT_LPAR   = LPAR_NAME(I) ;
+                   LPAR_NAME(I)   = LPAR_NAME(I+1);
+                   LPAR_NAME(I+1) = CURRENT_LPAR ;
+                   LIST_UNORDERED = '1'B ;
+                   END ;
+              END ;
+           END ;
+
+   PUT FILE (REPORT) SKIP EDIT
+    ('***                                  ') (COL(15),A)
+    ('***  INPUT  SYSLOG COUNT = ')           (COL(15),A)
+    (SLOG_COUNT)                              (P'ZZZ,ZZZ,ZZ9')
+    ('***                                  ') (COL(15),A)
+    ('***  OUTPUT SYSLOG COUNT = ')           (COL(15),A)
+    (LOGF_OUT_COUNT)                          (P'ZZZ,ZZZ,ZZ9')
+    ('***                                  ') (COL(15),A) ;
+   IF LPAR_COUNT = 1
+   THEN PUT FILE (REPORT) SKIP EDIT
+    ('***  THERE WAS 1 LPAR ON INPUT : ')     (COL(15),A)
+    ('***                                  ') (COL(15),A) ;
+   ELSE PUT FILE (REPORT) SKIP EDIT
+    ('***  THERE WERE ',LPAR_COUNT)           (COL(15),A,P'Z9')
+    (' LPARS ON INPUT :   ')                  (A)
+    ('***                                  ') (COL(15),A) ;
+   DO I = 1 TO 50 WHILE (LPAR_NAME(I) ^= '         ') ;
+      PUT FILE (REPORT) SKIP EDIT
+    ('***            ',LPAR_NAME(I))               (COL(15),A,A) ;
+      END ;
+   PUT FILE (REPORT) SKIP EDIT
+    ('***                                  ')      (COL(15),A)
+    ('******************************************') (COL(15),A)
+    ('***      END OF SYSLOG PRE-FORMAT      ***') (COL(15),A)
+    ('******************************************') (COL(15),A) ;
+
+   CLOSE FILE (LOGFIN) ;
+   CALL PLISRTA (' SORT FIELDS=(12,27,CH,A) ',
+                 ' RECORD TYPE=F,LENGTH=(133)',
+                  8192*40960,
+                  SORT_RETURN,
+                 'LOGF') ;
+
+   IF SORT_RETURN ^= 0
+   THEN DO ;
+        PUT FILE (SYSPRINT) SKIP(2) EDIT
+          ('>>>********************<<<')     (COL(5),A)
+          ('LOGF SORT FAILURE -- CODE ')     (COL(5),A)
+          (SORT_RETURN)                      (P'999')
+          ('>>>********************<<<')     (COL(5),A) ;
+        STOP ;
+        END ;
+   SLOG_COUNT = 0 ;
+
+   CLOSE FILE(SYSLOGF),
+         FILE(LOGFIN) ,
+         FILE(LOGFOUT) ;
+
+ /********************************************************************/
+ /*** PART 2 - FULL REPORT PER PARTITION FOLLOWING FROM PRE-FORMAT ***/
+ /********************************************************************/
+
+   PUT FILE (REPORT) SKIP EDIT
+     ('***                                    ***')  (COL(15),A)
+     ('******************************************')  (COL(15),A)
+     ('*****  INDIVIDUAL SYSLOG STATISTICS  *****')  (COL(15),A)
+     ('******************************************')  (COL(15),A)
+     ('***                                       ')  (COL(15),A) ;
+
+   EOF_LOGFOUT = '0'B ;
+
+   OPEN FILE (LOGFOUT) INPUT ,
+        FILE (OPUSERS) OUTPUT ,
+        FILE (SORTIN)  OUTPUT ;
+
+   READ FILE(LOGFOUT) SET (P_SLOG) ;    /* READ FIRST INPUT RECORD */
+
+   DO WHILE(^EOF_LOGFOUT) ;
+      CURRENT_LPAR = SLOG_REC_Y2.LPAR ;
+      IF SLOG_REC_TYPE.SPACE_1 = ' '
+       & SLOG_REC_TYPE.SPACE_2 = '  '      /* 2-BYTE YEAR FORMAT */
+      THEN DO WHILE (^EOF_LOGFOUT & SLOG_REC_Y2.LPAR = CURRENT_LPAR);
+              SLOG_COUNT = SLOG_COUNT + 1 ;
+              DO I = 1 TO 26 WHILE
+                  (SLOG_REC_Y2.LOG_CODE1^=LOG_CODE1_ARRAY(I).LOG_CODE);
+                 END ;
+              IF I < 27
+              THEN DO ;                  /* CHECK SECOND CHARACTER */
+                   IF START_DATE_Y2 = '                '
+                   THEN START_DATE_Y2 = SLOG_REC_Y2.DATE_TIME; /*1ST*/
+                   ELSE ENDED_DATE_Y2 = SLOG_REC_Y2.DATE_TIME; /*LST*/
+                   LOG_CODE1_ARRAY(I).CODE_COUNT =
+                                   LOG_CODE1_ARRAY(I).CODE_COUNT + 1 ;
+                   SELECT (SLOG_REC_Y2.LOG_CODE2) ;
+                   WHEN('C')
+                     DO ;
+                     LOG_CODE1_ARRAY(I).C_COUNT =
+                                     LOG_CODE1_ARRAY(I).C_COUNT + 1;
+                     DO J = 1 TO 26 ;
+                        IF SLOG_OPER1_Y2.OP_COMMAND =
+                           LOG_CODE1_ARRAY(I).OP_ARRAY(J).OP_CODE
+                        THEN
+                          DO ;
+                          LOG_CODE1_ARRAY(I).OP_ARRAY(J).OP_COUNT =
+                          LOG_CODE1_ARRAY(I).OP_ARRAY(J).OP_COUNT +1;
+                          USER.LPAR = SLOG_REC_Y2.LPAR ;
+                          USER.ID   = SLOG_REC_Y2.USERID ;
+                          SORTIN_COUNT = SORTIN_COUNT + 1 ;
+                          WRITE FILE(SORTIN)  FROM (USER) ;
+                          WRITE FILE(SYSLOGO) FROM (SLOG_RECORD) ;
+                          J = 99 ;/* FALSE END OF LOOP : MAKE > 27 */
+                          END ;
+                        END ;
+                     IF J = 27 /* REAL END OF LOOP : NO OP CODE */
+                     THEN LOG_CODE1_ARRAY(I).OP_ARRAY(0).OP_COUNT =
+                          LOG_CODE1_ARRAY(I).OP_ARRAY(0).OP_COUNT + 1;
+                     END ;
+                   WHEN('I')
+                     LOG_CODE1_ARRAY(I).I_COUNT =
+                                   LOG_CODE1_ARRAY(I).I_COUNT + 1;
+                   WHEN('R')
+                     DO ;
+                     LOG_CODE1_ARRAY(I).R_COUNT =
+                                   LOG_CODE1_ARRAY(I).R_COUNT + 1;
+                     SELECT (SLOG_OPER2_Y2.HASP_ID) ;
+                     WHEN('$HASP892')
+                       DO ;
+                       LOG_CODE1_ARRAY(I).HASP892_COUNT =
+                            LOG_CODE1_ARRAY(I).HASP892_COUNT + 1 ;
+                       SELECT (SLOG_OPER2_Y2.STATUS_TXT) ;
+                       WHEN ('STATUS=INACTIV')
+                         INACTIVE_STATUS = INACTIVE_STATUS + 1 ;
+                       WHEN ('STATUS=STARTIN')
+                         STARTING_STATUS = STARTING_STATUS + 1 ;
+                       WHEN ('STATUS=DRAINED')
+                         DRAINED_STATUS  = DRAINED_STATUS  + 1 ;
+                       OTHERWISE ;
+                       END ;
+                       WRITE FILE(HASP892) FROM (SLOG_RECORD) ;
+                       END ;
+                     OTHERWISE ;
+                     END ;
+                     END ;
+                   WHEN('U')
+                     LOG_CODE1_ARRAY(I).U_COUNT =
+                                     LOG_CODE1_ARRAY(I).U_COUNT + 1;
+                   OTHERWISE
+                     DO ;
+                     OTHER_CODE2_COUNT = OTHER_CODE2_COUNT + 1 ;
+                     LOG_CODE1_ARRAY(I).NS_CODE2 =
+                                   LOG_CODE1_ARRAY(I).NS_CODE2+1;
+                     END ;
+                   END ;
+                   END ;
+              ELSE DO ;
+                   OTHER_COUNT = OTHER_COUNT + 1 ;
+                   WRITE FILE(SYSLOGO) FROM (SLOG_RECORD) ;
+                   END ;
+
+              READ FILE(LOGFOUT) SET (P_SLOG) ;
+              END;                  /* END OF DO WHILE THIS LPAR Y2 ***/
+                                    /* ELSE PROCESS THIS LPAR Y4    ***/
+      ELSE DO WHILE (^EOF_LOGFOUT & SLOG_REC_Y4.LPAR = CURRENT_LPAR);
+              SLOG_COUNT = SLOG_COUNT + 1 ;
+              DO I = 1 TO 26 WHILE
+                 (SLOG_REC_Y4.LOG_CODE1 ^= LOG_CODE1_ARRAY(I).LOG_CODE);
+                 END ;
+              IF I < 27
+              THEN DO ;                    /* CHECK SECOND CHARACTER */
+                   IF START_DATE_Y4 = '                  '
+                   THEN START_DATE_Y4  = SLOG_REC_Y4.DATE_TIME; /*1ST*/
+                   ELSE ENDED_DATE_Y4  = SLOG_REC_Y4.DATE_TIME; /*LST*/
+                   LOG_CODE1_ARRAY(I).CODE_COUNT =
+                                   LOG_CODE1_ARRAY(I).CODE_COUNT + 1 ;
+                   SELECT (SLOG_REC_Y4.LOG_CODE2) ;
+                   WHEN('C')
+                     DO ;
+                     LOG_CODE1_ARRAY(I).C_COUNT =
+                                   LOG_CODE1_ARRAY(I).C_COUNT + 1;
+                     DO J = 1 TO 26 ;
+                        IF SLOG_OPER1_Y4.OP_COMMAND =
+                           LOG_CODE1_ARRAY(I).OP_ARRAY(J).OP_CODE
+                        THEN
+                          DO ;
+                          LOG_CODE1_ARRAY(I).OP_ARRAY(J).OP_COUNT =
+                          LOG_CODE1_ARRAY(I).OP_ARRAY(J).OP_COUNT +1;
+                          USER.LPAR = SLOG_REC_Y4.LPAR ;
+                          USER.ID   = SLOG_REC_Y4.USERID ;
+                          SORTIN_COUNT = SORTIN_COUNT + 1 ;
+                          WRITE FILE(SORTIN)  FROM (USER) ;
+                          WRITE FILE(SYSLOGO) FROM (SLOG_RECORD) ;
+                          J = 99 ;/* FALSE END OF LOOP : MAKE > 27 */
+                          END ;
+                        END ;
+                     IF J = 27 /* REAL END OF LOOP : NO OP CODE */
+                     THEN LOG_CODE1_ARRAY(I).OP_ARRAY(0).OP_COUNT =
+                          LOG_CODE1_ARRAY(I).OP_ARRAY(0).OP_COUNT + 1;
+                     END ;
+                   WHEN('I')
+                     LOG_CODE1_ARRAY(I).I_COUNT =
+                                   LOG_CODE1_ARRAY(I).I_COUNT + 1;
+                   WHEN('R')
+                     DO ;
+                     LOG_CODE1_ARRAY(I).R_COUNT =
+                                   LOG_CODE1_ARRAY(I).R_COUNT + 1;
+                     SELECT (SLOG_OPER2_Y4.HASP_ID) ;
+                     WHEN('$HASP892')
+                       DO ;
+                       LOG_CODE1_ARRAY(I).HASP892_COUNT =
+                            LOG_CODE1_ARRAY(I).HASP892_COUNT + 1 ;
+                       SELECT (SLOG_OPER2_Y4.STATUS_TXT) ;
+                       WHEN ('STATUS=INACTIV')
+                         INACTIVE_STATUS = INACTIVE_STATUS + 1 ;
+                       WHEN ('STATUS=STARTIN')
+                         STARTING_STATUS = STARTING_STATUS + 1 ;
+                       WHEN ('STATUS=DRAINED')
+                         DRAINED_STATUS  = DRAINED_STATUS  + 1 ;
+                       OTHERWISE ;
+                       END ;
+                       WRITE FILE(HASP892) FROM (SLOG_RECORD) ;
+                       END ;
+                     OTHERWISE ;
+                     END ;
+                     END ;
+                   WHEN('U')
+                     LOG_CODE1_ARRAY(I).U_COUNT =
+                                     LOG_CODE1_ARRAY(I).U_COUNT + 1;
+                   OTHERWISE
+                     DO ;
+                     OTHER_CODE2_COUNT = OTHER_CODE2_COUNT + 1 ;
+                     LOG_CODE1_ARRAY(I).NS_CODE2 =
+                                   LOG_CODE1_ARRAY(I).NS_CODE2 + 1;
+                     END ;
+                   END ;
+                   END ;
+              ELSE DO ;
+                   OTHER_COUNT = OTHER_COUNT + 1 ;
+                   WRITE FILE(SYSLOGO) FROM (SLOG_RECORD) ;
+                   END ;
+
+              READ FILE(LOGFOUT) SET (P_SLOG) ;
+              END;                  /* END OF DO WHILE THIS LPAR Y4 ***/
+
+ /*** SORT THE LPAR-USERID RECORDS FOR REPORTING IN THIS LPAR       ***/
+
+      CLOSE FILE (SORTIN) ;
+
+      IF SORTIN_COUNT > 0
+      THEN DO ;
+           CALL PLISRTA (' SORT FIELDS=(1,16,CH,A) ',
+                         ' RECORD TYPE=F,LENGTH=(16) ',
+                         4096*4096,
+                         SORT_RETURN,
+                         'SORT') ;
+
+           IF SORT_RETURN ^= 0
+           THEN PUT FILE (SYSPRINT) SKIP(2) EDIT
+                  ('>>>**  **  **  **  **  ***<<<')  (COL(5),A)
+                  ('>>> INTERNAL USERIDS SORT <<<')  (COL(5),A)
+                  ('>>> SORT FAILED - RETURN CODE ') (COL(5),A)
+                  (SORT_RETURN)                      (P'999')
+                  ('>>>***  **  **  **  **  **<<<')  (COL(5),A);
+           END ;
+
+      EOF_SORTOUT = '0'B ;
+
+      OPEN FILE(SORTOUT) INPUT ;
+
+      READ FILE (SORTOUT) INTO (USER) ;
+
+      DO WHILE(^EOF_SORTOUT) ;
+         STORE_LPAR = USER.LPAR ;
+         STORE_ID   = USER.ID ;
+         DO WHILE(^EOF_SORTOUT & USER.LPAR = STORE_LPAR
+                               & USER.ID   = STORE_ID) ;
+            USERID_COUNT = USERID_COUNT + 1 ;
+            READ FILE (SORTOUT) INTO (USER) ;
+            END ;
+         THIS_USERID_COUNT = USERID_COUNT ;
+         OP_USER_STRING = STORE_ID ||' = '|| THIS_USERID_CHAR ;
+         WRITE FILE (OPUSERS) FROM (OP_USER_STRING) ;
+         USERID_COUNT = 0 ;
+         END ;
+
+      CLOSE FILE(OPUSERS) ,
+            FILE(SORTIN)  ,
+            FILE(SORTOUT) ;
+
+ /*********************************************************************/
+ /*** INPUT RECORDS FOR LPAR CONSUMED - REPORT TOTALS FOR THIS LPAR ***/
+ /*********************************************************************/
+
+      PUT FILE (REPORT) SKIP EDIT
+        ('***     ********************* ')         (COL(15),A)
+        ('***     *   LPAR ',CURRENT_LPAR,'   *')  (COL(15),A,A,A)
+        ('***     ********************* ')         (COL(15),A)
+        ('***                             ')       (COL(15),A)
+        ('***  DATE / TIME OF LOG START : ')       (COL(15),A) ;
+      IF START_DATE_Y2 ^= '                 '
+      THEN PUT FILE (REPORT) EDIT
+        (START_DATE_Y2)                            (A) ;
+      ELSE PUT FILE (REPORT) EDIT
+        (START_DATE_Y4)                            (A) ;
+      PUT FILE (REPORT) SKIP EDIT
+        ('***  DATE / TIME OF LOG END   : ')       (COL(15),A) ;
+      IF ENDED_DATE_Y2 ^= '                 '
+      THEN PUT FILE (REPORT) EDIT
+        (ENDED_DATE_Y2)                            (A) ;
+      ELSE PUT FILE (REPORT) EDIT
+        (ENDED_DATE_Y4)                            (A) ;
+      PUT FILE (REPORT) SKIP EDIT
+        ('***                                  ')  (COL(15),A)
+        ('***  INPUT SYSLOG COUNT = ')             (COL(15),A)
+        (SLOG_COUNT)                               (P'ZZZ,ZZZ,ZZ9') ;
+
+      DO I = 1 TO 26 ;
+         IF LOG_CODE1_ARRAY(I).CODE_COUNT > 0
+         THEN DO ;
+              PUT FILE (REPORT) SKIP EDIT
+                ('***                       ')     (COL(15),A)
+                ('***  PRIMARY MESSAGE ID = ')     (COL(15),A)
+                (LOG_CODE1_ARRAY(I).LOG_CODE)      (A)
+                ('***         TOTAL COUNT = ')     (COL(15),A)
+                (LOG_CODE1_ARRAY(I).CODE_COUNT)    (P'ZZZ,ZZZ,ZZ9')
+                ('***  ==================   ===========') (COL(15),A)
+                ('***     C  RECORD COUNT = ')     (COL(15),A)
+                (LOG_CODE1_ARRAY(I).C_COUNT)       (P'ZZZ,ZZZ,ZZ9') ;
+              IF LOG_CODE1_ARRAY(I).C_COUNT ^= 0
+              THEN DO ;
+                   COMMAND_TITLE = '          OP COMMAND ' ;
+                   DO J = 1 TO 26 ;
+                      IF LOG_CODE1_ARRAY(I).OP_ARRAY(J).OP_COUNT > 0
+                      THEN PUT FILE (REPORT) SKIP EDIT
+                          (COMMAND_TITLE)                  (COL(15),A)
+                          (LOG_CODE1_ARRAY(I).OP_ARRAY(J).OP_CODE) (A)
+                          (' = ')                                  (A)
+                          (LOG_CODE1_ARRAY(I).OP_ARRAY(J).OP_COUNT)
+                                                      (P'ZZZ,ZZZ,ZZ9');
+                      COMMAND_TITLE = '                     ' ;
+                      END ;
+                   IF J = 27
+                   THEN PUT FILE (REPORT) SKIP EDIT
+                          ('           UNRECOGNIZED = ')   (COL(15),A)
+                          (LOG_CODE1_ARRAY(I).OP_ARRAY(0).OP_COUNT)
+                                                      (P'ZZZ,ZZZ,ZZ9');
+
+                   END ;
+              PUT FILE (REPORT) SKIP EDIT
+                ('***     I  RECORD COUNT = ')     (COL(15),A)
+                (LOG_CODE1_ARRAY(I).I_COUNT)       (P'ZZZ,ZZZ,ZZ9')
+                ('***     R  RECORD COUNT = ')     (COL(15),A)
+                (LOG_CODE1_ARRAY(I).R_COUNT)       (P'ZZZ,ZZZ,ZZ9');
+              IF LOG_CODE1_ARRAY(I).HASP892_COUNT ^= 0
+              THEN PUT FILE (REPORT) SKIP EDIT
+                     ('          HASP892 COUNT = ')(COL(15),A)
+                 (LOG_CODE1_ARRAY(I).HASP892_COUNT)(P'ZZZ,ZZZ,ZZ9')
+                     (' (INITIATOR ACTIVITY)') (A) ;
+              PUT FILE (REPORT) SKIP EDIT
+                ('***     U  RECORD COUNT = ')     (COL(15),A)
+                (LOG_CODE1_ARRAY(I).U_COUNT)       (P'ZZZ,ZZZ,ZZ9')
+                ('***        NON-SPECIFIC = ')     (COL(15),A)
+                (LOG_CODE1_ARRAY(I).NS_CODE2)      (P'ZZZ,ZZZ,ZZ9')
+                ('***                       ===========')(COL(15),A)
+                ('***               TOTAL = ')     (COL(15),A)
+                (LOG_CODE1_ARRAY(I).CODE_COUNT)    (P'ZZZ,ZZZ,ZZ9')
+                ('***                       ===========')(COL(15),A);
+              TOTAL_CODE_COUNT = TOTAL_CODE_COUNT
+                               + LOG_CODE1_ARRAY(I).CODE_COUNT ;
+              TOTAL_HASP_COUNT = TOTAL_HASP_COUNT
+                               + LOG_CODE1_ARRAY(I).HASP892_COUNT ;
+              TOTAL_C_COUNT    = TOTAL_C_COUNT
+                               + LOG_CODE1_ARRAY(I).C_COUNT ;
+              TOTAL_I_COUNT    = TOTAL_I_COUNT
+                               + LOG_CODE1_ARRAY(I).I_COUNT ;
+              TOTAL_R_COUNT    = TOTAL_R_COUNT
+                               + LOG_CODE1_ARRAY(I).R_COUNT ;
+              TOTAL_U_COUNT    = TOTAL_U_COUNT
+                               + LOG_CODE1_ARRAY(I).U_COUNT ;
+              TOTAL_NS_CODE2   = TOTAL_NS_CODE2
+                               + LOG_CODE1_ARRAY(I).NS_CODE2 ;
+              END ;
+         END ;
+
+      PUT FILE (REPORT) SKIP EDIT
+        ('***                        ')         (COL(15),A)
+        ('***  ',CURRENT_LPAR,' OVERALL TOTALS')(COL(15),A,A,A)
+        ('***  ======================')         (COL(15),A)
+        ('***     C  RECORD COUNT = ')          (COL(15),A)
+        (TOTAL_C_COUNT)                         (P'ZZZ,ZZZ,ZZ9') ;
+
+      IF SORTIN_COUNT > 0
+      THEN DO ;
+           OPEN FILE (OPUSERS) INPUT ;
+           READ FILE (OPUSERS) INTO (OP_USER_STRING) ;
+           DO WHILE(^EOF_OPUSERS) ;
+              ALLOCATE OP_USER_STORE ;
+              OP_USER_STORE = OP_USER_STRING ;
+              OP_USER_COUNT = OP_USER_COUNT + 1 ;
+              READ FILE (OPUSERS) INTO (OP_USER_STRING) ;
+              END ;
+           ALLOCATE OP_USER_ARRAY ;
+           DO I = OP_USER_COUNT TO 1 BY -1 ;
+              OP_USER_ARRAY(I) = OP_USER_STORE ;
+              FREE OP_USER_STORE ;
+              END ;
+
+           ALLOCATE OP_USER_STORE ;    /* USE AS SORT STORE       */
+           LIST_UNORDERED = '1'B ;     /* FORCE 1ST PASS ON ARRAY */
+
+           DO WHILE (LIST_UNORDERED) ; /* ENSURE NUMERIC ORDER    */
+              LIST_UNORDERED = '0'B ;
+              DO I = 1 TO OP_USER_COUNT - 1 ;
+                 IF SUBSTR(OP_USER_ARRAY(I),12,11) >
+                              SUBSTR(OP_USER_ARRAY(I+1),12,11)
+                 THEN DO ;
+                      OP_USER_STORE    = OP_USER_ARRAY(I) ;
+                      OP_USER_ARRAY(I) = OP_USER_ARRAY(I+1);
+                      OP_USER_ARRAY(I+1) = OP_USER_STORE ;
+                      LIST_UNORDERED     = '1'B ;
+                      END ;
+                 END ;
+              END ;
+
+           FREE OP_USER_STORE ;
+
+           PUT FILE (REPORT) SKIP EDIT
+             ('CMD COUNT BY USER')   (COL(21),A) ;
+           DO I = OP_USER_COUNT TO 1 BY -1; /* IN DESCENDING ORDER */
+              PUT FILE (REPORT) SKIP EDIT
+               (OP_USER_ARRAY(I))    (COL(30),A) ;
+              END ;
+
+           CLOSE FILE (OPUSERS) ;
+
+           FREE OP_USER_ARRAY ;
+           OP_USER_COUNT = 0 ;
+           SORTIN_COUNT  = 0 ;
+           EOF_SORTOUT   = '0'B ;
+           EOF_OPUSERS   = '0'B ;
+           END ;              /* OF PROCESSING SORTIN FOR THIS LPAR */
+
+      PUT FILE (REPORT) SKIP EDIT
+        ('***     I  RECORD COUNT = ')        (COL(15),A)
+        (TOTAL_I_COUNT)                       (P'ZZZ,ZZZ,ZZ9')
+        ('***     R  RECORD COUNT = ')        (COL(15),A)
+        (TOTAL_R_COUNT)                       (P'ZZZ,ZZZ,ZZ9')
+        ('          HASP892 COUNT = ')        (COL(15),A)
+        (TOTAL_HASP_COUNT)                    (P'ZZZ,ZZZ,ZZ9')
+        (' (INITIATOR ACTIVITY)')             (A) ;
+      IF TOTAL_HASP_COUNT ^= 0
+      THEN PUT FILE (REPORT) SKIP EDIT
+             ('      STATUS : INACTIVE = ')   (COL(15),A)
+             (INACTIVE_STATUS)                (P'ZZZ,ZZZ,ZZ9')
+             ('               STARTING = ')   (COL(15),A)
+             (STARTING_STATUS)                (P'ZZZ,ZZZ,ZZ9')
+             ('                DRAINED = ')   (COL(15),A)
+             (DRAINED_STATUS)                 (P'ZZZ,ZZZ,ZZ9') ;
+      PUT FILE (REPORT) SKIP EDIT
+        ('***     U  RECORD COUNT = ')        (COL(15),A)
+        (TOTAL_U_COUNT)                       (P'ZZZ,ZZZ,ZZ9')
+        ('***        NON-SPECIFIC = ')        (COL(15),A)
+        (TOTAL_NS_CODE2)                      (P'ZZZ,ZZZ,ZZ9')
+        ('***                       ===========')    (COL(15),A)
+        ('***      OVERALL TOTALS = ')               (COL(15),A)
+        (TOTAL_CODE_COUNT)                           (P'ZZZ,ZZZ,ZZ9')
+        ('***                       ===========')      (COL(15),A)
+        ('***                             ')           (COL(15),A)
+        ('***     ********************* ')             (COL(15),A)
+        ('***     *  END OF ',CURRENT_LPAR,'  *')      (COL(15),A,A,A)
+        ('***     ********************* ')             (COL(15),A)
+        ('***                             ')           (COL(15),A)
+        ('******************************************') (COL(15),A)
+        ('***                       ')                 (COL(15),A) ;
+
+      /*** RESET COUNTER FIELDS FOR NEXT LPAR PROCESSING ***/
+
+      DO I = 1 TO 26 ;
+         LOG_CODE1_ARRAY(I).CODE_COUNT = 0 ;
+         LOG_CODE1_ARRAY(I).C_COUNT    = 0 ;
+         DO J = 0 TO 26 ;
+            LOG_CODE1_ARRAY(I).OP_ARRAY(J).OP_COUNT = 0 ;
+            END ;
+         LOG_CODE1_ARRAY(I).I_COUNT  = 0 ;
+         LOG_CODE1_ARRAY(I).R_COUNT  = 0 ;
+         LOG_CODE1_ARRAY(I).HASP892_COUNT = 0 ;
+         LOG_CODE1_ARRAY(I).U_COUNT  = 0 ;
+         LOG_CODE1_ARRAY(I).NS_CODE2 = 0 ;
+         END ;
+
+      LIST_UNORDERED   = '1'B ;
+      SLOG_COUNT       = 0 ;
+      SORTIN_COUNT     = 0 ;
+      TOTAL_C_COUNT    = 0 ;
+      TOTAL_I_COUNT    = 0 ;
+      TOTAL_R_COUNT    = 0 ;
+      DRAINED_STATUS   = 0 ;
+      INACTIVE_STATUS  = 0 ;
+      STARTING_STATUS  = 0 ;
+      TOTAL_U_COUNT    = 0 ;
+      TOTAL_NS_CODE2   = 0 ;
+      TOTAL_CODE_COUNT = 0 ;
+      TOTAL_HASP_COUNT = 0 ;
+      START_DATE_Y2    = '                ' ;
+      ENDED_DATE_Y2    = '                ' ;
+      START_DATE_Y4    = '                  ' ;
+      ENDED_DATE_Y4    = '                  ' ;
+      END ;               /* OF ALL PROCESSING FOR CURRENT LPAR      */
+
+   /******************************************************************/
+   /*** FINAL REPORT TEXT AT END OF SYSLOG REPORTS                   */
+   /******************************************************************/
+
+   PUT FILE (REPORT) SKIP EDIT
+     ('***  KEY TO SYSLOG MESSAGE')                      (COL(15),A)
+     ('***  =====================')                      (COL(15),A)
+     ('***                                            ') (COL(15),A)
+     ('***  VALID SYSLOG FIRST CHARACTERS ARE:')         (COL(15),A)
+     ('***  ==================================')         (COL(15),A)
+     ('***    D - MULTI-LINE MESSAGE DATA LINE        ') (COL(15),A)
+     ('***    E - MULTI-LINE MESSAGE DATA/END LINE    ') (COL(15),A)
+     ('***    L - MULTI-LINE MESSAGE LABEL LINE       ') (COL(15),A)
+     ('***    M - FIRST LINE OF A MULTI-LINE MESSAGE  ') (COL(15),A)
+     ('***    N - SINGLE-LINE MESSAGE                 ') (COL(15),A)
+     ('***    O - LOG COMMAND INPUT                   ') (COL(15),A)
+     ('***    S - CONTINUATION OF PREVIOUS LINE       ') (COL(15),A)
+     ('***    W - SINGLE-LINE MESSAGE WITH REPLY      ') (COL(15),A)
+     ('***    X - NON-HARDCOPY OR LOG COMMAND SOURCE  ') (COL(15),A)
+     ('***                                            ') (COL(15),A)
+     ('***  VALID SYSLOG SECOND CHARACTERS ARE:       ') (COL(15),A)
+     ('***  ===================================       ') (COL(15),A)
+     ('***    C - COMMAND ISSUED BY OPERATOR          ') (COL(15),A)
+     ('***    I - INTERNALLY ISSUED COMMAND           ') (COL(15),A)
+     ('***    R - COMMAND RESPONSE MESSAGE            ') (COL(15),A)
+     ('***    U - COMMAND FROM UNKNOWN CONSOLE ID     ') (COL(15),A)
+     ('***                                            ') (COL(15),A)
+     ('******************************************')      (COL(15),A)
+     ('*****       NORMAL END OF JOB        *****')      (COL(15),A)
+     ('******************************************')      (COL(15),A) ;
+
+   CLOSE FILE(LOGFOUT),
+         FILE(SYSLOGO),
+         FILE(HASP892),
+         FILE(REPORT) ;
+
+ /********************************************************************/
+ /*****      L O G I C A L   E N D   O F   P R O G R A M         *****/
+ /********************************************************************/
+
+   END;                  /* OF PROGRAM SLOGREPT                      */

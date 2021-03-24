@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?totaltestVersion 20.5.2.v20210203-0313_126?>
+<!--Topaz for Total Test 20.5.2.v20210203-0313_126 Mar 5, 2021 11:01:37 AM-->
+<interface:interface xmlns:interface="http://www.compuware.com/model/xml/interface" xmlns:listructure="http://www.compuware.com/model/xml/listructure" xmlns:properties="http://www.compuware.com/model/xml/properties" alias="" id="Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Interfaces/CWKTDB2X_Insert_1_RATE.interface">
+  <interface:description></interface:description>
+  <interface:argument listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_EMP-NUM.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_EMP-NUM.listructure">
+    <interface:baseTypeExtension baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_EMP-NUM.listructure#EMP_NUM">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:stringType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_EMP-NUM.listructure#EMP_NUM.EMP_NUM">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+  </interface:argument>
+  <interface:argument listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-TYPE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-TYPE.listructure">
+    <interface:baseTypeExtension baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-TYPE.listructure#WA_EMP_TYPE">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:stringType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-TYPE.listructure#WA_EMP_TYPE.WA_EMP_TYPE">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+  </interface:argument>
+  <interface:argument listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_REGION.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_REGION.listructure">
+    <interface:baseTypeExtension baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_REGION.listructure#REGION">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:numberType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_REGION.listructure#REGION.REGION">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+  </interface:argument>
+  <interface:argument listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-NAME.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-NAME.listructure">
+    <interface:baseTypeExtension baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-NAME.listructure#WA_EMP_NAME">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:stringType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-NAME.listructure#WA_EMP_NAME.WA_EMP_NAME">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+  </interface:argument>
+  <interface:argument listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STREET.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STREET.listructure">
+    <interface:baseTypeExtension baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STREET.listructure#WA_EMP_STREET">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:stringType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STREET.listructure#WA_EMP_STREET.WA_EMP_STREET">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+  </interface:argument>
+  <interface:argument listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-CITY.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-CITY.listructure">
+    <interface:baseTypeExtension baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-CITY.listructure#WA_EMP_CITY">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:stringType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-CITY.listructure#WA_EMP_CITY.WA_EMP_CITY">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+  </interface:argument>
+  <interface:argument listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STATE.listructure">
+    <interface:baseTypeExtension baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STATE.listructure#WA_EMP_STATE">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:stringType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STATE.listructure#WA_EMP_STATE.WA_EMP_STATE">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+  </interface:argument>
+  <interface:argument listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-ZIP.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-ZIP.listructure">
+    <interface:baseTypeExtension baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-ZIP.listructure#WA_EMP_ZIP">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:stringType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-ZIP.listructure#WA_EMP_ZIP.WA_EMP_ZIP">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+  </interface:argument>
+  <interface:argument listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HIREDATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HIREDATE.listructure">
+    <interface:baseTypeExtension baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HIREDATE.listructure#HIREDATE">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:stringType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HIREDATE.listructure#HIREDATE.HIREDATE">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+  </interface:argument>
+  <interface:argument listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HOURS.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HOURS.listructure">
+    <interface:baseTypeExtension baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HOURS.listructure#HOURS">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:numberType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HOURS.listructure#HOURS.HOURS">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+  </interface:argument>
+  <interface:argument listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_RATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_RATE.listructure">
+    <interface:baseTypeExtension baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_RATE.listructure#RATE">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:numberType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_RATE.listructure#RATE.RATE">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+  </interface:argument>
+</interface:interface>

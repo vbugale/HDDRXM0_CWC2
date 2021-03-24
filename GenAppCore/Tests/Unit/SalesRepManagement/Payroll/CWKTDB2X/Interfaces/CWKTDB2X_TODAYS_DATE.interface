@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?totaltestVersion 20.5.2.v20210203-0313_126?>
+<!--Topaz for Total Test 20.5.2.v20210203-0313_126 Mar 5, 2021 11:01:26 AM-->
+<interface:interface xmlns:interface="http://www.compuware.com/model/xml/interface" xmlns:listructure="http://www.compuware.com/model/xml/listructure" xmlns:properties="http://www.compuware.com/model/xml/properties" alias="" id="Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Interfaces/CWKTDB2X_TODAYS_DATE.interface">
+  <interface:description></interface:description>
+  <interface:argument listructure="../Structures/CWKTDB2X_TODAYS-DATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_TODAYS-DATE.listructure">
+    <interface:baseTypeExtension baseType="listructure:structType ../Structures/CWKTDB2X_TODAYS-DATE.listructure#TODAYS_DATE">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:stringType ../Structures/CWKTDB2X_TODAYS-DATE.listructure#TODAYS_DATE.TODAYS_DATE">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+  </interface:argument>
+</interface:interface>

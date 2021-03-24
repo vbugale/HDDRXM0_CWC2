@@ -1,0 +1,725 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<stub:stub xmlns:listructure="http://www.compuware.com/model/xml/listructure" xmlns:properties="http://www.compuware.com/model/xml/properties" xmlns:stub="http://www.compuware.com/model/xml/stub" alias="" encoding="1047" id="Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Stubs/CWKTDB2X_Insert_1_SQL_01.stub" nextCalltoken="140007" stubtype="SQL" target="Insert" token="140000">
+  <stub:description>Created: Mar 5, 2021 11:01:37 AM</stub:description>
+  <stub:stubdata id="0" name="Insert">
+    <stub:interface>../Interfaces/CWKTDB2X_Insert_1_RATE.interface#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Interfaces/CWKTDB2X_Insert_1_RATE.interface</stub:interface>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_EMP-NUM.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_EMP-NUM.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_EMP-NUM.listructure#EMP_NUM" id="arg0.EMP_NUM">
+        <properties:properties>
+          <properties:property name="value" type="string">F0F2F5F2F3</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-TYPE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-TYPE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-TYPE.listructure#WA_EMP_TYPE" id="arg1.WA_EMP_TYPE">
+        <properties:properties>
+          <properties:property name="value" type="string">C8</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_REGION.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_REGION.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_REGION.listructure#REGION" id="arg2.REGION">
+        <properties:properties>
+          <properties:property name="value" type="string">0001</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-NAME.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-NAME.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-NAME.listructure#WA_EMP_NAME" id="arg3.WA_EMP_NAME">
+        <properties:properties>
+          <properties:property name="value" type="string">D1D6C8D540E2D4C9E3C84040404040</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STREET.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STREET.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STREET.listructure#WA_EMP_STREET" id="arg4.WA_EMP_STREET">
+        <properties:properties>
+          <properties:property name="value" type="string">F5F4F5F640C5D3D440E2E3D9C5C5E3</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-CITY.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-CITY.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-CITY.listructure#WA_EMP_CITY" id="arg5.WA_EMP_CITY">
+        <properties:properties>
+          <properties:property name="value" type="string">E6C1E8D5C5404040</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STATE.listructure#WA_EMP_STATE" id="arg6.WA_EMP_STATE">
+        <properties:properties>
+          <properties:property name="value" type="string">C9D3</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-ZIP.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-ZIP.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-ZIP.listructure#WA_EMP_ZIP" id="arg7.WA_EMP_ZIP">
+        <properties:properties>
+          <properties:property name="value" type="string">F7F7F9F0F240404040</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HIREDATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HIREDATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HIREDATE.listructure#HIREDATE" id="arg8.HIREDATE">
+        <properties:properties>
+          <properties:property name="value" type="string">F8F1F1F0F1F5</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HOURS.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HOURS.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HOURS.listructure#HOURS" id="arg9.HOURS">
+        <properties:properties>
+          <properties:property name="value" type="string">030C</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_RATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_RATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_RATE.listructure#RATE" id="arg10.RATE">
+        <properties:properties>
+          <properties:property name="value" type="string">0002500C</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:checkconditions/>
+    <stub:sqlStatus>
+      <stub:statement type="Insert">
+        <stub:text>      *****         EXEC SQL
+      *****            INSERT INTO FTS_DEMOTAB
+      *****            (
+      *****            EMP_NUM               ,
+      *****            WAGE_TYPE             ,
+      *****            REGION                ,
+      *****            FIRST_LAST_NAME       ,
+      *****            STREET_ADDR           ,
+      *****            CITY                  ,
+      *****            STATE                 ,
+      *****            ZIP                   ,
+      *****            HIREDATE              ,
+      *****            HOURS                 ,
+      *****            RATE   )
+      *****            VALUES (
+      *****           :EMP-NUM            ,
+      *****           :WA-EMP-TYPE     ,
+      *****           :REGION         ,
+      *****           :WA-EMP-NAME           ,
+      *****           :WA-EMP-STREET         ,
+      *****           :WA-EMP-CITY           ,
+      *****           :WA-EMP-STATE          ,
+      *****           :WA-EMP-ZIP            ,
+      *****           :HIREDATE              ,
+      *****           :HOURS                 ,
+      *****           :RATE           )
+      *****            END-EXEC
+</stub:text>
+      </stub:statement>
+      <stub:plist>
+        <stub:headerData>00404000001E43574B54444232581B2B82E11A4EE9E0000837ECA79037ECCDC00000000004B800E80000037D0000000000000000000000000000000000000000</stub:headerData>
+        <stub:varRawData>E2D8D3C4C1404008000001F4000B000B01C4000537ECA81837ECC528000040404040404040404040404040404040404040404040404040404040404001C4000137ECC07537ECC528000040404040404040404040404040404040404040404040404040404040404001F4000237ECA81E37ECC528000040404040404040404040404040404040404040404040404040404040404001C4000F37ECC07737ECC528000040404040404040404040404040404040404040404040404040404040404001C4000F37ECC08637ECC528000040404040404040404040404040404040404040404040404040404040404001C4000837ECC09537ECC528000040404040404040404040404040404040404040404040404040404040404001C4000237ECC09D37ECC528000040404040404040404040404040404040404040404040404040404040404001C4000937ECC09F37ECC528000040404040404040404040404040404040404040404040404040404040404001C4000637ECA85437ECC528000040404040404040404040404040404040404040404040404040404040404001E4020037ECA85A37ECC528000040404040404040404040404040404040404040404040404040404040404001E4060237ECA85C37ECC5280000404040404040404040404040404040404040404040404040404040404040</stub:varRawData>
+      </stub:plist>
+      <stub:sqlca callToken="140001">
+        <stub:rawData>E2D8D3C3C14040400000008800000000000040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040C4E2D54040404040000000000000000000000001FFFFFFFF00000000000000004040404040404040404040F0F0F0F0F0</stub:rawData>
+      </stub:sqlca>
+    </stub:sqlStatus>
+  </stub:stubdata>
+  <stub:stubdata id="1" name="Insert">
+    <stub:interface>../Interfaces/CWKTDB2X_Insert_1_RATE.interface#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Interfaces/CWKTDB2X_Insert_1_RATE.interface</stub:interface>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_EMP-NUM.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_EMP-NUM.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_EMP-NUM.listructure#EMP_NUM" id="arg0.EMP_NUM">
+        <properties:properties>
+          <properties:property name="value" type="string">F0F1F5F6F8</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-TYPE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-TYPE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-TYPE.listructure#WA_EMP_TYPE" id="arg1.WA_EMP_TYPE">
+        <properties:properties>
+          <properties:property name="value" type="string">C8</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_REGION.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_REGION.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_REGION.listructure#REGION" id="arg2.REGION">
+        <properties:properties>
+          <properties:property name="value" type="string">0004</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-NAME.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-NAME.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-NAME.listructure#WA_EMP_NAME" id="arg3.WA_EMP_NAME">
+        <properties:properties>
+          <properties:property name="value" type="string">E3C8D6D4C1E240D3D6D5C740404040</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STREET.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STREET.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STREET.listructure#WA_EMP_STREET" id="arg4.WA_EMP_STREET">
+        <properties:properties>
+          <properties:property name="value" type="string">F1F240D9C1C3C540E2E3D9C5C5E340</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-CITY.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-CITY.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-CITY.listructure#WA_EMP_CITY" id="arg5.WA_EMP_CITY">
+        <properties:properties>
+          <properties:property name="value" type="string">E2C1D540D1D6E2C5</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STATE.listructure#WA_EMP_STATE" id="arg6.WA_EMP_STATE">
+        <properties:properties>
+          <properties:property name="value" type="string">C3C1</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-ZIP.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-ZIP.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-ZIP.listructure#WA_EMP_ZIP" id="arg7.WA_EMP_ZIP">
+        <properties:properties>
+          <properties:property name="value" type="string">F9F5F1F2F640404040</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HIREDATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HIREDATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HIREDATE.listructure#HIREDATE" id="arg8.HIREDATE">
+        <properties:properties>
+          <properties:property name="value" type="string">F8F7F0F3F3F1</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HOURS.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HOURS.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HOURS.listructure#HOURS" id="arg9.HOURS">
+        <properties:properties>
+          <properties:property name="value" type="string">040C</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_RATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_RATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_RATE.listructure#RATE" id="arg10.RATE">
+        <properties:properties>
+          <properties:property name="value" type="string">0002500C</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:checkconditions/>
+    <stub:sqlStatus>
+      <stub:statement type="Insert">
+        <stub:text>      *****         EXEC SQL
+      *****            INSERT INTO FTS_DEMOTAB
+      *****            (
+      *****            EMP_NUM               ,
+      *****            WAGE_TYPE             ,
+      *****            REGION                ,
+      *****            FIRST_LAST_NAME       ,
+      *****            STREET_ADDR           ,
+      *****            CITY                  ,
+      *****            STATE                 ,
+      *****            ZIP                   ,
+      *****            HIREDATE              ,
+      *****            HOURS                 ,
+      *****            RATE   )
+      *****            VALUES (
+      *****           :EMP-NUM            ,
+      *****           :WA-EMP-TYPE     ,
+      *****           :REGION         ,
+      *****           :WA-EMP-NAME           ,
+      *****           :WA-EMP-STREET         ,
+      *****           :WA-EMP-CITY           ,
+      *****           :WA-EMP-STATE          ,
+      *****           :WA-EMP-ZIP            ,
+      *****           :HIREDATE              ,
+      *****           :HOURS                 ,
+      *****           :RATE           )
+      *****            END-EXEC
+</stub:text>
+      </stub:statement>
+      <stub:plist>
+        <stub:headerData>00404000001E43574B54444232581B2B82E11A4EE9E0000837ECA79037ECCDC00000000004B800E80000037D0000000000000000000000000000000000000000</stub:headerData>
+        <stub:varRawData>E2D8D3C4C1404008000001F4000B000B01C4000537ECA81837ECC528000040404040404040404040404040404040404040404040404040404040404001C4000137ECC07537ECC528000040404040404040404040404040404040404040404040404040404040404001F4000237ECA81E37ECC528000040404040404040404040404040404040404040404040404040404040404001C4000F37ECC07737ECC528000040404040404040404040404040404040404040404040404040404040404001C4000F37ECC08637ECC528000040404040404040404040404040404040404040404040404040404040404001C4000837ECC09537ECC528000040404040404040404040404040404040404040404040404040404040404001C4000237ECC09D37ECC528000040404040404040404040404040404040404040404040404040404040404001C4000937ECC09F37ECC528000040404040404040404040404040404040404040404040404040404040404001C4000637ECA85437ECC528000040404040404040404040404040404040404040404040404040404040404001E4020037ECA85A37ECC528000040404040404040404040404040404040404040404040404040404040404001E4060237ECA85C37ECC5280000404040404040404040404040404040404040404040404040404040404040</stub:varRawData>
+      </stub:plist>
+      <stub:sqlca callToken="140002">
+        <stub:rawData>E2D8D3C3C14040400000008800000000000040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040C4E2D54040404040000000000000000000000001FFFFFFFF00000000000000004040404040404040404040F0F0F0F0F0</stub:rawData>
+      </stub:sqlca>
+    </stub:sqlStatus>
+  </stub:stubdata>
+  <stub:stubdata id="2" name="Insert">
+    <stub:interface>../Interfaces/CWKTDB2X_Insert_1_RATE.interface#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Interfaces/CWKTDB2X_Insert_1_RATE.interface</stub:interface>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_EMP-NUM.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_EMP-NUM.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_EMP-NUM.listructure#EMP_NUM" id="arg0.EMP_NUM">
+        <properties:properties>
+          <properties:property name="value" type="string">F0F3F2F4F1</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-TYPE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-TYPE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-TYPE.listructure#WA_EMP_TYPE" id="arg1.WA_EMP_TYPE">
+        <properties:properties>
+          <properties:property name="value" type="string">C8</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_REGION.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_REGION.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_REGION.listructure#REGION" id="arg2.REGION">
+        <properties:properties>
+          <properties:property name="value" type="string">0003</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-NAME.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-NAME.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-NAME.listructure#WA_EMP_NAME" id="arg3.WA_EMP_NAME">
+        <properties:properties>
+          <properties:property name="value" type="string">D4C1D9C3C9C140E2E4D3D3C9E5C1D5</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STREET.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STREET.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STREET.listructure#WA_EMP_STREET" id="arg4.WA_EMP_STREET">
+        <properties:properties>
+          <properties:property name="value" type="string">F5F540E2D6E4E3C840E2E3D9C5C5E3</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-CITY.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-CITY.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-CITY.listructure#WA_EMP_CITY" id="arg5.WA_EMP_CITY">
+        <properties:properties>
+          <properties:property name="value" type="string">D5C5E640E8D6D9D2</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STATE.listructure#WA_EMP_STATE" id="arg6.WA_EMP_STATE">
+        <properties:properties>
+          <properties:property name="value" type="string">D5E8</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-ZIP.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-ZIP.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-ZIP.listructure#WA_EMP_ZIP" id="arg7.WA_EMP_ZIP">
+        <properties:properties>
+          <properties:property name="value" type="string">F1F0F0F1F740404040</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HIREDATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HIREDATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HIREDATE.listructure#HIREDATE" id="arg8.HIREDATE">
+        <properties:properties>
+          <properties:property name="value" type="string">F9F3F0F4F0F5</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HOURS.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HOURS.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HOURS.listructure#HOURS" id="arg9.HOURS">
+        <properties:properties>
+          <properties:property name="value" type="string">044C</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_RATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_RATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_RATE.listructure#RATE" id="arg10.RATE">
+        <properties:properties>
+          <properties:property name="value" type="string">0003000C</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:checkconditions/>
+    <stub:sqlStatus>
+      <stub:statement type="Insert">
+        <stub:text>      *****         EXEC SQL
+      *****            INSERT INTO FTS_DEMOTAB
+      *****            (
+      *****            EMP_NUM               ,
+      *****            WAGE_TYPE             ,
+      *****            REGION                ,
+      *****            FIRST_LAST_NAME       ,
+      *****            STREET_ADDR           ,
+      *****            CITY                  ,
+      *****            STATE                 ,
+      *****            ZIP                   ,
+      *****            HIREDATE              ,
+      *****            HOURS                 ,
+      *****            RATE   )
+      *****            VALUES (
+      *****           :EMP-NUM            ,
+      *****           :WA-EMP-TYPE     ,
+      *****           :REGION         ,
+      *****           :WA-EMP-NAME           ,
+      *****           :WA-EMP-STREET         ,
+      *****           :WA-EMP-CITY           ,
+      *****           :WA-EMP-STATE          ,
+      *****           :WA-EMP-ZIP            ,
+      *****           :HIREDATE              ,
+      *****           :HOURS                 ,
+      *****           :RATE           )
+      *****            END-EXEC
+</stub:text>
+      </stub:statement>
+      <stub:plist>
+        <stub:headerData>00404000001E43574B54444232581B2B82E11A4EE9E0000837ECA79037ECCDC00000000004B800E80000037D0000000000000000000000000000000000000000</stub:headerData>
+        <stub:varRawData>E2D8D3C4C1404008000001F4000B000B01C4000537ECA81837ECC528000040404040404040404040404040404040404040404040404040404040404001C4000137ECC07537ECC528000040404040404040404040404040404040404040404040404040404040404001F4000237ECA81E37ECC528000040404040404040404040404040404040404040404040404040404040404001C4000F37ECC07737ECC528000040404040404040404040404040404040404040404040404040404040404001C4000F37ECC08637ECC528000040404040404040404040404040404040404040404040404040404040404001C4000837ECC09537ECC528000040404040404040404040404040404040404040404040404040404040404001C4000237ECC09D37ECC528000040404040404040404040404040404040404040404040404040404040404001C4000937ECC09F37ECC528000040404040404040404040404040404040404040404040404040404040404001C4000637ECA85437ECC528000040404040404040404040404040404040404040404040404040404040404001E4020037ECA85A37ECC528000040404040404040404040404040404040404040404040404040404040404001E4060237ECA85C37ECC5280000404040404040404040404040404040404040404040404040404040404040</stub:varRawData>
+      </stub:plist>
+      <stub:sqlca callToken="140003">
+        <stub:rawData>E2D8D3C3C14040400000008800000000000040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040C4E2D54040404040000000000000000000000001FFFFFFFF00000000000000004040404040404040404040F0F0F0F0F0</stub:rawData>
+      </stub:sqlca>
+    </stub:sqlStatus>
+  </stub:stubdata>
+  <stub:stubdata id="3" name="Insert">
+    <stub:interface>../Interfaces/CWKTDB2X_Insert_1_RATE.interface#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Interfaces/CWKTDB2X_Insert_1_RATE.interface</stub:interface>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_EMP-NUM.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_EMP-NUM.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_EMP-NUM.listructure#EMP_NUM" id="arg0.EMP_NUM">
+        <properties:properties>
+          <properties:property name="value" type="string">F0F1F3F4F3</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-TYPE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-TYPE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-TYPE.listructure#WA_EMP_TYPE" id="arg1.WA_EMP_TYPE">
+        <properties:properties>
+          <properties:property name="value" type="string">C8</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_REGION.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_REGION.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_REGION.listructure#REGION" id="arg2.REGION">
+        <properties:properties>
+          <properties:property name="value" type="string">0003</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-NAME.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-NAME.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-NAME.listructure#WA_EMP_NAME" id="arg3.WA_EMP_NAME">
+        <properties:properties>
+          <properties:property name="value" type="string">D1C1D4C5E240D4D6D9D9C9E2D6D540</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STREET.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STREET.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STREET.listructure#WA_EMP_STREET" id="arg4.WA_EMP_STREET">
+        <properties:properties>
+          <properties:property name="value" type="string">F1F160C140D4C1D7D3C540C1E5C540</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-CITY.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-CITY.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-CITY.listructure#WA_EMP_CITY" id="arg5.WA_EMP_CITY">
+        <properties:properties>
+          <properties:property name="value" type="string">E2E8D9C1C3E4E2C5</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STATE.listructure#WA_EMP_STATE" id="arg6.WA_EMP_STATE">
+        <properties:properties>
+          <properties:property name="value" type="string">D5E8</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-ZIP.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-ZIP.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-ZIP.listructure#WA_EMP_ZIP" id="arg7.WA_EMP_ZIP">
+        <properties:properties>
+          <properties:property name="value" type="string">F1F2F1F2F340404040</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HIREDATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HIREDATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HIREDATE.listructure#HIREDATE" id="arg8.HIREDATE">
+        <properties:properties>
+          <properties:property name="value" type="string">F9F1F0F9F1F3</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HOURS.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HOURS.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HOURS.listructure#HOURS" id="arg9.HOURS">
+        <properties:properties>
+          <properties:property name="value" type="string">037C</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_RATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_RATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_RATE.listructure#RATE" id="arg10.RATE">
+        <properties:properties>
+          <properties:property name="value" type="string">0002750C</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:checkconditions/>
+    <stub:sqlStatus>
+      <stub:statement type="Insert">
+        <stub:text>      *****         EXEC SQL
+      *****            INSERT INTO FTS_DEMOTAB
+      *****            (
+      *****            EMP_NUM               ,
+      *****            WAGE_TYPE             ,
+      *****            REGION                ,
+      *****            FIRST_LAST_NAME       ,
+      *****            STREET_ADDR           ,
+      *****            CITY                  ,
+      *****            STATE                 ,
+      *****            ZIP                   ,
+      *****            HIREDATE              ,
+      *****            HOURS                 ,
+      *****            RATE   )
+      *****            VALUES (
+      *****           :EMP-NUM            ,
+      *****           :WA-EMP-TYPE     ,
+      *****           :REGION         ,
+      *****           :WA-EMP-NAME           ,
+      *****           :WA-EMP-STREET         ,
+      *****           :WA-EMP-CITY           ,
+      *****           :WA-EMP-STATE          ,
+      *****           :WA-EMP-ZIP            ,
+      *****           :HIREDATE              ,
+      *****           :HOURS                 ,
+      *****           :RATE           )
+      *****            END-EXEC
+</stub:text>
+      </stub:statement>
+      <stub:plist>
+        <stub:headerData>00404000001E43574B54444232581B2B82E11A4EE9E0000837ECA79037ECCDC00000000004B800E80000037D0000000000000000000000000000000000000000</stub:headerData>
+        <stub:varRawData>E2D8D3C4C1404008000001F4000B000B01C4000537ECA81837ECC528000040404040404040404040404040404040404040404040404040404040404001C4000137ECC07537ECC528000040404040404040404040404040404040404040404040404040404040404001F4000237ECA81E37ECC528000040404040404040404040404040404040404040404040404040404040404001C4000F37ECC07737ECC528000040404040404040404040404040404040404040404040404040404040404001C4000F37ECC08637ECC528000040404040404040404040404040404040404040404040404040404040404001C4000837ECC09537ECC528000040404040404040404040404040404040404040404040404040404040404001C4000237ECC09D37ECC528000040404040404040404040404040404040404040404040404040404040404001C4000937ECC09F37ECC528000040404040404040404040404040404040404040404040404040404040404001C4000637ECA85437ECC528000040404040404040404040404040404040404040404040404040404040404001E4020037ECA85A37ECC528000040404040404040404040404040404040404040404040404040404040404001E4060237ECA85C37ECC5280000404040404040404040404040404040404040404040404040404040404040</stub:varRawData>
+      </stub:plist>
+      <stub:sqlca callToken="140004">
+        <stub:rawData>E2D8D3C3C14040400000008800000000000040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040C4E2D54040404040000000000000000000000001FFFFFFFF00000000000000004040404040404040404040F0F0F0F0F0</stub:rawData>
+      </stub:sqlca>
+    </stub:sqlStatus>
+  </stub:stubdata>
+  <stub:stubdata id="4" name="Insert">
+    <stub:interface>../Interfaces/CWKTDB2X_Insert_1_RATE.interface#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Interfaces/CWKTDB2X_Insert_1_RATE.interface</stub:interface>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_EMP-NUM.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_EMP-NUM.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_EMP-NUM.listructure#EMP_NUM" id="arg0.EMP_NUM">
+        <properties:properties>
+          <properties:property name="value" type="string">F0F2F1F7F1</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-TYPE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-TYPE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-TYPE.listructure#WA_EMP_TYPE" id="arg1.WA_EMP_TYPE">
+        <properties:properties>
+          <properties:property name="value" type="string">C8</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_REGION.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_REGION.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_REGION.listructure#REGION" id="arg2.REGION">
+        <properties:properties>
+          <properties:property name="value" type="string">0004</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-NAME.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-NAME.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-NAME.listructure#WA_EMP_NAME" id="arg3.WA_EMP_NAME">
+        <properties:properties>
+          <properties:property name="value" type="string">E2C1D4E4C5D340C1C4C4C1D4E24040</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STREET.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STREET.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STREET.listructure#WA_EMP_STREET" id="arg4.WA_EMP_STREET">
+        <properties:properties>
+          <properties:property name="value" type="string">F9F0F040D3C9D5C3D6D3D540C3E340</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-CITY.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-CITY.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-CITY.listructure#WA_EMP_CITY" id="arg5.WA_EMP_CITY">
+        <properties:properties>
+          <properties:property name="value" type="string">D9C5D5D640404040</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STATE.listructure#WA_EMP_STATE" id="arg6.WA_EMP_STATE">
+        <properties:properties>
+          <properties:property name="value" type="string">D5E5</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-ZIP.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-ZIP.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-ZIP.listructure#WA_EMP_ZIP" id="arg7.WA_EMP_ZIP">
+        <properties:properties>
+          <properties:property name="value" type="string">F8F2F4F3F340404040</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HIREDATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HIREDATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HIREDATE.listructure#HIREDATE" id="arg8.HIREDATE">
+        <properties:properties>
+          <properties:property name="value" type="string">F8F6F0F1F0F2</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HOURS.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HOURS.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HOURS.listructure#HOURS" id="arg9.HOURS">
+        <properties:properties>
+          <properties:property name="value" type="string">042C</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_RATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_RATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_RATE.listructure#RATE" id="arg10.RATE">
+        <properties:properties>
+          <properties:property name="value" type="string">0002750C</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:checkconditions/>
+    <stub:sqlStatus>
+      <stub:statement type="Insert">
+        <stub:text>      *****         EXEC SQL
+      *****            INSERT INTO FTS_DEMOTAB
+      *****            (
+      *****            EMP_NUM               ,
+      *****            WAGE_TYPE             ,
+      *****            REGION                ,
+      *****            FIRST_LAST_NAME       ,
+      *****            STREET_ADDR           ,
+      *****            CITY                  ,
+      *****            STATE                 ,
+      *****            ZIP                   ,
+      *****            HIREDATE              ,
+      *****            HOURS                 ,
+      *****            RATE   )
+      *****            VALUES (
+      *****           :EMP-NUM            ,
+      *****           :WA-EMP-TYPE     ,
+      *****           :REGION         ,
+      *****           :WA-EMP-NAME           ,
+      *****           :WA-EMP-STREET         ,
+      *****           :WA-EMP-CITY           ,
+      *****           :WA-EMP-STATE          ,
+      *****           :WA-EMP-ZIP            ,
+      *****           :HIREDATE              ,
+      *****           :HOURS                 ,
+      *****           :RATE           )
+      *****            END-EXEC
+</stub:text>
+      </stub:statement>
+      <stub:plist>
+        <stub:headerData>00404000001E43574B54444232581B2B82E11A4EE9E0000837ECA79037ECCDC00000000004B800E80000037D0000000000000000000000000000000000000000</stub:headerData>
+        <stub:varRawData>E2D8D3C4C1404008000001F4000B000B01C4000537ECA81837ECC528000040404040404040404040404040404040404040404040404040404040404001C4000137ECC07537ECC528000040404040404040404040404040404040404040404040404040404040404001F4000237ECA81E37ECC528000040404040404040404040404040404040404040404040404040404040404001C4000F37ECC07737ECC528000040404040404040404040404040404040404040404040404040404040404001C4000F37ECC08637ECC528000040404040404040404040404040404040404040404040404040404040404001C4000837ECC09537ECC528000040404040404040404040404040404040404040404040404040404040404001C4000237ECC09D37ECC528000040404040404040404040404040404040404040404040404040404040404001C4000937ECC09F37ECC528000040404040404040404040404040404040404040404040404040404040404001C4000637ECA85437ECC528000040404040404040404040404040404040404040404040404040404040404001E4020037ECA85A37ECC528000040404040404040404040404040404040404040404040404040404040404001E4060237ECA85C37ECC5280000404040404040404040404040404040404040404040404040404040404040</stub:varRawData>
+      </stub:plist>
+      <stub:sqlca callToken="140005">
+        <stub:rawData>E2D8D3C3C14040400000008800000000000040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040C4E2D54040404040000000000000000000000001FFFFFFFF00000000000000004040404040404040404040F0F0F0F0F0</stub:rawData>
+      </stub:sqlca>
+    </stub:sqlStatus>
+  </stub:stubdata>
+  <stub:stubdata id="5" name="Insert">
+    <stub:interface>../Interfaces/CWKTDB2X_Insert_1_RATE.interface#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Interfaces/CWKTDB2X_Insert_1_RATE.interface</stub:interface>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_EMP-NUM.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_EMP-NUM.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_EMP-NUM.listructure#EMP_NUM" id="arg0.EMP_NUM">
+        <properties:properties>
+          <properties:property name="value" type="string">F0F2F1F7F5</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-TYPE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-TYPE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-TYPE.listructure#WA_EMP_TYPE" id="arg1.WA_EMP_TYPE">
+        <properties:properties>
+          <properties:property name="value" type="string">C8</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_REGION.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_REGION.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_REGION.listructure#REGION" id="arg2.REGION">
+        <properties:properties>
+          <properties:property name="value" type="string">0002</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-NAME.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-NAME.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-NAME.listructure#WA_EMP_NAME" id="arg3.WA_EMP_NAME">
+        <properties:properties>
+          <properties:property name="value" type="string">D2C1E3C9C540E6C9D3D3C9C1D4E240</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STREET.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STREET.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STREET.listructure#WA_EMP_STREET" id="arg4.WA_EMP_STREET">
+        <properties:properties>
+          <properties:property name="value" type="string">F1F2F340D4C1C9D540E2E340404040</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-CITY.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-CITY.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-CITY.listructure#WA_EMP_CITY" id="arg5.WA_EMP_CITY">
+        <properties:properties>
+          <properties:property name="value" type="string">C3D6D3E4D4C2E4E2</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-STATE.listructure#WA_EMP_STATE" id="arg6.WA_EMP_STATE">
+        <properties:properties>
+          <properties:property name="value" type="string">D6C8</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-ZIP.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-ZIP.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_WA-EMP-ZIP.listructure#WA_EMP_ZIP" id="arg7.WA_EMP_ZIP">
+        <properties:properties>
+          <properties:property name="value" type="string">F4F3F0F8F240404040</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HIREDATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HIREDATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HIREDATE.listructure#HIREDATE" id="arg8.HIREDATE">
+        <properties:properties>
+          <properties:property name="value" type="string">F9F6F1F0F0F2</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HOURS.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HOURS.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_HOURS.listructure#HOURS" id="arg9.HOURS">
+        <properties:properties>
+          <properties:property name="value" type="string">032C</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_RATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_RATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Insert_RATE.listructure#RATE" id="arg10.RATE">
+        <properties:properties>
+          <properties:property name="value" type="string">0002750C</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:checkconditions/>
+    <stub:sqlStatus>
+      <stub:statement type="Insert">
+        <stub:text>      *****         EXEC SQL
+      *****            INSERT INTO FTS_DEMOTAB
+      *****            (
+      *****            EMP_NUM               ,
+      *****            WAGE_TYPE             ,
+      *****            REGION                ,
+      *****            FIRST_LAST_NAME       ,
+      *****            STREET_ADDR           ,
+      *****            CITY                  ,
+      *****            STATE                 ,
+      *****            ZIP                   ,
+      *****            HIREDATE              ,
+      *****            HOURS                 ,
+      *****            RATE   )
+      *****            VALUES (
+      *****           :EMP-NUM            ,
+      *****           :WA-EMP-TYPE     ,
+      *****           :REGION         ,
+      *****           :WA-EMP-NAME           ,
+      *****           :WA-EMP-STREET         ,
+      *****           :WA-EMP-CITY           ,
+      *****           :WA-EMP-STATE          ,
+      *****           :WA-EMP-ZIP            ,
+      *****           :HIREDATE              ,
+      *****           :HOURS                 ,
+      *****           :RATE           )
+      *****            END-EXEC
+</stub:text>
+      </stub:statement>
+      <stub:plist>
+        <stub:headerData>00404000001E43574B54444232581B2B82E11A4EE9E0000837ECA79037ECCDC00000000004B800E80000037D0000000000000000000000000000000000000000</stub:headerData>
+        <stub:varRawData>E2D8D3C4C1404008000001F4000B000B01C4000537ECA81837ECC528000040404040404040404040404040404040404040404040404040404040404001C4000137ECC07537ECC528000040404040404040404040404040404040404040404040404040404040404001F4000237ECA81E37ECC528000040404040404040404040404040404040404040404040404040404040404001C4000F37ECC07737ECC528000040404040404040404040404040404040404040404040404040404040404001C4000F37ECC08637ECC528000040404040404040404040404040404040404040404040404040404040404001C4000837ECC09537ECC528000040404040404040404040404040404040404040404040404040404040404001C4000237ECC09D37ECC528000040404040404040404040404040404040404040404040404040404040404001C4000937ECC09F37ECC528000040404040404040404040404040404040404040404040404040404040404001C4000637ECA85437ECC528000040404040404040404040404040404040404040404040404040404040404001E4020037ECA85A37ECC528000040404040404040404040404040404040404040404040404040404040404001E4060237ECA85C37ECC5280000404040404040404040404040404040404040404040404040404040404040</stub:varRawData>
+      </stub:plist>
+      <stub:sqlca callToken="140006">
+        <stub:rawData>E2D8D3C3C14040400000008800000000000040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040C4E2D54040404040000000000000000000000001FFFFFFFF00000000000000004040404040404040404040F0F0F0F0F0</stub:rawData>
+      </stub:sqlca>
+    </stub:sqlStatus>
+  </stub:stubdata>
+  <stub:database version="1110"/>
+</stub:stub>

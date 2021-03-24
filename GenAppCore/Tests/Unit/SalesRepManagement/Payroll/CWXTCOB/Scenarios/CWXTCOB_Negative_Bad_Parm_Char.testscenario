@@ -1,0 +1,45 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<?totaltestVersion 20.5.1.v20201214-0405_74?>
+<!--Topaz for Total Test 20.5.1.v20201214-0405_74 Feb 12, 2021 12:24:20 PM-->
+<testscenario:testscenario xmlns:checkconditions="http://www.compuware.com/model/xml/checkconditions" xmlns:listructure="http://www.compuware.com/model/xml/listructure" xmlns:properties="http://www.compuware.com/model/xml/properties" xmlns:testcase="http://www.compuware.com/model/xml/testcase" xmlns:testscenario="http://www.compuware.com/model/xml/testscenario" alias="" id="Tests/Unit/SalesRepManagement/Payroll/CWXTCOB/Scenarios/CWXTCOB_Negative_Bad_Parm_Char.testscenario">
+  <testscenario:description></testscenario:description>
+  <testscenario:testcases>
+    <testscenario:testcase alias="" csect="CWXTCOB" encoding="1047" entrypoint="CWXTCOB#" id="InsuranceCore/Tests/Unit/SalesRepManagement/Payroll/CWXTCOB/Scenarios/CWXTCOB_Positive_Mid_Month.testscenario%23CWXTCOBCase1" target="CWXTCOB">
+      <testcase:description></testcase:description>
+      <testcase:ddio>SALESSUP.GITE.UT2.LOAD</testcase:ddio>
+      <testcase:ddiotype>EMBEDDED</testcase:ddiotype>
+      <testcase:targetCaptureCompileTime>1612858245000</testcase:targetCaptureCompileTime>
+      <testcase:interface>../Interfaces/CWXTCOB.interface#InsuranceCore/Tests/Unit/SalesRepManagement/Payroll/CWXTCOB/Interfaces/CWXTCOB.interface</testcase:interface>
+      <testcase:input listructure="../Structures/CWXTCOB_PARMINFO.listructure#InsuranceCore/Tests/Unit/SalesRepManagement/Payroll/CWXTCOB/Structures/CWXTCOB_PARMINFO.listructure">
+        <testcase:data baseType="listructure:structType ../Structures/CWXTCOB_PARMINFO.listructure#PARMINFO" id="arg0.PARMINFO">
+          <properties:properties>
+            <properties:property name="value" type="string">0005C1C2C3C4C5</properties:property>
+            <properties:property name="expectedValue" type="string">0005C1C2C3C4C5</properties:property>
+            <properties:property name="address" type="string">37A4D568</properties:property>
+          </properties:properties>
+        </testcase:data>
+      </testcase:input>
+      <testcase:output listructure="../Structures/CWXTCOB_PARMINFO.listructure#InsuranceCore/Tests/Unit/SalesRepManagement/Payroll/CWXTCOB/Structures/CWXTCOB_PARMINFO.listructure"/>
+      <testcase:output listructure="../Structures/CWXTCOB_PARMINFO.listructure#InsuranceCore/Tests/Unit/SalesRepManagement/Payroll/CWXTCOB/Structures/CWXTCOB_PARMINFO.listructure"/>
+      <testcase:checkconditions>
+        <checkconditions:complexCheckcondition message="Complex check condition failed" name="Complex check condition"/>
+        <checkconditions:simpleCheckcondition>
+          <checkconditions:expectation></checkconditions:expectation>
+        </checkconditions:simpleCheckcondition>
+      </testcase:checkconditions>
+      <testcase:stubs>
+        <testcase:stub>../Stubs/CWXTCOB_EMPFILE_FILE_Positive.stub#InsuranceCore/Tests/Unit/SalesRepManagement/Payroll/CWXTCOB/Stubs/CWXTCOB_EMPFILE_FILE_Positive.stub</testcase:stub>
+        <testcase:stub>../Stubs/CWXTCOB_RPTFILE_FILE_Negative_Bad_Parm.stub#InsuranceCore/Tests/Unit/SalesRepManagement/Payroll/CWXTCOB/Stubs/CWXTCOB_RPTFILE_FILE_Negative_Bad_Parm.stub</testcase:stub>
+      </testcase:stubs>
+      <testcase:returncode listructure="../Structures/CWXTCOB_RETURN-CODE.listructure#InsuranceCore/Tests/Unit/SalesRepManagement/Payroll/CWXTCOB/Structures/CWXTCOB_RETURN-CODE.listructure">
+        <testcase:data baseType="listructure:structType ../Structures/CWXTCOB_RETURN-CODE.listructure#RETURN_CODE" id="arg0.RETURN_CODE">
+          <properties:properties>
+            <properties:property name="expectedValue" type="string">0000</properties:property>
+          </properties:properties>
+        </testcase:data>
+      </testcase:returncode>
+      <testcase:ddioMemberName>CWXTCOB</testcase:ddioMemberName>
+      <testcase:isNoLinkage>false</testcase:isNoLinkage>
+    </testscenario:testcase>
+  </testscenario:testcases>
+</testscenario:testscenario>

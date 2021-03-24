@@ -1,0 +1,18 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<stub:stub xmlns:listructure="http://www.compuware.com/model/xml/listructure" xmlns:properties="http://www.compuware.com/model/xml/properties" xmlns:stub="http://www.compuware.com/model/xml/stub" alias="" disposition="MOD" encoding="1047" fileStatus="00" id="InsuranceCore/Tests/Unit/SalesRepManagement/Payroll/CWXTCOB/Stubs/CWXTCOB_RPTFILE_FILE_Negative_Bad_Parm.stub" stubtype="QSAM" target="RPTFILE" token="140000">
+  <properties:properties>
+    <properties:property name="bufferType" type="string">BA</properties:property>
+  </properties:properties>
+  <stub:description>Created: Feb 12, 2021 12:24:20 PM</stub:description>
+  <stub:stubdata id="0" name="RPTFILE">
+    <stub:interface>../Interfaces/CWXTCOB_RPTFILE_BLANK_LINE.interface#InsuranceCore/Tests/Unit/SalesRepManagement/Payroll/CWXTCOB/Interfaces/CWXTCOB_RPTFILE_BLANK_LINE.interface</stub:interface>
+    <stub:output listructure="../Structures/CWXTCOB_RPTFILE_BLANK-LINE.listructure#InsuranceCore/Tests/Unit/SalesRepManagement/Payroll/CWXTCOB/Structures/CWXTCOB_RPTFILE_BLANK-LINE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWXTCOB_RPTFILE_BLANK-LINE.listructure#BLANK_LINE" id="arg0.BLANK_LINE">
+        <properties:properties>
+          <properties:property name="value" type="string">404040D7C1D9C1D4C5E3C5D940D3C5D5C7E3C840D6D940C4C1E3C140C9E240C9D5C3D6D9D9C5C3E340404040404040404040404040404040404040404040404040404040404040404040404040404040</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:checkconditions/>
+  </stub:stubdata>
+</stub:stub>

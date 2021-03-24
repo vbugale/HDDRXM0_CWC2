@@ -1,0 +1,33 @@
+!!com.compuware.ispw.wzzms.models.IspwRoot
+ispwApplication:
+  host: ${host}
+  port: 16196
+  runtimeConfig: ispw
+  stream: GITDEMO1
+  application: ${ispw_app}
+  pathMappings:
+  - path: "**/Sources/**"
+    types:
+    - fileExtension: cbldb2
+      ispwType: COB
+      sql: 'Yes'
+  - path: "**/Sources/**"
+    types:
+    - fileExtension: cbl
+      ispwType: COB
+  - path: "**/Sources/**"
+    types:
+    - fileExtension: cpy
+      ispwType: COPY
+  - path: "**/Sources/**"
+    types:
+    - fileExtension: incl
+      ispwType: INCL
+  - path: "**/Sources/**"
+    types:
+    - fileExtension: jcl
+      ispwType: JOB
+  - path: "**/Sources/**"
+    types:
+    - fileExtension: pli
+      ispwType: PLI

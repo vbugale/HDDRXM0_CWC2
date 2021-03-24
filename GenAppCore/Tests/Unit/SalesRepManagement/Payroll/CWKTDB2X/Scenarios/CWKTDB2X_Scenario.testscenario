@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?totaltestVersion 20.5.2.v20210203-0313_126?>
+<!--Topaz for Total Test 20.5.2.v20210203-0313_126 Mar 5, 2021 11:02:58 AM-->
+<testscenario:testscenario xmlns:checkconditions="http://www.compuware.com/model/xml/checkconditions" xmlns:listructure="http://www.compuware.com/model/xml/listructure" xmlns:properties="http://www.compuware.com/model/xml/properties" xmlns:testcase="http://www.compuware.com/model/xml/testcase" xmlns:testscenario="http://www.compuware.com/model/xml/testscenario" alias="" id="Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Scenarios/CWKTDB2X_Scenario.testscenario">
+  <testscenario:description></testscenario:description>
+  <testscenario:testcases>
+    <testscenario:testcase alias="" csect="CWKTDB2X" encoding="1047" entrypoint="CWKTDB2X" id="Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Scenarios/CWKTDB2X_Scenario.testscenario%23CWKTDB2XCase1" target="CWKTDB2X">
+      <testcase:description></testcase:description>
+      <testcase:ddio>SALESSUP.GITE.UT1.LOAD</testcase:ddio>
+      <testcase:ddiotype>EMBEDDED</testcase:ddiotype>
+      <testcase:targetCaptureCompileTime>1614822353000</testcase:targetCaptureCompileTime>
+      <testcase:interface>../Interfaces/CWKTDB2X.interface#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Interfaces/CWKTDB2X.interface</testcase:interface>
+      <testcase:input listructure="../Structures/CWKTDB2X_PARMINFO.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_PARMINFO.listructure">
+        <testcase:data baseType="listructure:structType ../Structures/CWKTDB2X_PARMINFO.listructure#PARMINFO" id="arg0.PARMINFO">
+          <properties:properties>
+            <properties:property name="value" type="string">0005F0F0F0F0F300000000000000</properties:property>
+            <properties:property name="expectedValue" type="string">0005F0F0F0F0F300001554F0F0F8</properties:property>
+            <properties:property name="address" type="string">37C2B568</properties:property>
+          </properties:properties>
+        </testcase:data>
+      </testcase:input>
+      <testcase:checkconditions>
+        <checkconditions:complexCheckcondition message="Complex check condition failed" name="Complex check condition"/>
+      </testcase:checkconditions>
+      <testcase:stubs>
+        <testcase:stub>../Stubs/CWKTDB2X_CWKTDATE_01.stub#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Stubs/CWKTDB2X_CWKTDATE_01.stub</testcase:stub>
+        <testcase:stub>../Stubs/CWKTDB2X_RPTFILE_FILE_01.stub#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Stubs/CWKTDB2X_RPTFILE_FILE_01.stub</testcase:stub>
+        <testcase:stub>../Stubs/CWKTDB2X_EMPFILE_FILE_01.stub#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Stubs/CWKTDB2X_EMPFILE_FILE_01.stub</testcase:stub>
+        <testcase:stub>../Stubs/CWKTDB2X_Insert_1_SQL_01.stub#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Stubs/CWKTDB2X_Insert_1_SQL_01.stub</testcase:stub>
+        <testcase:stub>../Stubs/CWKTDB2X_EMPLOYEE_CURSOR_SQL_01.stub#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Stubs/CWKTDB2X_EMPLOYEE_CURSOR_SQL_01.stub</testcase:stub>
+        <testcase:stub>../Stubs/CWKTDB2X_Update_1_SQL_01.stub#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Stubs/CWKTDB2X_Update_1_SQL_01.stub</testcase:stub>
+        <testcase:stub>../Stubs/CWKTDB2X_Select_1_SQL_01.stub#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Stubs/CWKTDB2X_Select_1_SQL_01.stub</testcase:stub>
+        <testcase:stub>../Stubs/CWKTDB2X_ROLLBACK_1_SQL_01.stub#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Stubs/CWKTDB2X_ROLLBACK_1_SQL_01.stub</testcase:stub>
+        <testcase:stub>../Stubs/CWKTDB2X_DATETIME_01.stub#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Stubs/CWKTDB2X_DATETIME_01.stub</testcase:stub>
+      </testcase:stubs>
+      <testcase:returncode listructure="../Structures/CWKTDB2X_RETURN-CODE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_RETURN-CODE.listructure">
+        <testcase:data baseType="listructure:structType ../Structures/CWKTDB2X_RETURN-CODE.listructure#RETURN_CODE" id="arg0.RETURN_CODE">
+          <properties:properties>
+            <properties:property name="expectedValue" type="string">0000</properties:property>
+          </properties:properties>
+        </testcase:data>
+      </testcase:returncode>
+      <testcase:ddioMemberName>CWKTDB2X</testcase:ddioMemberName>
+      <testcase:isNoLinkage>false</testcase:isNoLinkage>
+    </testscenario:testcase>
+  </testscenario:testcases>
+</testscenario:testscenario>

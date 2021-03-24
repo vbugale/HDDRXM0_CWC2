@@ -1,0 +1,92 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<stub:stub xmlns:listructure="http://www.compuware.com/model/xml/listructure" xmlns:properties="http://www.compuware.com/model/xml/properties" xmlns:stub="http://www.compuware.com/model/xml/stub" alias="" disposition="SHR" encoding="1047" fileStatus="00" id="Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Stubs/CWKTDB2X_EMPFILE_FILE_01.stub" stubtype="QSAM" target="EMPFILE" token="180000">
+  <stub:description>Created: Mar 5, 2021 11:02:58 AM</stub:description>
+  <stub:stubdata id="0" name="EMPFILE">
+    <stub:inputinterface>../Interfaces/CWKTDB2X_EMPFILE_EMPLOYEE_WORK_AREA.interface#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Interfaces/CWKTDB2X_EMPFILE_EMPLOYEE_WORK_AREA.interface</stub:inputinterface>
+    <stub:input listructure="../Structures/CWKTDB2X_EMPFILE_EMPLOYEE-WORK-AREA.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_EMPFILE_EMPLOYEE-WORK-AREA.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_EMPFILE_EMPLOYEE-WORK-AREA.listructure#EMPLOYEE_WORK_AREA" id="arg0.EMPLOYEE_WORK_AREA">
+        <properties:properties>
+          <properties:property name="value" type="string">F0F3F4F3F1C8F2C7C1C9D340D3C1E6D9C5D5C3C54040F1F2F340D5D6D9E3C840C1E5C54040D7D3C1D5D6404040E3E7F5F7F0F1F040404040F3F802500F4040404040404040F8F4F0F6F2F54040404040</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:input>
+    <stub:checkconditions/>
+  </stub:stubdata>
+  <stub:stubdata id="1" name="EMPFILE">
+    <stub:inputinterface>../Interfaces/CWKTDB2X_EMPFILE_EMPLOYEE_WORK_AREA.interface#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Interfaces/CWKTDB2X_EMPFILE_EMPLOYEE_WORK_AREA.interface</stub:inputinterface>
+    <stub:input listructure="../Structures/CWKTDB2X_EMPFILE_EMPLOYEE-WORK-AREA.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_EMPFILE_EMPLOYEE-WORK-AREA.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_EMPFILE_EMPLOYEE-WORK-AREA.listructure#EMPLOYEE_WORK_AREA" id="arg0.EMPLOYEE_WORK_AREA">
+        <properties:properties>
+          <properties:property name="value" type="string">F0F2F5F2F3C8F1D1D6C8D540E2D4C9E3C84040404040F5F4F5F640C5D3D440E2E3D9C5C5E3E6C1E8D5C5404040C9D3F7F7F9F0F240404040F3F002500F4040404040404040F8F1F1F0F1F54040404040</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:input>
+    <stub:checkconditions/>
+  </stub:stubdata>
+  <stub:stubdata id="2" name="EMPFILE">
+    <stub:inputinterface>../Interfaces/CWKTDB2X_EMPFILE_EMPLOYEE_WORK_AREA.interface#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Interfaces/CWKTDB2X_EMPFILE_EMPLOYEE_WORK_AREA.interface</stub:inputinterface>
+    <stub:input listructure="../Structures/CWKTDB2X_EMPFILE_EMPLOYEE-WORK-AREA.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_EMPFILE_EMPLOYEE-WORK-AREA.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_EMPFILE_EMPLOYEE-WORK-AREA.listructure#EMPLOYEE_WORK_AREA" id="arg0.EMPLOYEE_WORK_AREA">
+        <properties:properties>
+          <properties:property name="value" type="string">F0F1F5F6F8C8F4E3C8D6D4C1E240D3D6D5C740404040F1F240D9C1C3C540E2E3D9C5C5E340E2C1D540D1D6E2C5C3C1F9F5F1F2F640404040F4F002500F4040404040404040F8F7F0F3F3F14040404040</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:input>
+    <stub:checkconditions/>
+  </stub:stubdata>
+  <stub:stubdata id="3" name="EMPFILE">
+    <stub:inputinterface>../Interfaces/CWKTDB2X_EMPFILE_EMPLOYEE_WORK_AREA.interface#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Interfaces/CWKTDB2X_EMPFILE_EMPLOYEE_WORK_AREA.interface</stub:inputinterface>
+    <stub:input listructure="../Structures/CWKTDB2X_EMPFILE_EMPLOYEE-WORK-AREA.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_EMPFILE_EMPLOYEE-WORK-AREA.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_EMPFILE_EMPLOYEE-WORK-AREA.listructure#EMPLOYEE_WORK_AREA" id="arg0.EMPLOYEE_WORK_AREA">
+        <properties:properties>
+          <properties:property name="value" type="string">F0F3F2F4F1C8F3D4C1D9C3C9C140E2E4D3D3C9E5C1D5F5F540E2D6E4E3C840E2E3D9C5C5E3D5C5E640E8D6D9D2D5E8F1F0F0F1F740404040F4F403000F4040404040404040F9F3F0F4F0F54040404040</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:input>
+    <stub:checkconditions/>
+  </stub:stubdata>
+  <stub:stubdata id="4" name="EMPFILE">
+    <stub:inputinterface>../Interfaces/CWKTDB2X_EMPFILE_EMPLOYEE_WORK_AREA.interface#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Interfaces/CWKTDB2X_EMPFILE_EMPLOYEE_WORK_AREA.interface</stub:inputinterface>
+    <stub:input listructure="../Structures/CWKTDB2X_EMPFILE_EMPLOYEE-WORK-AREA.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_EMPFILE_EMPLOYEE-WORK-AREA.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_EMPFILE_EMPLOYEE-WORK-AREA.listructure#EMPLOYEE_WORK_AREA" id="arg0.EMPLOYEE_WORK_AREA">
+        <properties:properties>
+          <properties:property name="value" type="string">F0F1F3F4F3C8F3D1C1D4C5E240D4D6D9D9C9E2D6D540F1F160C140D4C1D7D3C540C1E5C540E2E8D9C1C3E4E2C5D5E8F1F2F1F2F340404040F3F702750F4040404040404040F9F1F0F9F1F34040404040</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:input>
+    <stub:checkconditions/>
+  </stub:stubdata>
+  <stub:stubdata id="5" name="EMPFILE">
+    <stub:inputinterface>../Interfaces/CWKTDB2X_EMPFILE_EMPLOYEE_WORK_AREA.interface#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Interfaces/CWKTDB2X_EMPFILE_EMPLOYEE_WORK_AREA.interface</stub:inputinterface>
+    <stub:input listructure="../Structures/CWKTDB2X_EMPFILE_EMPLOYEE-WORK-AREA.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_EMPFILE_EMPLOYEE-WORK-AREA.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_EMPFILE_EMPLOYEE-WORK-AREA.listructure#EMPLOYEE_WORK_AREA" id="arg0.EMPLOYEE_WORK_AREA">
+        <properties:properties>
+          <properties:property name="value" type="string">F0F2F1F7F1C8F4E2C1D4E4C5D340C1C4C4C1D4E24040F9F0F040D3C9D5C3D6D3D540C3E340D9C5D5D640404040D5E5F8F2F4F3F340404040F4F202750F4040404040404040F8F6F0F1F0F24040404040</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:input>
+    <stub:checkconditions/>
+  </stub:stubdata>
+  <stub:stubdata id="6" name="EMPFILE">
+    <stub:inputinterface>../Interfaces/CWKTDB2X_EMPFILE_EMPLOYEE_WORK_AREA.interface#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Interfaces/CWKTDB2X_EMPFILE_EMPLOYEE_WORK_AREA.interface</stub:inputinterface>
+    <stub:input listructure="../Structures/CWKTDB2X_EMPFILE_EMPLOYEE-WORK-AREA.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_EMPFILE_EMPLOYEE-WORK-AREA.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_EMPFILE_EMPLOYEE-WORK-AREA.listructure#EMPLOYEE_WORK_AREA" id="arg0.EMPLOYEE_WORK_AREA">
+        <properties:properties>
+          <properties:property name="value" type="string">F0F2F1F7F5C8F2D2C1E3C9C540E6C9D3D3C9C1D4E240F1F2F340D4C1C9D540E2E340404040C3D6D3E4D4C2E4E2D6C8F4F3F0F8F240404040F3F202750F4040404040404040F9F6F1F0F0F24040404040</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:input>
+    <stub:checkconditions/>
+  </stub:stubdata>
+  <stub:stubdata id="7" name="EMPFILE">
+    <stub:inputinterface>../Interfaces/CWKTDB2X_EMPFILE_EMPLOYEE_WORK_AREA.interface#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Interfaces/CWKTDB2X_EMPFILE_EMPLOYEE_WORK_AREA.interface</stub:inputinterface>
+    <stub:input listructure="../Structures/CWKTDB2X_EMPFILE_EMPLOYEE-WORK-AREA.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_EMPFILE_EMPLOYEE-WORK-AREA.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_EMPFILE_EMPLOYEE-WORK-AREA.listructure#EMPLOYEE_WORK_AREA" id="arg0.EMPLOYEE_WORK_AREA">
+        <properties:properties>
+          <properties:property name="value" type="string">F5F9F9F9F9C4F3D4C1E740C540D4C9D3D3C9D6D54040F1F0F040D4C1C9D540E2E3D9C5C5E3D4C1C9D540404040D6C8F3F4F0F9F340404040F8F802500F4040404040404040F9F1F0F3F2F34040404040</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:input>
+    <stub:checkconditions/>
+  </stub:stubdata>
+</stub:stub>

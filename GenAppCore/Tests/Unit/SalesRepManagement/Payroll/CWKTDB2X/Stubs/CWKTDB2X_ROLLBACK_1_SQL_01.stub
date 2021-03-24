@@ -1,0 +1,20 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<stub:stub xmlns:stub="http://www.compuware.com/model/xml/stub" alias="" encoding="1047" id="Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Stubs/CWKTDB2X_ROLLBACK_1_SQL_01.stub" nextCalltoken="160002" stubtype="SQL" target="ROLLBACK" token="160000">
+  <stub:description>Created: Mar 5, 2021 11:02:23 AM</stub:description>
+  <stub:stubdata id="0" name="ROLLBACK">
+    <stub:checkconditions/>
+    <stub:sqlStatus>
+      <stub:statement type="ROLLBACK">
+        <stub:text>      *****EXEC SQL ROLLBACK END-EXEC.
+</stub:text>
+      </stub:statement>
+      <stub:plist>
+        <stub:headerData>00400000009B43574B54444232581B2B82E11A4EE9E0000037ECA790000000000000000004B80115000001D40000000000000000000000000000000000000000</stub:headerData>
+      </stub:plist>
+      <stub:sqlca callToken="160001">
+        <stub:rawData>E2D8D3C3C14040400000008800000000000040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040C4E2D54040404040000000000000000000000000FFFFFFFF00000000000000004040404040404040404040F0F0F0F0F0</stub:rawData>
+      </stub:sqlca>
+    </stub:sqlStatus>
+  </stub:stubdata>
+  <stub:database version="1110"/>
+</stub:stub>

@@ -1,0 +1,24 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<stub:stub xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:listructure="http://www.compuware.com/model/xml/listructure" xmlns:properties="http://www.compuware.com/model/xml/properties" xmlns:stub="http://www.compuware.com/model/xml/stub" alias="" encoding="1047" id="InsuranceCore/Tests/Unit/SalesRepManagement/Payroll/CWXTCOB/Stubs/CWXTCOB_DATETIME_End_Of_Month.stub" nextCalltoken="110002" stubtype="DATETIME" target="" token="110000">
+  <stub:description>Created: Feb 12, 2021 12:22:58 PM</stub:description>
+  <stub:stubdata callToken="110001" dateTimeType="1" id="0" name="ACCEPT DATE">
+    <stub:interface>../Interfaces/CWXTCOB_TODAYS_DATE.interface#InsuranceCore/Tests/Unit/SalesRepManagement/Payroll/CWXTCOB/Interfaces/CWXTCOB_TODAYS_DATE.interface</stub:interface>
+    <stub:output listructure="../Structures/CWXTCOB_TODAYS-DATE.listructure#InsuranceCore/Tests/Unit/SalesRepManagement/Payroll/CWXTCOB/Structures/CWXTCOB_TODAYS-DATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWXTCOB_TODAYS-DATE.listructure#TODAYS_DATE" id="arg0.TODAYS_DATE">
+        <properties:properties>
+          <properties:property name="value" type="string">F2F0F1F0F3F1</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:checkconditions/>
+    <stub:dateTimeServiceList>
+      <stub:dateTimeService>
+        <stub:serviceName>IGZXLOCT</stub:serviceName>
+        <stub:serviceArg>00027162</stub:serviceArg>
+        <stub:serviceArg>493387B0CC2F645A</stub:serviceArg>
+        <stub:serviceArg>F2F0F2F0F1F0F3F1F0F6F2F2F5F8F9F6F2</stub:serviceArg>
+        <stub:serviceArg xsi:nil="true"/>
+      </stub:dateTimeService>
+    </stub:dateTimeServiceList>
+  </stub:stubdata>
+</stub:stub>

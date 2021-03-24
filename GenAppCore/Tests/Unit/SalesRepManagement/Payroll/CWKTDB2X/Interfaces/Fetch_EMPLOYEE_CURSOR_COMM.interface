@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?totaltestVersion 20.5.2.v20210203-0313_126?>
+<!--Topaz for Total Test 20.5.2.v20210203-0313_126 Mar 5, 2021 11:01:33 AM-->
+<interface:interface xmlns:interface="http://www.compuware.com/model/xml/interface" xmlns:listructure="http://www.compuware.com/model/xml/listructure" xmlns:properties="http://www.compuware.com/model/xml/properties" alias="" id="Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Interfaces/Fetch_EMPLOYEE_CURSOR_COMM.interface">
+  <interface:description></interface:description>
+  <interface:argument listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_EMP-NUM.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_EMP-NUM.listructure">
+    <interface:baseTypeExtension baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_EMP-NUM.listructure#EMP_NUM">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:stringType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_EMP-NUM.listructure#EMP_NUM.EMP_NUM">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+  </interface:argument>
+  <interface:argument listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_WAGE-TYPE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_WAGE-TYPE.listructure">
+    <interface:baseTypeExtension baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_WAGE-TYPE.listructure#WAGE_TYPE">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:stringType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_WAGE-TYPE.listructure#WAGE_TYPE.WAGE_TYPE">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+  </interface:argument>
+  <interface:argument listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_REGION.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_REGION.listructure">
+    <interface:baseTypeExtension baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_REGION.listructure#REGION">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:numberType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_REGION.listructure#REGION.REGION">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+  </interface:argument>
+  <interface:argument listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_FIRST-LAST-NAME.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_FIRST-LAST-NAME.listructure">
+    <interface:baseTypeExtension baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_FIRST-LAST-NAME.listructure#FIRST_LAST_NAME">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_FIRST-LAST-NAME.listructure#FIRST_LAST_NAME.FIRST_LAST_NAME">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:numberType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_FIRST-LAST-NAME.listructure#FIRST_LAST_NAME.FIRST_LAST_NAME.FIRST_LAST_NAME_LEN">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:stringType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_FIRST-LAST-NAME.listructure#FIRST_LAST_NAME.FIRST_LAST_NAME.FIRST_LAST_NAME_TEXT">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+  </interface:argument>
+  <interface:argument listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_STREET-ADDR.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_STREET-ADDR.listructure">
+    <interface:baseTypeExtension baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_STREET-ADDR.listructure#STREET_ADDR">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_STREET-ADDR.listructure#STREET_ADDR.STREET_ADDR">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:numberType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_STREET-ADDR.listructure#STREET_ADDR.STREET_ADDR.STREET_ADDR_LEN">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:stringType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_STREET-ADDR.listructure#STREET_ADDR.STREET_ADDR.STREET_ADDR_TEXT">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+  </interface:argument>
+  <interface:argument listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_CITY.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_CITY.listructure">
+    <interface:baseTypeExtension baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_CITY.listructure#CITY">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_CITY.listructure#CITY.CITY">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:numberType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_CITY.listructure#CITY.CITY.CITY_LEN">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:stringType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_CITY.listructure#CITY.CITY.CITY_TEXT">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+  </interface:argument>
+  <interface:argument listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_STATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_STATE.listructure">
+    <interface:baseTypeExtension baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_STATE.listructure#STATE">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:stringType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_STATE.listructure#STATE.STATE">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+  </interface:argument>
+  <interface:argument listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_ZIP.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_ZIP.listructure">
+    <interface:baseTypeExtension baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_ZIP.listructure#ZIP">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:stringType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_ZIP.listructure#ZIP.ZIP">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+  </interface:argument>
+  <interface:argument listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_HIREDATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_HIREDATE.listructure">
+    <interface:baseTypeExtension baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_HIREDATE.listructure#HIREDATE">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:stringType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_HIREDATE.listructure#HIREDATE.HIREDATE">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+  </interface:argument>
+  <interface:argument listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_HOURS.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_HOURS.listructure">
+    <interface:baseTypeExtension baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_HOURS.listructure#HOURS">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:numberType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_HOURS.listructure#HOURS.HOURS">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+  </interface:argument>
+  <interface:argument listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_RATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_RATE.listructure">
+    <interface:baseTypeExtension baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_RATE.listructure#RATE">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:numberType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_RATE.listructure#RATE.RATE">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+  </interface:argument>
+  <interface:argument listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_WAGES.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_WAGES.listructure">
+    <interface:baseTypeExtension baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_WAGES.listructure#WAGES">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:numberType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_WAGES.listructure#WAGES.WAGES">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+  </interface:argument>
+  <interface:argument listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_OVERTIME.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_OVERTIME.listructure">
+    <interface:baseTypeExtension baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_OVERTIME.listructure#OVERTIME">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:numberType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_OVERTIME.listructure#OVERTIME.OVERTIME">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+  </interface:argument>
+  <interface:argument listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_COMM.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_COMM.listructure">
+    <interface:baseTypeExtension baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_COMM.listructure#COMM">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:numberType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_COMM.listructure#COMM.COMM">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+  </interface:argument>
+</interface:interface>

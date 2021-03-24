@@ -1,0 +1,8 @@
+eclipse.preferences.version=1
+encoding//gsrc/main/java/com/compuware/xatester/server/controllers/PromoteController.java=UTF-8
+encoding//gsrc/main/java/com/compuware/xatester/server/security/SimpleCORSFilter.java=UTF-8
+encoding//gsrc/main/java/com/compuware/xatester/server/services/ContextBuilderService.java=UTF-8
+encoding//gsrc/main/java/com/compuware/xatester/server/services/ContextExecutionService.java=UTF-8
+encoding//gsrc/main/java/com/compuware/xatester/server/services/ControllerUtilService.java=UTF-8
+encoding//gsrc/test/java/com/compuware/xatester/server/controllers/PromoteControllerTest.java=UTF-8
+encoding//gsrc/test/java/com/compuware/xatester/server/services/ControllerUtilServiceTest.java=UTF-8

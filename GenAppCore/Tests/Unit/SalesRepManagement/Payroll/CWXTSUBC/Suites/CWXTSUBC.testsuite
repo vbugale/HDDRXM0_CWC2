@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?totaltestVersion 20.4.1.v20200918-0303_109?>
+<!--Topaz for Total Test 20.4.1.v20200918-0303_109 Oct 26, 2020 12:59:33 PM-->
+<testsuite:testsuite xmlns:testsuite="http://www.compuware.com/model/xml/testsuite" id="InsuranceCore/Tests/Unit/SalesRepManagement/Payroll/CWXTSUBC/Suites/CWXTSUBC.testsuite">
+  <testsuite:testscenario>../Scenarios/CWXTSUBC_Mgmt_Scenario.testscenario#InsuranceCore/Tests/Unit/SalesRepManagement/Payroll/CWXTSUBC/Scenarios/CWXTSUBC_Mgmt_Scenario.testscenario</testsuite:testscenario>
+  <testsuite:testscenario>../Scenarios/CWXTSUBC_Sales_Scenario.testscenario#InsuranceCore/Tests/Unit/SalesRepManagement/Payroll/CWXTSUBC/Scenarios/CWXTSUBC_Sales_Scenario.testscenario</testsuite:testscenario>
+</testsuite:testsuite>

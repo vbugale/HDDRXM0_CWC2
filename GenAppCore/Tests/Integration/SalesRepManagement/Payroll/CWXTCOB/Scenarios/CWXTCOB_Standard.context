@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExecutionContext xmlns="http://www.xact.dk/xatester/v/1" environment="5b508b8a787be73b59238d38" logLevel="INFO" remote="false" useSimulations="true" uploadResult="false" timeout="300" readTimeout="30" debuggerType="NONE" jobInfoInterval="3">
+  <ExtensionData />
+  <ExtensionData componentName="cwxtcob" componentId="5d5fea81180742000cf98888">
+    <Parameter key="loadlibraries">
+      <Value>SALESSUP.${ispw_app_value}.${ut_level}.LOAD</Value>
+      <Value>SALESSUP.${ispw_app_value}.${ft_level}.LOAD</Value>
+      <Value>SALESSUP.${ispw_app_value}.DEVL.LOAD</Value>
+      <Value>SALESSUP.${ispw_app_value}.MAIN.LOAD</Value>
+      <Value>SALESSUP.${ispw_app_value}.PROD.LOAD</Value>
+    </Parameter>
+  </ExtensionData>
+  <XaUnit path="CWXTCOB_Standard.scenario" />
+</ExecutionContext>

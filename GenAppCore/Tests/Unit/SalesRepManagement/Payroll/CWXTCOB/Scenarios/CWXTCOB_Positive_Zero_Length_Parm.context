@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExecutionContext xmlns="http://www.xact.dk/xatester/v/1" environment="5b508b8a787be73b59238d38" logLevel="INFO" remote="false" useSimulations="true" uploadResult="false" timeout="300" readTimeout="30" debuggerType="NONE" jobInfoInterval="3" useRepository="false">
+  <ExtensionData>
+    <Parameter key="ispw_level">
+      <Value>${ispw_level_value}</Value>
+    </Parameter>
+    <Parameter key="ispw_app">
+      <Value>${ispw_app_value}</Value>
+    </Parameter>
+    <Parameter key="unittest.loadlibraries">
+      <Value>SALESSUP.${ispw_app}.${ispw_level}.LOAD</Value>
+    </Parameter>
+  </ExtensionData>
+  <XaUnit xmlns:data="http://www.xact.dk/xatester/data/v/1" componentNameUnderTest="CWXTCOB" caseInsensitiveCompare="false" path="CWXTCOB_Positive_Zero_Length_Parm.testscenario">
+    <Test>
+      <Unittest testscenariopath="CWXTCOB_Positive_Zero_Length_Parm.testscenario" moduleName="CWXTCOB" />
+    </Test>
+  </XaUnit>
+</ExecutionContext>
