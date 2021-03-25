@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?totaltestVersion 20.4.1.v20200918-0303_109?>
+<!--Topaz for Total Test 20.4.1.v20200918-0303_109 Oct 12, 2020 1:18:37 PM-->
+<interface:interface xmlns:interface="http://www.compuware.com/model/xml/interface" xmlns:listructure="http://www.compuware.com/model/xml/listructure" xmlns:properties="http://www.compuware.com/model/xml/properties" alias="" id="MainframeTests/Unit%20Tests/CWXTSUBC/Interfaces/CWXTSUBC.interface">
+  <interface:description></interface:description>
+  <interface:argument listructure="../Structures/CWXTSUBC_EMP-TYPE.listructure#MainframeTests/Unit%20Tests/CWXTSUBC/Structures/CWXTSUBC_EMP-TYPE.listructure">
+    <interface:baseTypeExtension baseType="listructure:structType ../Structures/CWXTSUBC_EMP-TYPE.listructure#EMP_TYPE">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:stringType ../Structures/CWXTSUBC_EMP-TYPE.listructure#EMP_TYPE.EMP_TYPE">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+  </interface:argument>
+  <interface:argument listructure="../Structures/CWXTSUBC_SALES-AMOUNT.listructure#MainframeTests/Unit%20Tests/CWXTSUBC/Structures/CWXTSUBC_SALES-AMOUNT.listructure">
+    <interface:baseTypeExtension baseType="listructure:structType ../Structures/CWXTSUBC_SALES-AMOUNT.listructure#SALES_AMOUNT">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:numberType ../Structures/CWXTSUBC_SALES-AMOUNT.listructure#SALES_AMOUNT.SALES_AMOUNT">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+  </interface:argument>
+  <interface:argument listructure="../Structures/CWXTSUBC_COMM-TOTAL.listructure#MainframeTests/Unit%20Tests/CWXTSUBC/Structures/CWXTSUBC_COMM-TOTAL.listructure">
+    <interface:baseTypeExtension baseType="listructure:structType ../Structures/CWXTSUBC_COMM-TOTAL.listructure#COMM_TOTAL">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:numberType ../Structures/CWXTSUBC_COMM-TOTAL.listructure#COMM_TOTAL.COMM_TOTAL">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+  </interface:argument>
+</interface:interface>

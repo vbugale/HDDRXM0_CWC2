@@ -1,0 +1,457 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<stub:stub xmlns:listructure="http://www.compuware.com/model/xml/listructure" xmlns:properties="http://www.compuware.com/model/xml/properties" xmlns:stub="http://www.compuware.com/model/xml/stub" alias="" encoding="1047" id="Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Stubs/CWKTDB2X_CWKTDATE_01.stub" stubtype="Program" target="CWKTDATE" token="120000">
+  <properties:properties>
+    <properties:property name="programtype" type="string">ProgramStubAssertion</properties:property>
+  </properties:properties>
+  <stub:description>Created: Mar 5, 2021 11:01:28 AM</stub:description>
+  <stub:stubdata id="0" name="CWKTDATE">
+    <stub:interface>../Interfaces/CWKTDB2X_CWKTDATE.interface#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Interfaces/CWKTDB2X_CWKTDATE.interface</stub:interface>
+    <stub:inputinterface>../Interfaces/CWKTDB2X_CWKTDATE.interface#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Interfaces/CWKTDB2X_CWKTDATE.interface</stub:inputinterface>
+    <stub:input listructure="../Structures/CWKTDB2X_CWKTDATE_END-OF-MONTH-SW.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_END-OF-MONTH-SW.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_END-OF-MONTH-SW.listructure#END_OF_MONTH_SW" id="arg0.END_OF_MONTH_SW">
+        <properties:properties>
+          <properties:property name="value" type="string">D5</properties:property>
+          <properties:property name="address" type="string">37ECAD54</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:input>
+    <stub:input listructure="../Structures/CWKTDB2X_CWKTDATE_YRS-OF-SERVICE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_YRS-OF-SERVICE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_YRS-OF-SERVICE.listructure#YRS_OF_SERVICE" id="arg1.YRS_OF_SERVICE">
+        <properties:properties>
+          <properties:property name="value" type="string">F0F0</properties:property>
+          <properties:property name="address" type="string">37ECAD78</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:input>
+    <stub:input listructure="../Structures/CWKTDB2X_CWKTDATE_TODAYS-DATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_TODAYS-DATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_TODAYS-DATE.listructure#TODAYS_DATE" id="arg2.TODAYS_DATE">
+        <properties:properties>
+          <properties:property name="value" type="string">F2F1F0F3F0F5</properties:property>
+          <properties:property name="address" type="string">37ECAD80</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:input>
+    <stub:input listructure="../Structures/CWKTDB2X_CWKTDATE_WA-EMP-HIRE-DATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_WA-EMP-HIRE-DATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_WA-EMP-HIRE-DATE.listructure#WA_EMP_HIRE_DATE" id="arg3.WA_EMP_HIRE_DATE">
+        <properties:properties>
+          <properties:property name="value" type="string">000000000000</properties:property>
+          <properties:property name="address" type="string">37ECC0B5</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:input>
+    <stub:output listructure="../Structures/CWKTDB2X_CWKTDATE_END-OF-MONTH-SW.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_END-OF-MONTH-SW.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_END-OF-MONTH-SW.listructure#END_OF_MONTH_SW" id="arg0.END_OF_MONTH_SW">
+        <properties:properties>
+          <properties:property name="value" type="string">D5</properties:property>
+          <properties:property name="address" type="string">37ECAD54</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/CWKTDB2X_CWKTDATE_YRS-OF-SERVICE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_YRS-OF-SERVICE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_YRS-OF-SERVICE.listructure#YRS_OF_SERVICE" id="arg1.YRS_OF_SERVICE">
+        <properties:properties>
+          <properties:property name="value" type="string">F0F0</properties:property>
+          <properties:property name="address" type="string">37ECAD78</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/CWKTDB2X_CWKTDATE_TODAYS-DATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_TODAYS-DATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_TODAYS-DATE.listructure#TODAYS_DATE" id="arg2.TODAYS_DATE">
+        <properties:properties>
+          <properties:property name="value" type="string">F2F1F0F3F0F5</properties:property>
+          <properties:property name="address" type="string">37ECAD80</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/CWKTDB2X_CWKTDATE_WA-EMP-HIRE-DATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_WA-EMP-HIRE-DATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_WA-EMP-HIRE-DATE.listructure#WA_EMP_HIRE_DATE" id="arg3.WA_EMP_HIRE_DATE">
+        <properties:properties>
+          <properties:property name="value" type="string">000000000000</properties:property>
+          <properties:property name="address" type="string">37ECC0B5</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:returncode listructure="../Structures/CWKTDB2X_CWKTDATE_RETURN-CODE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_RETURN-CODE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_RETURN-CODE.listructure#RETURN_CODE" id="arg0.RETURN_CODE">
+        <properties:properties>
+          <properties:property name="value" type="string">0000</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:returncode>
+  </stub:stubdata>
+  <stub:stubdata id="1" name="CWKTDATE">
+    <stub:interface>../Interfaces/CWKTDB2X_CWKTDATE.interface#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Interfaces/CWKTDB2X_CWKTDATE.interface</stub:interface>
+    <stub:inputinterface>../Interfaces/CWKTDB2X_CWKTDATE.interface#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Interfaces/CWKTDB2X_CWKTDATE.interface</stub:inputinterface>
+    <stub:input listructure="../Structures/CWKTDB2X_CWKTDATE_END-OF-MONTH-SW.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_END-OF-MONTH-SW.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_END-OF-MONTH-SW.listructure#END_OF_MONTH_SW" id="arg0.END_OF_MONTH_SW">
+        <properties:properties>
+          <properties:property name="value" type="string">D5</properties:property>
+          <properties:property name="address" type="string">37ECAD54</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:input>
+    <stub:input listructure="../Structures/CWKTDB2X_CWKTDATE_YRS-OF-SERVICE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_YRS-OF-SERVICE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_YRS-OF-SERVICE.listructure#YRS_OF_SERVICE" id="arg1.YRS_OF_SERVICE">
+        <properties:properties>
+          <properties:property name="value" type="string">F0F0</properties:property>
+          <properties:property name="address" type="string">37ECAD78</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:input>
+    <stub:input listructure="../Structures/CWKTDB2X_CWKTDATE_TODAYS-DATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_TODAYS-DATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_TODAYS-DATE.listructure#TODAYS_DATE" id="arg2.TODAYS_DATE">
+        <properties:properties>
+          <properties:property name="value" type="string">F2F1F0F3F0F5</properties:property>
+          <properties:property name="address" type="string">37ECAD80</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:input>
+    <stub:input listructure="../Structures/CWKTDB2X_CWKTDATE_WA-EMP-HIRE-DATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_WA-EMP-HIRE-DATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_WA-EMP-HIRE-DATE.listructure#WA_EMP_HIRE_DATE" id="arg3.WA_EMP_HIRE_DATE">
+        <properties:properties>
+          <properties:property name="value" type="string">F8F7F0F3F3F1</properties:property>
+          <properties:property name="address" type="string">37ECC0B5</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:input>
+    <stub:output listructure="../Structures/CWKTDB2X_CWKTDATE_END-OF-MONTH-SW.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_END-OF-MONTH-SW.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_END-OF-MONTH-SW.listructure#END_OF_MONTH_SW" id="arg0.END_OF_MONTH_SW">
+        <properties:properties>
+          <properties:property name="value" type="string">D5</properties:property>
+          <properties:property name="address" type="string">37ECAD54</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/CWKTDB2X_CWKTDATE_YRS-OF-SERVICE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_YRS-OF-SERVICE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_YRS-OF-SERVICE.listructure#YRS_OF_SERVICE" id="arg1.YRS_OF_SERVICE">
+        <properties:properties>
+          <properties:property name="value" type="string">F3F3</properties:property>
+          <properties:property name="address" type="string">37ECAD78</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/CWKTDB2X_CWKTDATE_TODAYS-DATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_TODAYS-DATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_TODAYS-DATE.listructure#TODAYS_DATE" id="arg2.TODAYS_DATE">
+        <properties:properties>
+          <properties:property name="value" type="string">F2F1F0F3F0F5</properties:property>
+          <properties:property name="address" type="string">37ECAD80</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/CWKTDB2X_CWKTDATE_WA-EMP-HIRE-DATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_WA-EMP-HIRE-DATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_WA-EMP-HIRE-DATE.listructure#WA_EMP_HIRE_DATE" id="arg3.WA_EMP_HIRE_DATE">
+        <properties:properties>
+          <properties:property name="value" type="string">F8F7F0F3F3F1</properties:property>
+          <properties:property name="address" type="string">37ECC0B5</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:returncode listructure="../Structures/CWKTDB2X_CWKTDATE_RETURN-CODE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_RETURN-CODE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_RETURN-CODE.listructure#RETURN_CODE" id="arg0.RETURN_CODE">
+        <properties:properties>
+          <properties:property name="value" type="string">0000</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:returncode>
+  </stub:stubdata>
+  <stub:stubdata id="2" name="CWKTDATE">
+    <stub:interface>../Interfaces/CWKTDB2X_CWKTDATE.interface#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Interfaces/CWKTDB2X_CWKTDATE.interface</stub:interface>
+    <stub:inputinterface>../Interfaces/CWKTDB2X_CWKTDATE.interface#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Interfaces/CWKTDB2X_CWKTDATE.interface</stub:inputinterface>
+    <stub:input listructure="../Structures/CWKTDB2X_CWKTDATE_END-OF-MONTH-SW.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_END-OF-MONTH-SW.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_END-OF-MONTH-SW.listructure#END_OF_MONTH_SW" id="arg0.END_OF_MONTH_SW">
+        <properties:properties>
+          <properties:property name="value" type="string">D5</properties:property>
+          <properties:property name="address" type="string">37ECAD54</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:input>
+    <stub:input listructure="../Structures/CWKTDB2X_CWKTDATE_YRS-OF-SERVICE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_YRS-OF-SERVICE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_YRS-OF-SERVICE.listructure#YRS_OF_SERVICE" id="arg1.YRS_OF_SERVICE">
+        <properties:properties>
+          <properties:property name="value" type="string">F3F3</properties:property>
+          <properties:property name="address" type="string">37ECAD78</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:input>
+    <stub:input listructure="../Structures/CWKTDB2X_CWKTDATE_TODAYS-DATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_TODAYS-DATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_TODAYS-DATE.listructure#TODAYS_DATE" id="arg2.TODAYS_DATE">
+        <properties:properties>
+          <properties:property name="value" type="string">F2F1F0F3F0F5</properties:property>
+          <properties:property name="address" type="string">37ECAD80</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:input>
+    <stub:input listructure="../Structures/CWKTDB2X_CWKTDATE_WA-EMP-HIRE-DATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_WA-EMP-HIRE-DATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_WA-EMP-HIRE-DATE.listructure#WA_EMP_HIRE_DATE" id="arg3.WA_EMP_HIRE_DATE">
+        <properties:properties>
+          <properties:property name="value" type="string">F9F3F0F4F0F5</properties:property>
+          <properties:property name="address" type="string">37ECC0B5</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:input>
+    <stub:output listructure="../Structures/CWKTDB2X_CWKTDATE_END-OF-MONTH-SW.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_END-OF-MONTH-SW.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_END-OF-MONTH-SW.listructure#END_OF_MONTH_SW" id="arg0.END_OF_MONTH_SW">
+        <properties:properties>
+          <properties:property name="value" type="string">D5</properties:property>
+          <properties:property name="address" type="string">37ECAD54</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/CWKTDB2X_CWKTDATE_YRS-OF-SERVICE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_YRS-OF-SERVICE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_YRS-OF-SERVICE.listructure#YRS_OF_SERVICE" id="arg1.YRS_OF_SERVICE">
+        <properties:properties>
+          <properties:property name="value" type="string">F2F7</properties:property>
+          <properties:property name="address" type="string">37ECAD78</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/CWKTDB2X_CWKTDATE_TODAYS-DATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_TODAYS-DATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_TODAYS-DATE.listructure#TODAYS_DATE" id="arg2.TODAYS_DATE">
+        <properties:properties>
+          <properties:property name="value" type="string">F2F1F0F3F0F5</properties:property>
+          <properties:property name="address" type="string">37ECAD80</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/CWKTDB2X_CWKTDATE_WA-EMP-HIRE-DATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_WA-EMP-HIRE-DATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_WA-EMP-HIRE-DATE.listructure#WA_EMP_HIRE_DATE" id="arg3.WA_EMP_HIRE_DATE">
+        <properties:properties>
+          <properties:property name="value" type="string">F9F3F0F4F0F5</properties:property>
+          <properties:property name="address" type="string">37ECC0B5</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:returncode listructure="../Structures/CWKTDB2X_CWKTDATE_RETURN-CODE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_RETURN-CODE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_RETURN-CODE.listructure#RETURN_CODE" id="arg0.RETURN_CODE">
+        <properties:properties>
+          <properties:property name="value" type="string">0000</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:returncode>
+  </stub:stubdata>
+  <stub:stubdata id="3" name="CWKTDATE">
+    <stub:interface>../Interfaces/CWKTDB2X_CWKTDATE.interface#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Interfaces/CWKTDB2X_CWKTDATE.interface</stub:interface>
+    <stub:inputinterface>../Interfaces/CWKTDB2X_CWKTDATE.interface#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Interfaces/CWKTDB2X_CWKTDATE.interface</stub:inputinterface>
+    <stub:input listructure="../Structures/CWKTDB2X_CWKTDATE_END-OF-MONTH-SW.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_END-OF-MONTH-SW.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_END-OF-MONTH-SW.listructure#END_OF_MONTH_SW" id="arg0.END_OF_MONTH_SW">
+        <properties:properties>
+          <properties:property name="value" type="string">D5</properties:property>
+          <properties:property name="address" type="string">37ECAD54</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:input>
+    <stub:input listructure="../Structures/CWKTDB2X_CWKTDATE_YRS-OF-SERVICE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_YRS-OF-SERVICE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_YRS-OF-SERVICE.listructure#YRS_OF_SERVICE" id="arg1.YRS_OF_SERVICE">
+        <properties:properties>
+          <properties:property name="value" type="string">F2F7</properties:property>
+          <properties:property name="address" type="string">37ECAD78</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:input>
+    <stub:input listructure="../Structures/CWKTDB2X_CWKTDATE_TODAYS-DATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_TODAYS-DATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_TODAYS-DATE.listructure#TODAYS_DATE" id="arg2.TODAYS_DATE">
+        <properties:properties>
+          <properties:property name="value" type="string">F2F1F0F3F0F5</properties:property>
+          <properties:property name="address" type="string">37ECAD80</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:input>
+    <stub:input listructure="../Structures/CWKTDB2X_CWKTDATE_WA-EMP-HIRE-DATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_WA-EMP-HIRE-DATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_WA-EMP-HIRE-DATE.listructure#WA_EMP_HIRE_DATE" id="arg3.WA_EMP_HIRE_DATE">
+        <properties:properties>
+          <properties:property name="value" type="string">F9F1F0F9F1F3</properties:property>
+          <properties:property name="address" type="string">37ECC0B5</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:input>
+    <stub:output listructure="../Structures/CWKTDB2X_CWKTDATE_END-OF-MONTH-SW.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_END-OF-MONTH-SW.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_END-OF-MONTH-SW.listructure#END_OF_MONTH_SW" id="arg0.END_OF_MONTH_SW">
+        <properties:properties>
+          <properties:property name="value" type="string">D5</properties:property>
+          <properties:property name="address" type="string">37ECAD54</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/CWKTDB2X_CWKTDATE_YRS-OF-SERVICE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_YRS-OF-SERVICE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_YRS-OF-SERVICE.listructure#YRS_OF_SERVICE" id="arg1.YRS_OF_SERVICE">
+        <properties:properties>
+          <properties:property name="value" type="string">F2F9</properties:property>
+          <properties:property name="address" type="string">37ECAD78</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/CWKTDB2X_CWKTDATE_TODAYS-DATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_TODAYS-DATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_TODAYS-DATE.listructure#TODAYS_DATE" id="arg2.TODAYS_DATE">
+        <properties:properties>
+          <properties:property name="value" type="string">F2F1F0F3F0F5</properties:property>
+          <properties:property name="address" type="string">37ECAD80</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/CWKTDB2X_CWKTDATE_WA-EMP-HIRE-DATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_WA-EMP-HIRE-DATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_WA-EMP-HIRE-DATE.listructure#WA_EMP_HIRE_DATE" id="arg3.WA_EMP_HIRE_DATE">
+        <properties:properties>
+          <properties:property name="value" type="string">F9F1F0F9F1F3</properties:property>
+          <properties:property name="address" type="string">37ECC0B5</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:returncode listructure="../Structures/CWKTDB2X_CWKTDATE_RETURN-CODE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_RETURN-CODE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_RETURN-CODE.listructure#RETURN_CODE" id="arg0.RETURN_CODE">
+        <properties:properties>
+          <properties:property name="value" type="string">0000</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:returncode>
+  </stub:stubdata>
+  <stub:stubdata id="4" name="CWKTDATE">
+    <stub:interface>../Interfaces/CWKTDB2X_CWKTDATE.interface#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Interfaces/CWKTDB2X_CWKTDATE.interface</stub:interface>
+    <stub:inputinterface>../Interfaces/CWKTDB2X_CWKTDATE.interface#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Interfaces/CWKTDB2X_CWKTDATE.interface</stub:inputinterface>
+    <stub:input listructure="../Structures/CWKTDB2X_CWKTDATE_END-OF-MONTH-SW.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_END-OF-MONTH-SW.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_END-OF-MONTH-SW.listructure#END_OF_MONTH_SW" id="arg0.END_OF_MONTH_SW">
+        <properties:properties>
+          <properties:property name="value" type="string">D5</properties:property>
+          <properties:property name="address" type="string">37ECAD54</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:input>
+    <stub:input listructure="../Structures/CWKTDB2X_CWKTDATE_YRS-OF-SERVICE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_YRS-OF-SERVICE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_YRS-OF-SERVICE.listructure#YRS_OF_SERVICE" id="arg1.YRS_OF_SERVICE">
+        <properties:properties>
+          <properties:property name="value" type="string">F2F9</properties:property>
+          <properties:property name="address" type="string">37ECAD78</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:input>
+    <stub:input listructure="../Structures/CWKTDB2X_CWKTDATE_TODAYS-DATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_TODAYS-DATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_TODAYS-DATE.listructure#TODAYS_DATE" id="arg2.TODAYS_DATE">
+        <properties:properties>
+          <properties:property name="value" type="string">F2F1F0F3F0F5</properties:property>
+          <properties:property name="address" type="string">37ECAD80</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:input>
+    <stub:input listructure="../Structures/CWKTDB2X_CWKTDATE_WA-EMP-HIRE-DATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_WA-EMP-HIRE-DATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_WA-EMP-HIRE-DATE.listructure#WA_EMP_HIRE_DATE" id="arg3.WA_EMP_HIRE_DATE">
+        <properties:properties>
+          <properties:property name="value" type="string">F8F6F0F1F0F2</properties:property>
+          <properties:property name="address" type="string">37ECC0B5</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:input>
+    <stub:output listructure="../Structures/CWKTDB2X_CWKTDATE_END-OF-MONTH-SW.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_END-OF-MONTH-SW.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_END-OF-MONTH-SW.listructure#END_OF_MONTH_SW" id="arg0.END_OF_MONTH_SW">
+        <properties:properties>
+          <properties:property name="value" type="string">D5</properties:property>
+          <properties:property name="address" type="string">37ECAD54</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/CWKTDB2X_CWKTDATE_YRS-OF-SERVICE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_YRS-OF-SERVICE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_YRS-OF-SERVICE.listructure#YRS_OF_SERVICE" id="arg1.YRS_OF_SERVICE">
+        <properties:properties>
+          <properties:property name="value" type="string">F3F5</properties:property>
+          <properties:property name="address" type="string">37ECAD78</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/CWKTDB2X_CWKTDATE_TODAYS-DATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_TODAYS-DATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_TODAYS-DATE.listructure#TODAYS_DATE" id="arg2.TODAYS_DATE">
+        <properties:properties>
+          <properties:property name="value" type="string">F2F1F0F3F0F5</properties:property>
+          <properties:property name="address" type="string">37ECAD80</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/CWKTDB2X_CWKTDATE_WA-EMP-HIRE-DATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_WA-EMP-HIRE-DATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_WA-EMP-HIRE-DATE.listructure#WA_EMP_HIRE_DATE" id="arg3.WA_EMP_HIRE_DATE">
+        <properties:properties>
+          <properties:property name="value" type="string">F8F6F0F1F0F2</properties:property>
+          <properties:property name="address" type="string">37ECC0B5</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:returncode listructure="../Structures/CWKTDB2X_CWKTDATE_RETURN-CODE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_RETURN-CODE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_RETURN-CODE.listructure#RETURN_CODE" id="arg0.RETURN_CODE">
+        <properties:properties>
+          <properties:property name="value" type="string">0000</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:returncode>
+  </stub:stubdata>
+  <stub:stubdata id="5" name="CWKTDATE">
+    <stub:interface>../Interfaces/CWKTDB2X_CWKTDATE.interface#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Interfaces/CWKTDB2X_CWKTDATE.interface</stub:interface>
+    <stub:inputinterface>../Interfaces/CWKTDB2X_CWKTDATE.interface#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Interfaces/CWKTDB2X_CWKTDATE.interface</stub:inputinterface>
+    <stub:input listructure="../Structures/CWKTDB2X_CWKTDATE_END-OF-MONTH-SW.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_END-OF-MONTH-SW.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_END-OF-MONTH-SW.listructure#END_OF_MONTH_SW" id="arg0.END_OF_MONTH_SW">
+        <properties:properties>
+          <properties:property name="value" type="string">D5</properties:property>
+          <properties:property name="address" type="string">37ECAD54</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:input>
+    <stub:input listructure="../Structures/CWKTDB2X_CWKTDATE_YRS-OF-SERVICE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_YRS-OF-SERVICE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_YRS-OF-SERVICE.listructure#YRS_OF_SERVICE" id="arg1.YRS_OF_SERVICE">
+        <properties:properties>
+          <properties:property name="value" type="string">F3F5</properties:property>
+          <properties:property name="address" type="string">37ECAD78</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:input>
+    <stub:input listructure="../Structures/CWKTDB2X_CWKTDATE_TODAYS-DATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_TODAYS-DATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_TODAYS-DATE.listructure#TODAYS_DATE" id="arg2.TODAYS_DATE">
+        <properties:properties>
+          <properties:property name="value" type="string">F2F1F0F3F0F5</properties:property>
+          <properties:property name="address" type="string">37ECAD80</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:input>
+    <stub:input listructure="../Structures/CWKTDB2X_CWKTDATE_WA-EMP-HIRE-DATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_WA-EMP-HIRE-DATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_WA-EMP-HIRE-DATE.listructure#WA_EMP_HIRE_DATE" id="arg3.WA_EMP_HIRE_DATE">
+        <properties:properties>
+          <properties:property name="value" type="string">F9F6F1F0F0F2</properties:property>
+          <properties:property name="address" type="string">37ECC0B5</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:input>
+    <stub:output listructure="../Structures/CWKTDB2X_CWKTDATE_END-OF-MONTH-SW.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_END-OF-MONTH-SW.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_END-OF-MONTH-SW.listructure#END_OF_MONTH_SW" id="arg0.END_OF_MONTH_SW">
+        <properties:properties>
+          <properties:property name="value" type="string">D5</properties:property>
+          <properties:property name="address" type="string">37ECAD54</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/CWKTDB2X_CWKTDATE_YRS-OF-SERVICE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_YRS-OF-SERVICE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_YRS-OF-SERVICE.listructure#YRS_OF_SERVICE" id="arg1.YRS_OF_SERVICE">
+        <properties:properties>
+          <properties:property name="value" type="string">F2F4</properties:property>
+          <properties:property name="address" type="string">37ECAD78</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/CWKTDB2X_CWKTDATE_TODAYS-DATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_TODAYS-DATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_TODAYS-DATE.listructure#TODAYS_DATE" id="arg2.TODAYS_DATE">
+        <properties:properties>
+          <properties:property name="value" type="string">F2F1F0F3F0F5</properties:property>
+          <properties:property name="address" type="string">37ECAD80</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/CWKTDB2X_CWKTDATE_WA-EMP-HIRE-DATE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_WA-EMP-HIRE-DATE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_WA-EMP-HIRE-DATE.listructure#WA_EMP_HIRE_DATE" id="arg3.WA_EMP_HIRE_DATE">
+        <properties:properties>
+          <properties:property name="value" type="string">F9F6F1F0F0F2</properties:property>
+          <properties:property name="address" type="string">37ECC0B5</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:returncode listructure="../Structures/CWKTDB2X_CWKTDATE_RETURN-CODE.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/CWKTDB2X_CWKTDATE_RETURN-CODE.listructure">
+      <stub:data baseType="listructure:structType ../Structures/CWKTDB2X_CWKTDATE_RETURN-CODE.listructure#RETURN_CODE" id="arg0.RETURN_CODE">
+        <properties:properties>
+          <properties:property name="value" type="string">0000</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:returncode>
+  </stub:stubdata>
+</stub:stub>

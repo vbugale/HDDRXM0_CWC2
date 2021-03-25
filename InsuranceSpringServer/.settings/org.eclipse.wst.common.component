@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+	<wb-module deploy-name="XaTesterServer">
+		<property name="context-root" value="XaTesterServer"/>
+		<wb-resource deploy-path="/WEB-INF/classes" source-path="gsrc/main/resources"/>
+		<wb-resource deploy-path="/WEB-INF/classes" source-path="gsrc/main/java"/>
+		<wb-resource deploy-path="/WEB-INF/classes" source-path="../com.compuware.xatester.xaunit/src"/>
+		<wb-resource deploy-path="/WEB-INF/classes" source-path="../com.compuware.xatester.clientapi/src"/>
+		<wb-resource deploy-path="/WEB-INF/classes" source-path="../com.compuware.totaltest.common/src"/>
+		<wb-resource deploy-path="/WEB-INF/classes" source-path="../com.compuware.totaltest.common.hci.api/src"/>
+	</wb-module>
+</project-modules>

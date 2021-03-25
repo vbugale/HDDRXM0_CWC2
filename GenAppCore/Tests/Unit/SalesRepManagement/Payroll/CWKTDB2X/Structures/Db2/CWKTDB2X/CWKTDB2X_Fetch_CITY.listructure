@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?totaltestVersion 20.5.2.v20210203-0313_126?>
+<!--Topaz for Total Test 20.5.2.v20210203-0313_126 Mar 5, 2021 11:01:32 AM-->
+<listructure:listructure xmlns:listructure="http://www.compuware.com/model/xml/listructure" xmlns:properties="http://www.compuware.com/model/xml/properties" id="Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Fetch_CITY.listructure">
+  <listructure:struct id="CITY" name="CITY">
+    <properties:properties>
+      <properties:property name="displayLength" type="number">10</properties:property>
+      <properties:property name="platform" type="string">mainframe</properties:property>
+      <properties:property name="storageLength" type="number">10</properties:property>
+    </properties:properties>
+    <listructure:struct id="CITY.CITY" name="CITY">
+      <properties:properties>
+        <properties:property name="displayLength" type="number">10</properties:property>
+        <properties:property name="platform" type="string">mainframe</properties:property>
+        <properties:property name="storageLength" type="number">10</properties:property>
+        <properties:property name="sqltype" type="number">449</properties:property>
+      </properties:properties>
+      <listructure:number id="CITY.CITY.CITY_LEN" length="4" name="CITY_LEN">
+        <properties:properties>
+          <properties:property name="picture" type="string">S9(4)</properties:property>
+          <properties:property name="usage" type="string">computational</properties:property>
+          <properties:property name="signed" type="boolean">true</properties:property>
+          <properties:property name="displayLength" type="number">4</properties:property>
+          <properties:property name="integerDigits" type="number">4</properties:property>
+          <properties:property name="platform" type="string">mainframe</properties:property>
+          <properties:property name="liType" type="string">binary</properties:property>
+          <properties:property name="storageLength" type="number">2</properties:property>
+          <properties:property name="sqltype" type="number">449</properties:property>
+        </properties:properties>
+      </listructure:number>
+      <listructure:string id="CITY.CITY.CITY_TEXT" length="8" name="CITY_TEXT">
+        <properties:properties>
+          <properties:property name="picture" type="string">X(8)</properties:property>
+          <properties:property name="displayLength" type="number">8</properties:property>
+          <properties:property name="platform" type="string">mainframe</properties:property>
+          <properties:property name="liType" type="string">char</properties:property>
+          <properties:property name="mask" type="string">X(8)</properties:property>
+          <properties:property name="storageLength" type="number">8</properties:property>
+          <properties:property name="sqltype" type="number">449</properties:property>
+        </properties:properties>
+      </listructure:string>
+    </listructure:struct>
+  </listructure:struct>
+</listructure:listructure>

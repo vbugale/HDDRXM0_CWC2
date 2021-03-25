@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?totaltestVersion 20.5.1.v20201214-0405_74?>
+<!--Topaz for Total Test 20.5.1.v20201214-0405_74 Feb 12, 2021 3:35:42 PM-->
+<testsuite:testsuite xmlns:testsuite="http://www.compuware.com/model/xml/testsuite" id="InsuranceCore/Tests/Unit/SalesRepManagement/Payroll/CWXTDATE/Suites/CWXTDATE.testsuite">
+  <testsuite:testscenario>../Scenarios/CWXTDATE_Calc_YOS.testscenario#InsuranceCore/Tests/Unit/SalesRepManagement/Payroll/CWXTDATE/Scenarios/CWXTDATE_Calc_YOS.testscenario</testsuite:testscenario>
+  <testsuite:testscenario>../Scenarios/CWXTDATE_Determine_EOM.testscenario#InsuranceCore/Tests/Unit/SalesRepManagement/Payroll/CWXTDATE/Scenarios/CWXTDATE_Determine_EOM.testscenario</testsuite:testscenario>
+</testsuite:testsuite>

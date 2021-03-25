@@ -1,0 +1,250 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<stub:stub xmlns:listructure="http://www.compuware.com/model/xml/listructure" xmlns:properties="http://www.compuware.com/model/xml/properties" xmlns:stub="http://www.compuware.com/model/xml/stub" alias="" encoding="1047" id="Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Stubs/CWKTDB2X_Update_1_SQL_01.stub" nextCalltoken="150006" stubtype="SQL" target="Update" token="150000">
+  <stub:description>Created: Mar 5, 2021 11:01:42 AM</stub:description>
+  <stub:stubdata id="0" name="Update">
+    <stub:interface>../Interfaces/CWKTDB2X_Update_1_EMP_NUM.interface#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Interfaces/CWKTDB2X_Update_1_EMP_NUM.interface</stub:interface>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_WAGES.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Update_WAGES.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_WAGES.listructure#WAGES" id="arg0.WAGES">
+        <properties:properties>
+          <properties:property name="value" type="string">0100000C</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_OVERTIME.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Update_OVERTIME.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_OVERTIME.listructure#OVERTIME" id="arg1.OVERTIME">
+        <properties:properties>
+          <properties:property name="value" type="string">0000000C</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_COMM.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Update_COMM.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_COMM.listructure#COMM" id="arg2.COMM">
+        <properties:properties>
+          <properties:property name="value" type="string">0000000C</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_EMP-NUM.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Update_EMP-NUM.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_EMP-NUM.listructure#EMP_NUM" id="arg3.EMP_NUM">
+        <properties:properties>
+          <properties:property name="value" type="string">F0F1F5F6F8</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:checkconditions/>
+    <stub:sqlStatus>
+      <stub:statement type="Update">
+        <stub:text>      *****            EXEC SQL UPDATE FTS_DEMOTAB
+      *****                  SET (WAGES, OVERTIME, COMM)
+      *****                  = (:WAGES, :OVERTIME, :COMM)
+      *****                  WHERE EMP_NUM = :EMP-NUM
+      *****            END-EXEC
+</stub:text>
+      </stub:statement>
+      <stub:plist>
+        <stub:headerData>00404000001E43574B54444232581B2B82E11A4EE9E0000537ECA79037ECC7B00000000004B800EA000002830000000000000000000000000000000000000000</stub:headerData>
+        <stub:varRawData>E2D8D3C4C1404008000000C00004000401E4060237ECA86037ECC528000040404040404040404040404040404040404040404040404040404040404001E4060237ECA86437ECC528000040404040404040404040404040404040404040404040404040404040404001E4060237ECA86837ECC528000040404040404040404040404040404040404040404040404040404040404001C4000537ECA81837ECC5280000404040404040404040404040404040404040404040404040404040404040</stub:varRawData>
+      </stub:plist>
+      <stub:sqlca callToken="150001">
+        <stub:rawData>E2D8D3C3C14040400000008800000000000040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040C4E2D54040404040000000000000000000000002FFFFFFFF00000000000000004040404040404040404040F0F0F0F0F0</stub:rawData>
+      </stub:sqlca>
+    </stub:sqlStatus>
+  </stub:stubdata>
+  <stub:stubdata id="1" name="Update">
+    <stub:interface>../Interfaces/CWKTDB2X_Update_1_EMP_NUM.interface#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Interfaces/CWKTDB2X_Update_1_EMP_NUM.interface</stub:interface>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_WAGES.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Update_WAGES.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_WAGES.listructure#WAGES" id="arg0.WAGES">
+        <properties:properties>
+          <properties:property name="value" type="string">0120000C</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_OVERTIME.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Update_OVERTIME.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_OVERTIME.listructure#OVERTIME" id="arg1.OVERTIME">
+        <properties:properties>
+          <properties:property name="value" type="string">0018000C</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_COMM.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Update_COMM.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_COMM.listructure#COMM" id="arg2.COMM">
+        <properties:properties>
+          <properties:property name="value" type="string">0000000C</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_EMP-NUM.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Update_EMP-NUM.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_EMP-NUM.listructure#EMP_NUM" id="arg3.EMP_NUM">
+        <properties:properties>
+          <properties:property name="value" type="string">F0F3F2F4F1</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:checkconditions/>
+    <stub:sqlStatus>
+      <stub:statement type="Update">
+        <stub:text>      *****            EXEC SQL UPDATE FTS_DEMOTAB
+      *****                  SET (WAGES, OVERTIME, COMM)
+      *****                  = (:WAGES, :OVERTIME, :COMM)
+      *****                  WHERE EMP_NUM = :EMP-NUM
+      *****            END-EXEC
+</stub:text>
+      </stub:statement>
+      <stub:plist>
+        <stub:headerData>00404000001E43574B54444232581B2B82E11A4EE9E0000537ECA79037ECC7B00000000004B800EA000002830000000000000000000000000000000000000000</stub:headerData>
+        <stub:varRawData>E2D8D3C4C1404008000000C00004000401E4060237ECA86037ECC528000040404040404040404040404040404040404040404040404040404040404001E4060237ECA86437ECC528000040404040404040404040404040404040404040404040404040404040404001E4060237ECA86837ECC528000040404040404040404040404040404040404040404040404040404040404001C4000537ECA81837ECC5280000404040404040404040404040404040404040404040404040404040404040</stub:varRawData>
+      </stub:plist>
+      <stub:sqlca callToken="150002">
+        <stub:rawData>E2D8D3C3C14040400000008800000000000040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040C4E2D54040404040000000000000000000000002FFFFFFFF00000000000000004040404040404040404040F0F0F0F0F0</stub:rawData>
+      </stub:sqlca>
+    </stub:sqlStatus>
+  </stub:stubdata>
+  <stub:stubdata id="2" name="Update">
+    <stub:interface>../Interfaces/CWKTDB2X_Update_1_EMP_NUM.interface#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Interfaces/CWKTDB2X_Update_1_EMP_NUM.interface</stub:interface>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_WAGES.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Update_WAGES.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_WAGES.listructure#WAGES" id="arg0.WAGES">
+        <properties:properties>
+          <properties:property name="value" type="string">0101750C</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_OVERTIME.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Update_OVERTIME.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_OVERTIME.listructure#OVERTIME" id="arg1.OVERTIME">
+        <properties:properties>
+          <properties:property name="value" type="string">0000000C</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_COMM.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Update_COMM.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_COMM.listructure#COMM" id="arg2.COMM">
+        <properties:properties>
+          <properties:property name="value" type="string">0000000C</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_EMP-NUM.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Update_EMP-NUM.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_EMP-NUM.listructure#EMP_NUM" id="arg3.EMP_NUM">
+        <properties:properties>
+          <properties:property name="value" type="string">F0F1F3F4F3</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:checkconditions/>
+    <stub:sqlStatus>
+      <stub:statement type="Update">
+        <stub:text>      *****            EXEC SQL UPDATE FTS_DEMOTAB
+      *****                  SET (WAGES, OVERTIME, COMM)
+      *****                  = (:WAGES, :OVERTIME, :COMM)
+      *****                  WHERE EMP_NUM = :EMP-NUM
+      *****            END-EXEC
+</stub:text>
+      </stub:statement>
+      <stub:plist>
+        <stub:headerData>00404000001E43574B54444232581B2B82E11A4EE9E0000537ECA79037ECC7B00000000004B800EA000002830000000000000000000000000000000000000000</stub:headerData>
+        <stub:varRawData>E2D8D3C4C1404008000000C00004000401E4060237ECA86037ECC528000040404040404040404040404040404040404040404040404040404040404001E4060237ECA86437ECC528000040404040404040404040404040404040404040404040404040404040404001E4060237ECA86837ECC528000040404040404040404040404040404040404040404040404040404040404001C4000537ECA81837ECC5280000404040404040404040404040404040404040404040404040404040404040</stub:varRawData>
+      </stub:plist>
+      <stub:sqlca callToken="150003">
+        <stub:rawData>E2D8D3C3C14040400000008800000000000040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040C4E2D54040404040000000000000000000000002FFFFFFFF00000000000000004040404040404040404040F0F0F0F0F0</stub:rawData>
+      </stub:sqlca>
+    </stub:sqlStatus>
+  </stub:stubdata>
+  <stub:stubdata id="3" name="Update">
+    <stub:interface>../Interfaces/CWKTDB2X_Update_1_EMP_NUM.interface#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Interfaces/CWKTDB2X_Update_1_EMP_NUM.interface</stub:interface>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_WAGES.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Update_WAGES.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_WAGES.listructure#WAGES" id="arg0.WAGES">
+        <properties:properties>
+          <properties:property name="value" type="string">0110000C</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_OVERTIME.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Update_OVERTIME.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_OVERTIME.listructure#OVERTIME" id="arg1.OVERTIME">
+        <properties:properties>
+          <properties:property name="value" type="string">0008250C</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_COMM.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Update_COMM.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_COMM.listructure#COMM" id="arg2.COMM">
+        <properties:properties>
+          <properties:property name="value" type="string">0000000C</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_EMP-NUM.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Update_EMP-NUM.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_EMP-NUM.listructure#EMP_NUM" id="arg3.EMP_NUM">
+        <properties:properties>
+          <properties:property name="value" type="string">F0F2F1F7F1</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:checkconditions/>
+    <stub:sqlStatus>
+      <stub:statement type="Update">
+        <stub:text>      *****            EXEC SQL UPDATE FTS_DEMOTAB
+      *****                  SET (WAGES, OVERTIME, COMM)
+      *****                  = (:WAGES, :OVERTIME, :COMM)
+      *****                  WHERE EMP_NUM = :EMP-NUM
+      *****            END-EXEC
+</stub:text>
+      </stub:statement>
+      <stub:plist>
+        <stub:headerData>00404000001E43574B54444232581B2B82E11A4EE9E0000537ECA79037ECC7B00000000004B800EA000002830000000000000000000000000000000000000000</stub:headerData>
+        <stub:varRawData>E2D8D3C4C1404008000000C00004000401E4060237ECA86037ECC528000040404040404040404040404040404040404040404040404040404040404001E4060237ECA86437ECC528000040404040404040404040404040404040404040404040404040404040404001E4060237ECA86837ECC528000040404040404040404040404040404040404040404040404040404040404001C4000537ECA81837ECC5280000404040404040404040404040404040404040404040404040404040404040</stub:varRawData>
+      </stub:plist>
+      <stub:sqlca callToken="150004">
+        <stub:rawData>E2D8D3C3C14040400000008800000000000040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040C4E2D54040404040000000000000000000000002FFFFFFFF00000000000000004040404040404040404040F0F0F0F0F0</stub:rawData>
+      </stub:sqlca>
+    </stub:sqlStatus>
+  </stub:stubdata>
+  <stub:stubdata id="4" name="Update">
+    <stub:interface>../Interfaces/CWKTDB2X_Update_1_EMP_NUM.interface#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Interfaces/CWKTDB2X_Update_1_EMP_NUM.interface</stub:interface>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_WAGES.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Update_WAGES.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_WAGES.listructure#WAGES" id="arg0.WAGES">
+        <properties:properties>
+          <properties:property name="value" type="string">0088000C</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_OVERTIME.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Update_OVERTIME.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_OVERTIME.listructure#OVERTIME" id="arg1.OVERTIME">
+        <properties:properties>
+          <properties:property name="value" type="string">0000000C</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_COMM.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Update_COMM.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_COMM.listructure#COMM" id="arg2.COMM">
+        <properties:properties>
+          <properties:property name="value" type="string">0000000C</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:output listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_EMP-NUM.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Update_EMP-NUM.listructure">
+      <stub:data baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_EMP-NUM.listructure#EMP_NUM" id="arg3.EMP_NUM">
+        <properties:properties>
+          <properties:property name="value" type="string">F0F2F1F7F5</properties:property>
+        </properties:properties>
+      </stub:data>
+    </stub:output>
+    <stub:checkconditions/>
+    <stub:sqlStatus>
+      <stub:statement type="Update">
+        <stub:text>      *****            EXEC SQL UPDATE FTS_DEMOTAB
+      *****                  SET (WAGES, OVERTIME, COMM)
+      *****                  = (:WAGES, :OVERTIME, :COMM)
+      *****                  WHERE EMP_NUM = :EMP-NUM
+      *****            END-EXEC
+</stub:text>
+      </stub:statement>
+      <stub:plist>
+        <stub:headerData>00404000001E43574B54444232581B2B82E11A4EE9E0000537ECA79037ECC7B00000000004B800EA000002830000000000000000000000000000000000000000</stub:headerData>
+        <stub:varRawData>E2D8D3C4C1404008000000C00004000401E4060237ECA86037ECC528000040404040404040404040404040404040404040404040404040404040404001E4060237ECA86437ECC528000040404040404040404040404040404040404040404040404040404040404001E4060237ECA86837ECC528000040404040404040404040404040404040404040404040404040404040404001C4000537ECA81837ECC5280000404040404040404040404040404040404040404040404040404040404040</stub:varRawData>
+      </stub:plist>
+      <stub:sqlca callToken="150005">
+        <stub:rawData>E2D8D3C3C14040400000008800000000000040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040404040C4E2D54040404040000000000000000000000001FFFFFFFF00000000000000004040404040404040404040F0F0F0F0F0</stub:rawData>
+      </stub:sqlca>
+    </stub:sqlStatus>
+  </stub:stubdata>
+  <stub:database version="1110"/>
+</stub:stub>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?totaltestVersion 20.5.1.v20201214-0405_74?>
+<!--Topaz for Total Test 20.5.1.v20201214-0405_74 Feb 12, 2021 3:27:56 PM-->
+<listructure:listructure xmlns:listructure="http://www.compuware.com/model/xml/listructure" xmlns:properties="http://www.compuware.com/model/xml/properties" id="InsuranceCore/Tests/Unit/SalesRepManagement/Payroll/CWXTDATE/Structures/CWXTDATE_EOM-SW.listructure">
+  <listructure:struct id="EOM_SW" name="EOM_SW">
+    <properties:properties>
+      <properties:property name="displayLength" type="number">1</properties:property>
+      <properties:property name="platform" type="string">mainframe</properties:property>
+      <properties:property name="storageLength" type="number">1</properties:property>
+    </properties:properties>
+    <listructure:string id="EOM_SW.EOM_SW" length="1" name="EOM_SW">
+      <properties:properties>
+        <properties:property name="picture" type="string">X</properties:property>
+        <properties:property name="displayLength" type="number">1</properties:property>
+        <properties:property name="platform" type="string">mainframe</properties:property>
+        <properties:property name="liType" type="string">char</properties:property>
+        <properties:property name="mask" type="string">X</properties:property>
+        <properties:property name="storageLength" type="number">1</properties:property>
+      </properties:properties>
+    </listructure:string>
+  </listructure:struct>
+</listructure:listructure>

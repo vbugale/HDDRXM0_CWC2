@@ -1,0 +1,11 @@
+build.commands=org.eclipse.jdt.core.javabuilder
+connection.arguments=
+connection.gradle.user.home=null
+connection.java.home=null
+connection.jvm.arguments=
+connection.project.dir=
+derived.resources=.gradle,build
+eclipse.preferences.version=1
+linked.resources=com.compuware.xatester.common.test-src,src,com.compuware.xatester.xaunit-src,com.compuware.xatester.xaunit.test-src
+natures=org.eclipse.jdt.core.javanature
+project.path=\:

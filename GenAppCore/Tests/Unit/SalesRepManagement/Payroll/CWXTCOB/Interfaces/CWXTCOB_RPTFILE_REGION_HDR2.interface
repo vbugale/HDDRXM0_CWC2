@@ -1,0 +1,78 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<?totaltestVersion 20.5.1.v20201214-0405_74?>
+<!--Topaz for Total Test 20.5.1.v20201214-0405_74 Feb 12, 2021 1:44:21 PM-->
+<interface:interface xmlns:interface="http://www.compuware.com/model/xml/interface" xmlns:listructure="http://www.compuware.com/model/xml/listructure" xmlns:properties="http://www.compuware.com/model/xml/properties" alias="" id="InsuranceCore/Tests/Unit/SalesRepManagement/Payroll/CWXTCOB/Interfaces/CWXTCOB_RPTFILE_REGION_HDR2.interface">
+  <interface:description></interface:description>
+  <interface:argument listructure="../Structures/CWXTCOB_RPTFILE_REGION-HDR2.listructure#InsuranceCore/Tests/Unit/SalesRepManagement/Payroll/CWXTCOB/Structures/CWXTCOB_RPTFILE_REGION-HDR2.listructure">
+    <interface:baseTypeExtension baseType="listructure:structType ../Structures/CWXTCOB_RPTFILE_REGION-HDR2.listructure#REGION_HDR2">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:stringType ../Structures/CWXTCOB_RPTFILE_REGION-HDR2.listructure#REGION_HDR2.FILLER0">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:stringType ../Structures/CWXTCOB_RPTFILE_REGION-HDR2.listructure#REGION_HDR2.FILLER1">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:stringType ../Structures/CWXTCOB_RPTFILE_REGION-HDR2.listructure#REGION_HDR2.FILLER2">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:stringType ../Structures/CWXTCOB_RPTFILE_REGION-HDR2.listructure#REGION_HDR2.FILLER3">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:stringType ../Structures/CWXTCOB_RPTFILE_REGION-HDR2.listructure#REGION_HDR2.FILLER4">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:stringType ../Structures/CWXTCOB_RPTFILE_REGION-HDR2.listructure#REGION_HDR2.FILLER5">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:stringType ../Structures/CWXTCOB_RPTFILE_REGION-HDR2.listructure#REGION_HDR2.FILLER6">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:stringType ../Structures/CWXTCOB_RPTFILE_REGION-HDR2.listructure#REGION_HDR2.FILLER7">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:stringType ../Structures/CWXTCOB_RPTFILE_REGION-HDR2.listructure#REGION_HDR2.FILLER8">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:stringType ../Structures/CWXTCOB_RPTFILE_REGION-HDR2.listructure#REGION_HDR2.FILLER9">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:stringType ../Structures/CWXTCOB_RPTFILE_REGION-HDR2.listructure#REGION_HDR2.FILLER10">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:stringType ../Structures/CWXTCOB_RPTFILE_REGION-HDR2.listructure#REGION_HDR2.FILLER11">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:stringType ../Structures/CWXTCOB_RPTFILE_REGION-HDR2.listructure#REGION_HDR2.FILLER12">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+  </interface:argument>
+</interface:interface>

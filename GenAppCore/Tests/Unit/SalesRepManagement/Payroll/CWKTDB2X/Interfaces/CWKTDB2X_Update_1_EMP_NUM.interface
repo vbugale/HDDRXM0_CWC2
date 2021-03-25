@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?totaltestVersion 20.5.2.v20210203-0313_126?>
+<!--Topaz for Total Test 20.5.2.v20210203-0313_126 Mar 5, 2021 11:01:42 AM-->
+<interface:interface xmlns:interface="http://www.compuware.com/model/xml/interface" xmlns:listructure="http://www.compuware.com/model/xml/listructure" xmlns:properties="http://www.compuware.com/model/xml/properties" alias="" id="Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Interfaces/CWKTDB2X_Update_1_EMP_NUM.interface">
+  <interface:description></interface:description>
+  <interface:argument listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_WAGES.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Update_WAGES.listructure">
+    <interface:baseTypeExtension baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_WAGES.listructure#WAGES">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:numberType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_WAGES.listructure#WAGES.WAGES">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+  </interface:argument>
+  <interface:argument listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_OVERTIME.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Update_OVERTIME.listructure">
+    <interface:baseTypeExtension baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_OVERTIME.listructure#OVERTIME">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:numberType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_OVERTIME.listructure#OVERTIME.OVERTIME">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+  </interface:argument>
+  <interface:argument listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_COMM.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Update_COMM.listructure">
+    <interface:baseTypeExtension baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_COMM.listructure#COMM">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:numberType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_COMM.listructure#COMM.COMM">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+  </interface:argument>
+  <interface:argument listructure="../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_EMP-NUM.listructure#Tests/Unit/SalesRepManagement/Payroll/CWKTDB2X/Structures/Db2/CWKTDB2X/CWKTDB2X_Update_EMP-NUM.listructure">
+    <interface:baseTypeExtension baseType="listructure:structType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_EMP-NUM.listructure#EMP_NUM">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+    <interface:baseTypeExtension baseType="listructure:stringType ../Structures/Db2/CWKTDB2X/CWKTDB2X_Update_EMP-NUM.listructure#EMP_NUM.EMP_NUM">
+      <properties:properties>
+        <properties:property name="usage" type="string">inout</properties:property>
+      </properties:properties>
+    </interface:baseTypeExtension>
+  </interface:argument>
+</interface:interface>
