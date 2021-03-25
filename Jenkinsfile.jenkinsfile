@@ -1,4 +1,4 @@
-@Library('GITDEMO_Shared_Lib@Git2IspwFts') _
+@Library('GITDEMO_Shared_Lib@Git2IspwCWC2') _
 
 String hostCredentialsId    = 'HDDRXM0'                    /* Change to Jenkins credentials ID for Host userid/password            */
 String cesCredentialsId     = 'HDDRXM0_CES_CWC2'                     /* Change to Jenkins credentials ID for CES token                       */
