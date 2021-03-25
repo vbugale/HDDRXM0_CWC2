@@ -14,6 +14,7 @@ Store expected RPFILE data locally and restore to mainframe</Description>
   <Test>
     <Scope name="Config" disabled="false">
       <Variable id="userid">HDDRXM0</Variable>
+<<<<<<< HEAD
       <Variable id="ispw_app">CWC2.GITA</Variable>
     </Scope>
     <Scope name="Initialize" disabled="false">
@@ -23,6 +24,18 @@ Store expected RPFILE data locally and restore to mainframe</Description>
         <Variable id="empInDatasetName">${datasetQualifier}.CWXTDATA</Variable>
         <Variable id="outDatasetNameActual">${datasetQualifier}.CWXTRPT</Variable>
         <Variable id="outDatasetNameExpected">${datasetQualifier}.CWXTRPT.EXP</Variable>
+=======
+      <Variable id="ispw_app">GITA</Variable>
+      <Variable id="ispw_level">FT1</Variable>
+    </Scope>
+    <Scope name="Initialize" disabled="false">
+      <Scope name="Variable Set Up" disabled="false">
+        <Variable id="datasetQualifier">SALESSUP.${ispw_app}.TEST</Variable>
+        <Variable id="empMasterDatasetName">SALESSUP.GITDEMO1.TEST.MSTR.CWXTDATA</Variable>
+        <Variable id="empInDatasetName">${datasetQualifier}.CWXTDATA</Variable>
+        <Variable id="outDatasetNameActual">${datasetQualifier}.CWXTRPT</Variable>
+        <Variable id="outDatasetNameExpected">${datasetQualifier}.CWXTRPT.EXPECT</Variable>
+>>>>>>> branch 'feature/FT1/demo_feature' of https://github.com/CPWRGIT/HDDRXM0_CWC2.git
       </Scope>
     </Scope>
     <Scope name="Test Set Up" disabled="false">
