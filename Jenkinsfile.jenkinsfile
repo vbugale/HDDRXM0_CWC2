@@ -7,6 +7,7 @@ String gitCredentialsId     = 'GitHub_ralphnuesse'                     /* Change
 String ccRepo               = 'SALESSUP.CWC2.GITA.COCO.REPOS'                     /* Change to user specific code coverage repository                     */
 
 git2Ispw(
+    executionEnvironment: 'cwc2',
     hostCredentialsId:    hostCredentialsId,
     cesCredentialsId:     cesCredentialsId, 
     gitCredentialsId:     gitCredentialsId, 
