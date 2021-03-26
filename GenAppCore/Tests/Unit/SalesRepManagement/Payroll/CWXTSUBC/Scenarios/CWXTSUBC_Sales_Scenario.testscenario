@@ -550,11 +550,14 @@
         <testcase:data baseType="listructure:structType ../Structures/CWXTSUBC_COMM-TOTAL.listructure#COMM_TOTAL" id="arg2.COMM_TOTAL">
           <properties:properties>
             <properties:property name="value" type="string">0000000F</properties:property>
-            <properties:property name="expectedValue" type="string">0600000F</properties:property>
+            <properties:property name="expectedValue" type="string">0650000F</properties:property>
             <properties:property name="address" type="string">37CF39D1</properties:property>
           </properties:properties>
         </testcase:data>
       </testcase:input>
+      <testcase:output listructure="../Structures/CWXTSUBC_EMP-TYPE.listructure#MainframeTests/Unit%20Tests/CWXTSUBC/Structures/CWXTSUBC_EMP-TYPE.listructure"/>
+      <testcase:output listructure="../Structures/CWXTSUBC_SALES-AMOUNT.listructure#MainframeTests/Unit%20Tests/CWXTSUBC/Structures/CWXTSUBC_SALES-AMOUNT.listructure"/>
+      <testcase:output listructure="../Structures/CWXTSUBC_COMM-TOTAL.listructure#MainframeTests/Unit%20Tests/CWXTSUBC/Structures/CWXTSUBC_COMM-TOTAL.listructure"/>
       <testcase:checkconditions>
         <checkconditions:complexCheckcondition message="Complex check condition failed" name="Complex check condition"/>
       </testcase:checkconditions>
