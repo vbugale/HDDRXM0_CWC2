@@ -8,6 +8,7 @@
       *  FOR XPEDITER/TSO TRAINING SESSIONS                            *
       *                                                                *
       ******************************************************************
+      * 20.07.01 
        ENVIRONMENT DIVISION.
        DATA DIVISION.
        WORKING-STORAGE SECTION.
