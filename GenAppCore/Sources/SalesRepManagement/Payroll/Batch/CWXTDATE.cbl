@@ -9,6 +9,7 @@
       *                                                                *
       ******************************************************************
       * IWG368E
+      * Plugin format change
        ENVIRONMENT DIVISION.
        DATA DIVISION.
        WORKING-STORAGE SECTION.
