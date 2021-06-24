@@ -9,7 +9,6 @@
       *                                                                *
       ******************************************************************
       * IWG368E
-      * Plugin format change validation
        ENVIRONMENT DIVISION.
        DATA DIVISION.
        WORKING-STORAGE SECTION.
