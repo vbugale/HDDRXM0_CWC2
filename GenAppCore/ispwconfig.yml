@@ -4,8 +4,7 @@ ispwApplication:
   port: 16196
   runtimeConfig: isp8
   stream: GITDEMO1
-  sandbox: y 
-  application: GITA
+    application: GITA
   pathMappings:
   - path: "**/Sources/**"
     types:
