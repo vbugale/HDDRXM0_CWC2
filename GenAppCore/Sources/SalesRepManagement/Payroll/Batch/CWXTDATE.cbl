@@ -8,7 +8,11 @@
       *  FOR XPEDITER/TSO TRAINING SESSIONS                            *
       *                                                                *
       ******************************************************************
-      * IWG368E
+      *IWG380A
+      *Git commit id 
+      *new password
+      *new jenkinsfile
+      *remove sandbox option 
        ENVIRONMENT DIVISION.
        DATA DIVISION.
        WORKING-STORAGE SECTION.
