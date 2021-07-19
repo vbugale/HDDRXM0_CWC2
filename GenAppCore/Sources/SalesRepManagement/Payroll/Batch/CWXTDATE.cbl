@@ -8,7 +8,6 @@
       *  FOR XPEDITER/TSO TRAINING SESSIONS                            *
       *                                                                *
       ******************************************************************
-      * IWG368E
       *IWG380A
        ENVIRONMENT DIVISION.
        DATA DIVISION.
