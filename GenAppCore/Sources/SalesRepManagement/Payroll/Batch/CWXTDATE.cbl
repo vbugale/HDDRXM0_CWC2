@@ -9,6 +9,7 @@
       *                                                                *
       ******************************************************************
       *IWG380A
+      *Git commit id 
        ENVIRONMENT DIVISION.
        DATA DIVISION.
        WORKING-STORAGE SECTION.
