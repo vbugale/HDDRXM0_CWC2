@@ -12,6 +12,7 @@
       *Git commit id 
       *new password
       *new jenkinsfile
+      *remove sandbox option 
        ENVIRONMENT DIVISION.
        DATA DIVISION.
        WORKING-STORAGE SECTION.
