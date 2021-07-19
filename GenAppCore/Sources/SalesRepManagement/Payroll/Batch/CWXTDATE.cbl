@@ -9,6 +9,7 @@
       *                                                                *
       ******************************************************************
       * IWG368E
+      *IWG380A
        ENVIRONMENT DIVISION.
        DATA DIVISION.
        WORKING-STORAGE SECTION.
