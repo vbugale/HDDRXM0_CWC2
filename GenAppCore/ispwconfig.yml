@@ -2,9 +2,8 @@
 ispwApplication:
   host: cwc2.nasa.cpwr.corp
   port: 16196
-  runtimeConfig: isp8
   stream: GITDEMO1
-    application: GITA
+  application: GITA
   pathMappings:
   - path: "**/Sources/**"
     types:
