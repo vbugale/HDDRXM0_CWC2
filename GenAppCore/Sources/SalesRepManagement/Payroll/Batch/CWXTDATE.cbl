@@ -10,6 +10,7 @@
       ******************************************************************
       *IWG380A
       *Git commit id 
+      *new password
        ENVIRONMENT DIVISION.
        DATA DIVISION.
        WORKING-STORAGE SECTION.
