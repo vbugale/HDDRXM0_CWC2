@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ExecutionContext xmlns="http://www.xact.dk/xatester/v/1" environment="5c519facfba8720a90ccc645" logLevel="INFO" remote="false" useSimulations="true" uploadResult="false" timeout="300" readTimeout="30" debuggerType="NONE" jobInfoInterval="3">
-  <ExtensionData />
-  <ExtensionData componentName="cwxtcob" componentId="6046063418074200e864cb5e">
-    <Parameter key="loadlibraries">
-      <Value>SALESSUP.GITA.UT1.LOAD</Value>
-      <Value>SALESSUP.GITA.FT1.LOAD</Value>
-      <Value>SALESSUP.GITA.DEVL.LOAD</Value>
-      <Value>SALESSUP.GITA.MAIN.LOAD</Value>
-      <Value>SALESSUP.GITA.PROD.LOAD</Value>
+<ExecutionContext xmlns="http://www.xact.dk/xatester/v/1" environment="CWC2 - Batch" logLevel="INFO" remote="false" useSimulations="true" uploadResult="false" timeout="300" readTimeout="30" debuggerType="NONE" jobInfoInterval="3">
+  <ExtensionData>
+    <Parameter key="nvt_ispw_app">
+      <Value>GITE</Value>
+    </Parameter>
+    <Parameter key="nvt_ispw_level4">
+      <Value>MAIN</Value>
+    </Parameter>
+    <Parameter key="nvt_ispw_level3">
+      <Value>DEVL</Value>
+    </Parameter>
+    <Parameter key="nvt_ispw_level2">
+      <Value>FT1</Value>
+    </Parameter>
+    <Parameter key="nvt_ispw_level1">
+      <Value>UT1</Value>
     </Parameter>
   </ExtensionData>
+  <ExtensionData componentName="cwxtcob" componentId="605c99c3180742004522aeb1" />
   <XaUnit path="CWXTCOB_Standard.scenario" />
 </ExecutionContext>

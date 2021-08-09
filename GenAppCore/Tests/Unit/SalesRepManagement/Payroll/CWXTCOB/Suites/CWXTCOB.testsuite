@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?totaltestVersion 20.5.1.v20201214-0405_74?>
 <!--Topaz for Total Test 20.5.1.v20201214-0405_74 Feb 12, 2021 2:57:34 PM-->
-<testsuite:testsuite xmlns:testsuite="http://www.compuware.com/model/xml/testsuite" id="InsuranceCore/Tests/Unit/SalesRepManagement/Payroll/CWXTCOB/Suites/CWXTCOB.testsuite">
-  <testsuite:testscenario>../Scenarios/CWXTCOB_Negative_Bad_Employee.testscenario#InsuranceCore/Tests/Unit/SalesRepManagement/Payroll/CWXTCOB/Scenarios/CWXTCOB_Negative_Bad_Employee.testscenario</testsuite:testscenario>
-  <testsuite:testscenario>../Scenarios/CWXTCOB_Negative_Bad_Parm_Char.testscenario#InsuranceCore/Tests/Unit/SalesRepManagement/Payroll/CWXTCOB/Scenarios/CWXTCOB_Negative_Bad_Parm_Char.testscenario</testsuite:testscenario>
-  <testsuite:testscenario>../Scenarios/CWXTCOB_Negative_Bad_Parm_Length.testscenario#InsuranceCore/Tests/Unit/SalesRepManagement/Payroll/CWXTCOB/Scenarios/CWXTCOB_Negative_Bad_Parm_Length.testscenario</testsuite:testscenario>
-  <testsuite:testscenario>../Scenarios/CWXTCOB_Negative_EOM_Bad_Sales.testscenario#InsuranceCore/Tests/Unit/SalesRepManagement/Payroll/CWXTCOB/Scenarios/CWXTCOB_Negative_EOM_Bad_Sales.testscenario</testsuite:testscenario>
-  <testsuite:testscenario>../Scenarios/CWXTCOB_Negative_Bad_Region.testscenario#InsuranceCore/Tests/Unit/SalesRepManagement/Payroll/CWXTCOB/Scenarios/CWXTCOB_Negative_Bad_Region.testscenario</testsuite:testscenario>
-  <testsuite:testscenario>../Scenarios/CWXTCOB_Positive_End_Of_Month.testscenario#InsuranceCore/Tests/Unit/SalesRepManagement/Payroll/CWXTCOB/Scenarios/CWXTCOB_Positive_End_Of_Month.testscenario</testsuite:testscenario>
-  <testsuite:testscenario>../Scenarios/CWXTCOB_Positive_Mid_Month.testscenario#InsuranceCore/Tests/Unit/SalesRepManagement/Payroll/CWXTCOB/Scenarios/CWXTCOB_Positive_Mid_Month.testscenario</testsuite:testscenario>
-  <testsuite:testscenario>../Scenarios/CWXTCOB_Positive_Zero_Length_Parm.testscenario#InsuranceCore/Tests/Unit/SalesRepManagement/Payroll/CWXTCOB/Scenarios/CWXTCOB_Positive_Zero_Length_Parm.testscenario</testsuite:testscenario>
+<testsuite:testsuite xmlns:testsuite="http://www.compuware.com/model/xml/testsuite" id="Tests/Unit/SalesRepManagement/Payroll/CWXTCOB/Suites/CWXTCOB.testsuite">
+  <testsuite:testscenario>../Scenarios/CWXTCOB_Negative_Bad_Employee.testscenario#Tests/Unit/SalesRepManagement/Payroll/CWXTCOB/Scenarios/CWXTCOB_Negative_Bad_Employee.testscenario</testsuite:testscenario>
+  <testsuite:testscenario>../Scenarios/CWXTCOB_Negative_Bad_Parm_Char.testscenario#Tests/Unit/SalesRepManagement/Payroll/CWXTCOB/Scenarios/CWXTCOB_Negative_Bad_Parm_Char.testscenario</testsuite:testscenario>
+  <testsuite:testscenario>../Scenarios/CWXTCOB_Negative_Bad_Parm_Length.testscenario#Tests/Unit/SalesRepManagement/Payroll/CWXTCOB/Scenarios/CWXTCOB_Negative_Bad_Parm_Length.testscenario</testsuite:testscenario>
+  <testsuite:testscenario>../Scenarios/CWXTCOB_Negative_Bad_Region.testscenario#Tests/Unit/SalesRepManagement/Payroll/CWXTCOB/Scenarios/CWXTCOB_Negative_Bad_Region.testscenario</testsuite:testscenario>
+  <testsuite:testscenario>../Scenarios/CWXTCOB_Negative_EOM_Bad_Sales.testscenario#Tests/Unit/SalesRepManagement/Payroll/CWXTCOB/Scenarios/CWXTCOB_Negative_EOM_Bad_Sales.testscenario</testsuite:testscenario>
+  <testsuite:testscenario>../Scenarios/CWXTCOB_Positive_End_Of_Month.testscenario#Tests/Unit/SalesRepManagement/Payroll/CWXTCOB/Scenarios/CWXTCOB_Positive_End_Of_Month.testscenario</testsuite:testscenario>
+  <testsuite:testscenario>../Scenarios/CWXTCOB_Positive_Mid_Month.testscenario#Tests/Unit/SalesRepManagement/Payroll/CWXTCOB/Scenarios/CWXTCOB_Positive_Mid_Month.testscenario</testsuite:testscenario>
+  <testsuite:testscenario>../Scenarios/CWXTCOB_Positive_Zero_Length_Parm.testscenario#Tests/Unit/SalesRepManagement/Payroll/CWXTCOB/Scenarios/CWXTCOB_Positive_Zero_Length_Parm.testscenario</testsuite:testscenario>
 </testsuite:testsuite>

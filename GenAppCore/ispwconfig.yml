@@ -2,7 +2,6 @@
 ispwApplication:
   host: cwc2.nasa.cpwr.corp
   port: 16196
-  runtimeConfig: ispw
   stream: GITDEMO1
   application: GITA
   pathMappings:
