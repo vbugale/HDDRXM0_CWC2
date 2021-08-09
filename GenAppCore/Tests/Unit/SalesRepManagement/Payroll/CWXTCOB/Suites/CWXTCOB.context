@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExecutionContext xmlns="http://www.xact.dk/xatester/v/1" environment="5c519facfba8720a90ccc645" logLevel="INFO" remote="false" useSimulations="true" uploadResult="false" timeout="300" readTimeout="30" debuggerType="NONE" jobInfoInterval="3">
+  <ExtensionData>
+    <Parameter key="unittest.loadlibraries">
+      <Value>SALESSUP.CWC2.GITA.FT1.LOAD</Value>
+    </Parameter>
+  </ExtensionData>
+  <XaUnit xmlns:data="http://www.xact.dk/xatester/data/v/1" componentNameUnderTest="CWXTCOB.testsuite" caseInsensitiveCompare="false" path="CWXTCOB.testsuite">
+    <Test>
+      <Unittest testscenariopath="CWXTCOB.testsuite" moduleName="CWXTCOB.testsuite" />
+    </Test>
+  </XaUnit>
+</ExecutionContext>
