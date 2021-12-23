@@ -2,8 +2,10 @@
 ispwApplication:
   host: cwc2.nasa.cpwr.corp
   port: 16196
+  runtimeConfig: isp8
   stream: GITDEMO1
   application: GITA
+  sandbox: Y 
   pathMappings:
   - path: "**/Sources/**"
     types:
