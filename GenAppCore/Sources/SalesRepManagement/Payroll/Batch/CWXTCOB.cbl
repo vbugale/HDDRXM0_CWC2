@@ -16,7 +16,6 @@
       *                                                                *
       * RNU 2021.08.09-14:58                                           *
       ******************************************************************
-      * mBank
        ENVIRONMENT DIVISION.
        INPUT-OUTPUT SECTION.
        FILE-CONTROL.
