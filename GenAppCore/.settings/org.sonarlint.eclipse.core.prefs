@@ -2,5 +2,5 @@ autoEnabled=true
 eclipse.preferences.version=1
 idePrefixKey=
 projectKey=GITDEMO1_GITE
-serverId=dtw-sonarqube-cwcc.nasa.cpwr.corp
+serverId=Git
 sqPrefixKey=GenAppCore
