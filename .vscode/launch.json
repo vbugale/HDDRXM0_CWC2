@@ -1,0 +1,22 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "xpediter",
+            "request": "launch",
+            "name": "CWXTCOB",
+            "program": "CWXTCOB",
+            "dsn": "ISPWSA0.JCL.LIBRARY(CXWTCOB2)",
+            "jobName": "ISPWSA0A",
+            "step": "STEP1",
+            "DB2": false,
+            "IMS": false,
+            "stopOnEntry": true,
+            "trace": true,
+            "profileName": "cwc2_dsn"
+        }
+    ]
+}
