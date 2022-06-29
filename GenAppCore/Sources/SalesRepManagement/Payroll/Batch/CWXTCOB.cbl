@@ -16,7 +16,7 @@
       *                                                                *
       * RNU 2021.08.09-14:58                                           *
       ******************************************************************
-      * 20.11.01
+      * 20.11.01 in to UT1
        ENVIRONMENT DIVISION.
        INPUT-OUTPUT SECTION.
        FILE-CONTROL.
