@@ -15,6 +15,7 @@ node {
     gitCredentialsId: 'bitbucket', 
     gitRepoUrl: 'https://bitbucket.zeng.bmc.com/scm/~vbugale/gitplay.git', 
     runtimeConfig: 'isp8', 
-    stream: 'CWEZ'
+    stream: 'CWEZ',
+    ispwConfigPath: './GenAppCore/ispwconfig.yml'
   }  
 }
