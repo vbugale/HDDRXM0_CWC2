@@ -7,13 +7,15 @@ node {
   
   stage('Git to ISPW Synchronization')
   { 
-    gitToIspwIntegration
+    gitToIspwIntegration app: 'GITA', 
     branchMapping: '''ispw_demo => DEV1, per-commit
       ''',
     connectionId: 'cwc2-16196', 
     credentialsId: 'cwc2-cwezxx2', 
     gitCredentialsId: 'bitbucket', 
-    gitRepoUrl: 'https://bitbucket.zeng.bmc.com/scm/~vbugale/gitplay.git',
+    gitRepoUrl: 'https://bitbucket.zeng.bmc.com/scm/~vbugale/gitplay.git', 
+    runtimeConfig: 'isp8', 
+    stream: 'GITDEMO1',
     ispwConfigPath: './GenAppCore/ispwconfig.yml'
   }  
 }
