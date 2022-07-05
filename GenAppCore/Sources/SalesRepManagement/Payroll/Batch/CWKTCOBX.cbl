@@ -2,7 +2,7 @@
        PROGRAM-ID.       CWKTCOBX.
       ******************************************************************
       *                                                                *
-      ******      C O M P U W A R E   C O R P O R A T I O N       ******
+      ******      C O M P U W A R E   C O R P O R A T I O N    BMC   ******
       *                                                                *
       *  THIS PROGRAM IS A QSAM COBOL DEMO PROGRAM USED FOR            *
       *  TOPAZ FOR TOTAL TEST TRAINING SESSIONS.                       *
