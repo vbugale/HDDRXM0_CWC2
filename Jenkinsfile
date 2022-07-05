@@ -7,15 +7,15 @@ node {
   
   stage('Git to ISPW Synchronization')
   { 
-    gitToIspwIntegration app: 'TXX2', 
-    branchMapping: '''ispw_demo => DEV1, per-commit
+    gitToIspwIntegration app: 'GITA', 
+    branchMapping: '''ispw_demo => FT1, per-commit
       ''',
     connectionId: 'cwc2-16196', 
     credentialsId: 'cwc2-cwezxx2', 
     gitCredentialsId: 'bitbucket', 
     gitRepoUrl: 'https://github.com/vbugale/HDDRXM0_CWC2.git', 
     runtimeConfig: 'isp8', 
-    stream: 'CWEZ',
+    stream: 'GITDEMO1',
     ispwConfigPath: './GenAppCore/ispwconfig.yml'
   }  
 }
