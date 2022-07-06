@@ -12,7 +12,7 @@ node {
       ''',
     connectionId: 'cwc2-16196', 
     credentialsId: 'cwc2-cwezxx2', 
-    gitCredentialsId: 'bitbucket', 
+    gitCredentialsId: 'github-token', 
     gitRepoUrl: 'https://github.com/vbugale/HDDRXM0_CWC2.git', 
     runtimeConfig: 'isp8', 
     stream: 'CWEZ',
